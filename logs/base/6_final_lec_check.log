@@ -1,0 +1,69 @@
+[2026-10-01 22:04:34.592] [miter_logger] [info] MiterStrategy::run starting
+[2026-10-01 22:04:34.593] [miter_logger] [info] Collecting POs for design 0: mux8_32bit
+
+[2026-10-01 22:04:34.624] [miter_logger] [info] Collected 259 PIs for design 0
+
+[2026-10-01 22:04:34.624] [miter_logger] [info] Collected 32 POs for design 0
+
+[2026-10-01 22:04:34.625] [miter_logger] [info] design 0 PI summary by model/term (259 total terminals, 9 unique rows):
+| Model      | Term | Count |
+|------------|------|-------|
+| mux8_32bit | A    |    32 |
+| mux8_32bit | B    |    32 |
+| mux8_32bit | C    |    32 |
+| mux8_32bit | D    |    32 |
+| mux8_32bit | E    |    32 |
+| mux8_32bit | F    |    32 |
+| mux8_32bit | G    |    32 |
+| mux8_32bit | H    |    32 |
+| mux8_32bit | SEL  |     3 |
+
+[2026-10-01 22:04:34.626] [miter_logger] [info] design 0 PO summary by model/term (32 total terminals, 1 unique rows):
+| Model      | Term | Count |
+|------------|------|-------|
+| mux8_32bit | Y    |    32 |
+
+[2026-10-01 22:04:34.626] [miter_logger] [info] Collecting POs for design 1: mux8_32bit
+
+[2026-10-01 22:04:34.649] [miter_logger] [info] size of common inputs: 259
+[2026-10-01 22:04:34.649] [miter_logger] [info] size of diff0 inputs: 0
+[2026-10-01 22:04:34.649] [miter_logger] [info] size of diff1 inputs: 0
+[2026-10-01 22:04:34.650] [miter_logger] [info] Collected 259 PIs for design 1
+
+[2026-10-01 22:04:34.650] [miter_logger] [info] Collected 32 POs for design 1
+
+[2026-10-01 22:04:34.650] [miter_logger] [info] design 1 PI summary by model/term (259 total terminals, 9 unique rows):
+| Model      | Term | Count |
+|------------|------|-------|
+| mux8_32bit | A    |    32 |
+| mux8_32bit | B    |    32 |
+| mux8_32bit | C    |    32 |
+| mux8_32bit | D    |    32 |
+| mux8_32bit | E    |    32 |
+| mux8_32bit | F    |    32 |
+| mux8_32bit | G    |    32 |
+| mux8_32bit | H    |    32 |
+| mux8_32bit | SEL  |     3 |
+
+[2026-10-01 22:04:34.650] [miter_logger] [info] design 1 PO summary by model/term (32 total terminals, 1 unique rows):
+| Model      | Term | Count |
+|------------|------|-------|
+| mux8_32bit | Y    |    32 |
+
+[2026-10-01 22:04:34.651] [miter_logger] [info] normalizeInputs: starting
+[2026-10-01 22:04:34.652] [miter_logger] [info] size of common inputs: 259
+[2026-10-01 22:04:34.652] [miter_logger] [info] size of diff0 inputs: 0
+[2026-10-01 22:04:34.652] [miter_logger] [info] size of diff1 inputs: 0
+[2026-10-01 22:04:34.652] [miter_logger] [info] normalizeOutputs: starting
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of common outputs: 32
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of diff0 outputs: 0
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of diff1 outputs: 0
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of PIs in circuit 0: 259
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of PIs in circuit 1: 259
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of POs in circuit 0: 32
+[2026-10-01 22:04:34.653] [miter_logger] [info] size of POs in circuit 1: 32
+[2026-10-01 22:04:34.728] [miter_logger] [info] Building miter expression
+[2026-10-01 22:04:34.729] [miter_logger] [info] Finished building miter expression
+[2026-10-01 22:04:34.731] [miter_logger] [info] Starting solver
+[2026-10-01 22:04:34.731] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-10-01 22:04:34.731] [miter_logger] [info] Circuits are IDENTICAL
