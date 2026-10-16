@@ -81,7 +81,7 @@ Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
        70 |     +0.0% |       0 |        0 |         7
     final |     +0.0% |       0 |        0 |         0
 -------------------------------------------------------
-[INFO GPL-0106] Timing-driven: worst slack 2.1291266e-08
+[INFO GPL-0106] Timing-driven: worst slack 7.9579685e-09
 [INFO GPL-0107] Timing-driven: repair_design delta area: 0.000 um^2 (+0.00%)
 [INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 0 (+0.00%)
 [INFO GPL-0109] Timing-driven: repair_design, gcells created: 0, deleted: 0
@@ -90,27 +90,27 @@ Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
         0 |   0.4247 |  5.299320e+02 |          |           |      
 Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
 ---------------------------------------------------------------
-       10 |   0.3250 |  5.778440e+02 |   +9.04% |  2.05e-12 |      
-       20 |   0.3125 |  5.752970e+02 |   -0.44% |  3.01e-12 |      
+       10 |   0.3251 |  5.778540e+02 |   +9.04% |  2.05e-12 |      
+       20 |   0.3125 |  5.753030e+02 |   -0.44% |  3.01e-12 |      
        30 |   0.3104 |  5.754600e+02 |   +0.03% |  4.44e-12 |      
-       40 |   0.3111 |  5.755840e+02 |   +0.02% |  6.54e-12 |      
-       50 |   0.3117 |  5.758380e+02 |   +0.04% |  9.63e-12 |      
-       60 |   0.3118 |  5.755510e+02 |   -0.05% |  1.42e-11 |      
-       70 |   0.3119 |  5.754280e+02 |   -0.02% |  2.09e-11 |      
-       80 |   0.3122 |  5.755030e+02 |   +0.01% |  3.08e-11 |      
-       90 |   0.3118 |  5.755360e+02 |   +0.01% |  4.54e-11 |      
-      100 |   0.3112 |  5.755380e+02 |   +0.00% |  6.68e-11 |      
-      110 |   0.3113 |  5.755360e+02 |   -0.00% |  9.85e-11 |      
-      120 |   0.3115 |  5.754950e+02 |   -0.01% |  1.45e-10 |      
-      130 |   0.3113 |  5.754420e+02 |   -0.01% |  2.14e-10 |      
-      140 |   0.3107 |  5.753930e+02 |   -0.01% |  3.15e-10 |      
-      150 |   0.3102 |  5.754670e+02 |   +0.01% |  4.64e-10 |      
-      160 |   0.3096 |  5.755720e+02 |   +0.02% |  6.83e-10 |      
-      170 |   0.3089 |  5.756810e+02 |   +0.02% |  1.01e-09 |      
-      180 |   0.3078 |  5.757490e+02 |   +0.01% |  1.48e-09 |      
-      190 |   0.3062 |  5.756970e+02 |   -0.01% |  2.18e-09 |      
-      200 |   0.3045 |  5.756240e+02 |   -0.01% |  3.22e-09 |      
-      210 |   0.3019 |  5.757790e+02 |   +0.03% |  4.74e-09 |      
+       40 |   0.3111 |  5.755800e+02 |   +0.02% |  6.54e-12 |      
+       50 |   0.3117 |  5.758410e+02 |   +0.05% |  9.63e-12 |      
+       60 |   0.3118 |  5.755500e+02 |   -0.05% |  1.42e-11 |      
+       70 |   0.3119 |  5.754370e+02 |   -0.02% |  2.09e-11 |      
+       80 |   0.3122 |  5.755070e+02 |   +0.01% |  3.08e-11 |      
+       90 |   0.3118 |  5.755460e+02 |   +0.01% |  4.54e-11 |      
+      100 |   0.3112 |  5.755490e+02 |   +0.00% |  6.68e-11 |      
+      110 |   0.3113 |  5.755450e+02 |   -0.00% |  9.85e-11 |      
+      120 |   0.3115 |  5.754990e+02 |   -0.01% |  1.45e-10 |      
+      130 |   0.3113 |  5.754410e+02 |   -0.01% |  2.14e-10 |      
+      140 |   0.3108 |  5.753990e+02 |   -0.01% |  3.15e-10 |      
+      150 |   0.3102 |  5.754700e+02 |   +0.01% |  4.64e-10 |      
+      160 |   0.3096 |  5.755760e+02 |   +0.02% |  6.83e-10 |      
+      170 |   0.3089 |  5.756820e+02 |   +0.02% |  1.01e-09 |      
+      180 |   0.3078 |  5.757570e+02 |   +0.01% |  1.48e-09 |      
+      190 |   0.3062 |  5.757030e+02 |   -0.01% |  2.18e-09 |      
+      200 |   0.3045 |  5.756220e+02 |   -0.01% |  3.22e-09 |      
+      210 |   0.3019 |  5.757750e+02 |   +0.03% |  4.74e-09 |      
 [INFO GPL-0040] Routability iteration: 1
 [INFO GPL-0088] Tiles the placer can act on: 21 of 36 (58.33%)
 [INFO GPL-0041] Total routing overflow: 0.0000
@@ -124,17 +124,17 @@ Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
 [INFO GPL-0090] Routability finished. Target routing congestion achieved succesfully.
 Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
 ---------------------------------------------------------------
-      220 |   0.2989 |  5.761820e+02 |   +0.07% |  6.98e-09 |      
-      230 |   0.2943 |  5.760650e+02 |   -0.02% |  1.03e-08 |      
-      240 |   0.2876 |  5.761720e+02 |   +0.02% |  1.52e-08 |      
-      250 |   0.2779 |  5.758350e+02 |   -0.06% |  2.23e-08 |      
-      260 |   0.2663 |  5.771330e+02 |   +0.23% |  3.29e-08 |      
-      270 |   0.2534 |  5.811640e+02 |   +0.70% |  4.84e-08 |      
-      280 |   0.2418 |  5.870240e+02 |   +1.01% |  7.14e-08 |      
-      290 |   0.2230 |  5.932600e+02 |   +1.06% |  1.05e-07 |      
-      300 |   0.2024 |  6.003250e+02 |   +1.19% |  1.55e-07 |      
+      220 |   0.2989 |  5.761930e+02 |   +0.07% |  6.98e-09 |      
+      230 |   0.2943 |  5.760680e+02 |   -0.02% |  1.03e-08 |      
+      240 |   0.2876 |  5.761770e+02 |   +0.02% |  1.52e-08 |      
+      250 |   0.2779 |  5.758380e+02 |   -0.06% |  2.23e-08 |      
+      260 |   0.2663 |  5.771360e+02 |   +0.23% |  3.29e-08 |      
+      270 |   0.2534 |  5.811650e+02 |   +0.70% |  4.84e-08 |      
+      280 |   0.2418 |  5.870210e+02 |   +1.01% |  7.14e-08 |      
+      290 |   0.2230 |  5.932750e+02 |   +1.07% |  1.05e-07 |      
+      300 |   0.2024 |  6.003300e+02 |   +1.19% |  1.55e-07 |      
 [INFO GPL-0100] Timing-driven iteration 2/2, virtual: false.
-[INFO GPL-0101]    Iter: 305, overflow: 0.194, keep resizer changes at: 1, HPWL: 604017
+[INFO GPL-0101]    Iter: 305, overflow: 0.194, keep resizer changes at: 1, HPWL: 604022
 Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
 ---------------------------------------------------------------------
         0 |     +0.0% |       0 |       0 |             0 |        93
@@ -156,17 +156,17 @@ Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
        70 |     +0.0% |       0 |        0 |         7
     final |     +0.0% |       0 |        0 |         0
 -------------------------------------------------------
-[INFO GPL-0106] Timing-driven: worst slack 2.131769e-08
+[INFO GPL-0106] Timing-driven: worst slack 7.984394e-09
 [INFO GPL-0107] Timing-driven: repair_design delta area: 0.000 um^2 (+0.00%)
 [INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 0 (+0.00%)
 [INFO GPL-0109] Timing-driven: repair_design, gcells created: 0, deleted: 0
 [INFO GPL-0110] Timing-driven: new target density: 0.6
 Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
 ---------------------------------------------------------------
-      310 |   0.1808 |  6.098620e+02 |   +1.59% |  2.28e-07 |      
-      320 |   0.1577 |  6.175630e+02 |   +1.26% |  3.36e-07 |      
-      330 |   0.1375 |  6.302810e+02 |   +2.06% |  4.95e-07 |      
-      340 |   0.1151 |  6.440790e+02 |   +2.19% |  7.29e-07 |      
+      310 |   0.1808 |  6.098590e+02 |   +1.59% |  2.28e-07 |      
+      320 |   0.1577 |  6.175790e+02 |   +1.27% |  3.36e-07 |      
+      330 |   0.1375 |  6.302950e+02 |   +2.06% |  4.95e-07 |      
+      340 |   0.1151 |  6.440810e+02 |   +2.19% |  7.29e-07 |      
       349 |   0.0992 |  6.567500e+02 |          |  1.07e-06 |      
 ---------------------------------------------------------------
 [INFO GPL-1001] Global placement finished at iteration 349
@@ -183,7 +183,7 @@ Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
 [INFO GPL-1012] Total routability artificial inflation: 0.00 (+0.00%)
 [INFO GPL-1013] Total timing-driven delta area: 0.00 (+0.00%)
 [INFO GPL-1014] Final placement area: 647.18 (+0.00%)
-[INFO GPL-1018] Final HPWL (um): 661.39
+[INFO GPL-1018] Final HPWL (um): 661.38
 estimate_parasitics -placement
 Report metrics stage 3, global place...
 
@@ -192,7 +192,7 @@ global place report_design_area
 --------------------------------------------------------------------------
 Design area 623 um^2 40% utilization.
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/3_3_place_gp.odb
-Elapsed time: 0:00.54[h:]min:sec. CPU time: user 0.41 sys 0.13 (99%). Peak memory: 233084KB.
+Elapsed time: 0:00.48[h:]min:sec. CPU time: user 0.39 sys 0.11 (102%). Peak memory: 233640KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-3_3_place_gp           .odb          0        1     1.00      227 c915ddbeb6
+3_3_place_gp           .odb          0        0     1.04      228 08cd54eb0c

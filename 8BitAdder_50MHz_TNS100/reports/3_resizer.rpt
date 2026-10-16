@@ -12,7 +12,7 @@ wns max 0.00
 ==========================================================================
 resizer report_worst_slack
 --------------------------------------------------------------------------
-worst slack max 21.32
+worst slack max 7.99
 
 ==========================================================================
 resizer report_clock_min_period
@@ -101,16 +101,16 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.03    0.00    7.01 ^ Sum[6] (out)
                                   7.01   data arrival time
 
-                  0.00   33.33   33.33   clock virtual_clk (rise edge)
-                          0.00   33.33   clock network delay (ideal)
-                          0.00   33.33   clock reconvergence pessimism
-                         -5.00   28.33   output external delay
-                                 28.33   data required time
+                  0.00   20.00   20.00   clock virtual_clk (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                          0.00   20.00   clock reconvergence pessimism
+                         -5.00   15.00   output external delay
+                                 15.00   data required time
 -----------------------------------------------------------------------------
-                                 28.33   data required time
+                                 15.00   data required time
                                  -7.01   data arrival time
 -----------------------------------------------------------------------------
-                                 21.32   slack (MET)
+                                  7.99   slack (MET)
 
 
 
@@ -156,16 +156,16 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.03    0.00    7.01 ^ Sum[6] (out)
                                   7.01   data arrival time
 
-                  0.00   33.33   33.33   clock virtual_clk (rise edge)
-                          0.00   33.33   clock network delay (ideal)
-                          0.00   33.33   clock reconvergence pessimism
-                         -5.00   28.33   output external delay
-                                 28.33   data required time
+                  0.00   20.00   20.00   clock virtual_clk (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                          0.00   20.00   clock reconvergence pessimism
+                         -5.00   15.00   output external delay
+                                 15.00   data required time
 -----------------------------------------------------------------------------
-                                 28.33   data required time
+                                 15.00   data required time
                                  -7.01   data arrival time
 -----------------------------------------------------------------------------
-                                 21.32   slack (MET)
+                                  7.99   slack (MET)
 
 
 
@@ -176,7 +176,7 @@ resizer report_check_types -max_slew -max_cap -max_fanout -violators
 ==========================================================================
 resizer max_slew_check_slack
 --------------------------------------------------------------------------
-1.2621688842773438
+1.2621667385101318
 
 ==========================================================================
 resizer max_slew_check_limit
@@ -201,7 +201,7 @@ resizer max_fanout_check_limit
 ==========================================================================
 resizer max_capacitance_check_slack
 --------------------------------------------------------------------------
-0.0473732128739357
+0.04737303778529167
 
 ==========================================================================
 resizer max_capacitance_check_limit
@@ -246,12 +246,12 @@ resizer critical path delay
 ==========================================================================
 resizer critical path slack
 --------------------------------------------------------------------------
-21.3225
+7.9892
 
 ==========================================================================
 resizer slack div critical path delay
 --------------------------------------------------------------------------
-304.137902
+113.955611
 
 ==========================================================================
 resizer report_power
@@ -260,10 +260,10 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          7.57e-06   3.95e-06   2.64e-10   1.15e-05 100.0%
+Combinational          1.26e-05   6.58e-06   2.64e-10   1.92e-05 100.0%
 Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  7.57e-06   3.95e-06   2.64e-10   1.15e-05 100.0%
+Total                  1.26e-05   6.58e-06   2.64e-10   1.92e-05 100.0%
                           65.7%      34.3%       0.0%

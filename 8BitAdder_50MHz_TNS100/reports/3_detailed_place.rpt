@@ -12,7 +12,7 @@ wns max 0.00
 ==========================================================================
 detailed place report_worst_slack
 --------------------------------------------------------------------------
-worst slack max 21.31
+worst slack max 7.97
 
 ==========================================================================
 detailed place report_clock_min_period
@@ -101,16 +101,16 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.03    0.00    7.03 ^ Sum[6] (out)
                                   7.03   data arrival time
 
-                  0.00   33.33   33.33   clock virtual_clk (rise edge)
-                          0.00   33.33   clock network delay (ideal)
-                          0.00   33.33   clock reconvergence pessimism
-                         -5.00   28.33   output external delay
-                                 28.33   data required time
+                  0.00   20.00   20.00   clock virtual_clk (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                          0.00   20.00   clock reconvergence pessimism
+                         -5.00   15.00   output external delay
+                                 15.00   data required time
 -----------------------------------------------------------------------------
-                                 28.33   data required time
+                                 15.00   data required time
                                  -7.03   data arrival time
 -----------------------------------------------------------------------------
-                                 21.31   slack (MET)
+                                  7.97   slack (MET)
 
 
 
@@ -156,16 +156,16 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.03    0.00    7.03 ^ Sum[6] (out)
                                   7.03   data arrival time
 
-                  0.00   33.33   33.33   clock virtual_clk (rise edge)
-                          0.00   33.33   clock network delay (ideal)
-                          0.00   33.33   clock reconvergence pessimism
-                         -5.00   28.33   output external delay
-                                 28.33   data required time
+                  0.00   20.00   20.00   clock virtual_clk (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                          0.00   20.00   clock reconvergence pessimism
+                         -5.00   15.00   output external delay
+                                 15.00   data required time
 -----------------------------------------------------------------------------
-                                 28.33   data required time
+                                 15.00   data required time
                                  -7.03   data arrival time
 -----------------------------------------------------------------------------
-                                 21.31   slack (MET)
+                                  7.97   slack (MET)
 
 
 
@@ -246,12 +246,12 @@ detailed place critical path delay
 ==========================================================================
 detailed place critical path slack
 --------------------------------------------------------------------------
-21.3074
+7.9741
 
 ==========================================================================
 detailed place slack div critical path delay
 --------------------------------------------------------------------------
-303.269332
+113.495780
 
 ==========================================================================
 detailed place report_power
@@ -260,10 +260,10 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          7.58e-06   3.96e-06   2.64e-10   1.15e-05 100.0%
+Combinational          1.26e-05   6.60e-06   2.64e-10   1.92e-05 100.0%
 Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  7.58e-06   3.96e-06   2.64e-10   1.15e-05 100.0%
+Total                  1.26e-05   6.60e-06   2.64e-10   1.92e-05 100.0%
                           65.7%      34.3%       0.0%

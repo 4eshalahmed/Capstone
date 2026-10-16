@@ -32,7 +32,7 @@ repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footpri
 [WARNING EST-0027] no estimated parasitics. Using wire load models.
 [INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
 [INFO RSZ-0098] No setup violations found
-[INFO RSZ-0505] Runtime: 0.04s
+[INFO RSZ-0505] Runtime: 0.03s
 Default units for flow
  time 1ns
  capacitance 1pF
@@ -69,8 +69,8 @@ floorplan final report_design_area
 Design area 353 um^2 22% utilization.
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/2_1_floorplan.odb
 write_sdc -no_timestamp ./results/sky130hd/8BitAdder_50MHz_TNS100/base/2_1_floorplan.sdc
-Elapsed time: 0:00.34[h:]min:sec. CPU time: user 0.27 sys 0.06 (98%). Peak memory: 134896KB.
+Elapsed time: 0:00.33[h:]min:sec. CPU time: user 0.28 sys 0.06 (100%). Peak memory: 135656KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-2_1_floorplan          .odb          0        0     0.97      131 9e506c1b3d
-2_1_floorplan          .sdc                                       5c7db4ebc4
+2_1_floorplan          .odb          0        0     1.03      132 9e506c1b3d
+2_1_floorplan          .sdc                                       206f5c7c3a

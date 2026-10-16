@@ -171,10 +171,10 @@ abc -script /OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty /OpenR
 23. Executing Verilog backend.
 23.1. Executing BMUXMAP pass.
 23.2. Executing DEMUXMAP pass.
-End of script. Logfile hash: cfaed3477b, time: 0.68s, user: 0.27s, system: 0.15s, MEM: 57.81 MB peak
+End of script. Logfile hash: cfaed3477b, time: 0.67s, user: 0.28s, system: 0.14s, MEM: 58.44 MB peak
 Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
 Time spent: 35% 1x abc (0 sec), 13% 2x synth (0 sec), ...
-Elapsed time: 0:00.69[h:]min:sec. CPU time: user 0.47 sys 0.21 (97%). Peak memory: 60640KB.
+Elapsed time: 0:00.68[h:]min:sec. CPU time: user 0.48 sys 0.19 (99%). Peak memory: 61600KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-1_2_yosys              .v            0        1     0.99       59 60338f8069
+1_2_yosys              .v            0        1     0.99       60 60338f8069

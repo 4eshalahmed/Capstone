@@ -36,7 +36,7 @@ Design area 623 um^2 40% utilization.
 Instance count before 84, after 84
 Pin count before 211, after 211
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/3_4_place_resized.odb
-Elapsed time: 0:00.34[h:]min:sec. CPU time: user 0.28 sys 0.06 (99%). Peak memory: 134236KB.
+Elapsed time: 0:00.31[h:]min:sec. CPU time: user 0.26 sys 0.05 (100%). Peak memory: 134776KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-3_4_place_resized      .odb          0        0     1.00      131 c915ddbeb6
+3_4_place_resized      .odb          0        0     1.00      131 08cd54eb0c

@@ -15,8 +15,8 @@ Design area 353 um^2 100% utilization.
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/1_synth.odb
 write_sdc -no_timestamp ./results/sky130hd/8BitAdder_50MHz_TNS100/base/1_synth.sdc
 Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
-Elapsed time: 0:00.34[h:]min:sec. CPU time: user 0.29 sys 0.05 (97%). Peak memory: 104160KB.
+Elapsed time: 0:00.33[h:]min:sec. CPU time: user 0.28 sys 0.05 (100%). Peak memory: 104480KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-1_synth                .odb          0        0     1.00      101 a5f4b7c4d8
-1_synth                .sdc                                       5c7db4ebc4
+1_synth                .odb          0        0     1.00      102 a5f4b7c4d8
+1_synth                .sdc                                       206f5c7c3a

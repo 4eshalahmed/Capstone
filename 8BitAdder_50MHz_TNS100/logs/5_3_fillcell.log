@@ -12,7 +12,7 @@ filler_placement "sky130_fd_sc_hd__fill_1 sky130_fd_sc_hd__fill_2 sky130_fd_sc_h
 [INFO DPL-0001] Placed 167 filler instances.
 Design area 623 um^2 40% utilization.
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/5_3_fillcell.odb
-Elapsed time: 0:00.29[h:]min:sec. CPU time: user 0.24 sys 0.05 (99%). Peak memory: 103200KB.
+Elapsed time: 0:00.28[h:]min:sec. CPU time: user 0.25 sys 0.03 (100%). Peak memory: 103680KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-5_3_fillcell           .odb          0        0     1.00      100 b338bb8ce2
+5_3_fillcell           .odb          0        0     1.00      101 b338bb8ce2

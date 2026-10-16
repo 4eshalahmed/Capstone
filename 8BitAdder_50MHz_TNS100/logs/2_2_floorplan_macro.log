@@ -10,7 +10,7 @@ source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
 No macros found: Skipping macro_placement
 Design area 353 um^2 22% utilization.
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/2_2_floorplan_macro.odb
-Elapsed time: 0:00.28[h:]min:sec. CPU time: user 0.24 sys 0.04 (99%). Peak memory: 101600KB.
+Elapsed time: 0:00.28[h:]min:sec. CPU time: user 0.24 sys 0.04 (100%). Peak memory: 101920KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
 2_2_floorplan_macro    .odb          0        0     1.00       99 9e506c1b3d

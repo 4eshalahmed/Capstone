@@ -93,7 +93,7 @@ Number of nets:           93
 #macroValidViaAp       = 0
 #macroNoAp             = 0
 [INFO DRT-0166] Complete pin access.
-[INFO DRT-0267] cpu time = 00:00:05, elapsed time = 00:00:04, memory = 107.57 (MB), peak = 106.88 (MB)
+[INFO DRT-0267] cpu time = 00:00:05, elapsed time = 00:00:04, memory = 108.02 (MB), peak = 107.19 (MB)
 Took 5 seconds: pin_access
 global_route -congestion_report_file ./reports/sky130hd/8BitAdder_50MHz_TNS100/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
 [INFO GRT-0020] Min routing layer: met1
@@ -243,16 +243,16 @@ No registers in design
 global route report_design_area
 --------------------------------------------------------------------------
 Design area 623 um^2 40% utilization.
-[INFO FLW-0007] clock virtual_clk period 33.333302
+[INFO FLW-0007] clock virtual_clk period 20.000000
 [INFO FLW-0008] Clock virtual_clk period 11.490
-[INFO FLW-0009] Clock virtual_clk slack 21.239
+[INFO FLW-0009] Clock virtual_clk slack 7.906
 write_sdc -no_timestamp ./results/sky130hd/8BitAdder_50MHz_TNS100/base/updated_clks.sdc
 [WARNING STA-0450] virtual clock virtual_clk can not be propagated.
 [INFO FLW-0011] Path endpoint path count 9
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/5_1_grt.odb
 write_sdc -no_timestamp ./results/sky130hd/8BitAdder_50MHz_TNS100/base/5_1_grt.sdc
-Elapsed time: 0:05.04[h:]min:sec. CPU time: user 6.26 sys 0.09 (125%). Peak memory: 246436KB.
+Elapsed time: 0:05.02[h:]min:sec. CPU time: user 6.25 sys 0.10 (126%). Peak memory: 246956KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-5_1_grt                .odb          5        6     1.26      240 4978b016c7
-5_1_grt                .sdc                                       5c7db4ebc4
+5_1_grt                .odb          5        6     1.26      241 4978b016c7
+5_1_grt                .sdc                                       206f5c7c3a

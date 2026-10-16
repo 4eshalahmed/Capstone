@@ -5,7 +5,7 @@ current_design adder8
 ###############################################################################
 # Timing Constraints
 ###############################################################################
-create_clock -name virtual_clk -period 33.3333 
+create_clock -name virtual_clk -period 20.0000 
 set_input_delay 0.0000 -clock [get_clocks {virtual_clk}] -min -add_delay [get_ports {A[0]}]
 set_input_delay 5.0000 -clock [get_clocks {virtual_clk}] -max -add_delay [get_ports {A[0]}]
 set_input_delay 0.0000 -clock [get_clocks {virtual_clk}] -min -add_delay [get_ports {A[1]}]

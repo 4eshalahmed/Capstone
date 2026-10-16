@@ -112,7 +112,7 @@ detailed place report_design_area
 Design area 623 um^2 40% utilization.
 write_db ./results/sky130hd/8BitAdder_50MHz_TNS100/base/3_5_place_dp.odb
 write_sdc -no_timestamp ./results/sky130hd/8BitAdder_50MHz_TNS100/base/3_place.sdc
-Elapsed time: 0:00.31[h:]min:sec. CPU time: user 0.26 sys 0.05 (99%). Peak memory: 105440KB.
+Elapsed time: 0:00.30[h:]min:sec. CPU time: user 0.26 sys 0.05 (100%). Peak memory: 106240KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-3_5_place_dp           .odb          0        0     1.00      102 aa9330e2ce
+3_5_place_dp           .odb          0        0     1.03      103 aa9330e2ce
