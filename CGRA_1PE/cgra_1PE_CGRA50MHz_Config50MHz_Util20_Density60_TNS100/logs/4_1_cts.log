@@ -1,0 +1,727 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/cgra_U0/base/3_place.odb
+read_sdc ./results/sky130hd/cgra_U0/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0007] Net "CGRA_Clock" found for clock "cgra_clk".
+[INFO CTS-0010]  Clock net "CGRA_Clock" has 416 sinks.
+[INFO CTS-0007] Net "Config_Clock" found for clock "config_clk".
+[INFO CTS-0010]  Clock net "Config_Clock" has 77 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net CGRA_Clock.
+[INFO CTS-0028]  Total number of sinks: 416.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0206] Best clustering solution was found from max clustering size of 14 and max clustering diameter of 101.
+[INFO CTS-0019]  Total number of sinks after clustering: 41.
+[INFO CTS-0024]  Normalized sink region: [(1.32169, 1.92794), (17.5607, 28.5202)].
+[INFO CTS-0025]     Width:  16.2390.
+[INFO CTS-0026]     Height: 26.5922.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 21
+    Sub-region size: 16.2390 X 13.2961
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 11
+    Sub-region size: 8.1195 X 13.2961
+[INFO CTS-0034]     Segment length (rounded): 4.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 41.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net Config_Clock.
+[INFO CTS-0028]  Total number of sinks: 77.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(13605, 55820), (320425, 352180)].
+[INFO CTS-0024]  Normalized sink region: [(1.00037, 4.10441), (23.5607, 25.8956)].
+[INFO CTS-0025]     Width:  22.5603.
+[INFO CTS-0026]     Height: 21.7912.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 39
+    Sub-region size: 11.2801 X 21.7912
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 20
+    Sub-region size: 11.2801 X 10.8956
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 10
+    Sub-region size: 5.6401 X 10.8956
+[INFO CTS-0034]     Segment length (rounded): 2.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 77.
+[INFO CTS-0018]     Created 46 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 46 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 4:1, 5:1, 6:3, 7:3, 8:3, 9:2, 10:6, 11:11, 12:10, 13:4, 14:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0018]     Created 9 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 9 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 7:1, 9:3, 10:2, 11:1, 12:1..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0098] Clock net "CGRA_Clock"
+[INFO CTS-0099]  Sinks 450
+[INFO CTS-0100]  Leaf buffers 41
+[INFO CTS-0101]  Average sink wire length 560.25 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Dummy loads inserted 34
+[INFO CTS-0098] Clock net "Config_Clock"
+[INFO CTS-0099]  Sinks 84
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 456.21 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Dummy loads inserted 7
+[INFO CTS-0500] Runtime: 0.32s
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 265090.49 um^2
+[INFO DPL-0007] Movable instances area: 60300.33 um^2
+[INFO DPL-0008] Fixed instances area within core: 4420.49 um^2
+[INFO DPL-0009] Utilization: 24.4%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 9977 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |        307 |        47 |       260
+        1 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 1.
+[INFO DPL-0500] Runtime: 0.04s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                2039
+total displacement       6251.7 u
+average displacement        0.6 u
+max displacement           17.4 u
+original HPWL          245426.3 u
+legalized HPWL         249006.9 u
+delta HPWL                    1 %
+
+estimate_parasitics -placement
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 160 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 160 out of 160 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -3.292 |     -388.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+      10* |       0 |       9 |        0 |      0 |     0 |    +0.0% |   -3.156 |     -386.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+      20* |       0 |      18 |        0 |      0 |     1 |    +0.1% |   -3.085 |     -384.9 |    160 | mem_0_mem_unit_addr_to_ram[4]
+      30* |       1 |      23 |        0 |      0 |     5 |    +0.1% |   -3.028 |     -383.9 |    160 | mem_0_mem_unit_addr_to_ram[11]
+      40* |       2 |      31 |        0 |      0 |     6 |    +0.1% |   -2.971 |     -382.9 |    160 | mem_0_mem_unit_data_in_to_ram[12]
+      50* |       2 |      40 |        0 |      0 |     7 |    +0.2% |   -2.936 |     -381.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+      60* |       3 |      47 |        0 |      0 |     9 |    +0.2% |   -2.918 |     -379.8 |    160 | mem_0_mem_unit_addr_to_ram[10]
+      70* |       4 |      54 |        0 |      0 |    11 |    +0.2% |   -2.894 |     -378.6 |    160 | mem_0_mem_unit_addr_to_ram[4]
+      80* |       5 |      62 |        0 |      0 |    12 |    +0.2% |   -2.867 |     -377.8 |    160 | mem_0_mem_unit_data_in_to_ram[6]
+      90* |       6 |      70 |        1 |      0 |    12 |    +0.2% |   -2.839 |     -376.3 |    160 | mem_0_mem_unit_addr_to_ram[26]
+     100* |       6 |      77 |        1 |      0 |    15 |    +0.2% |   -2.817 |     -375.6 |    160 | mem_0_mem_unit_addr_to_ram[26]
+     110* |       6 |      83 |        2 |      0 |    18 |    +0.2% |   -2.796 |     -374.3 |    160 | mem_0_mem_unit_addr_to_ram[17]
+     120* |       6 |      92 |        3 |      0 |    18 |    +0.2% |   -2.767 |     -373.5 |    160 | mem_0_mem_unit_addr_to_ram[5]
+     130* |       6 |      98 |        4 |      0 |    21 |    +0.2% |   -2.757 |     -373.1 |    160 | mem_0_mem_unit_addr_to_ram[13]
+     140* |       6 |     105 |        4 |      0 |    24 |    +0.3% |   -2.780 |     -372.5 |    160 | mem_0_mem_unit_addr_to_ram[9]
+     150* |       6 |     113 |        4 |      0 |    26 |    +0.3% |   -2.727 |     -371.1 |    160 | mem_0_mem_unit_data_in_to_ram[11]
+     160* |       6 |     121 |        4 |      0 |    28 |    +0.3% |   -2.716 |     -369.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     170* |       6 |     130 |        4 |      0 |    29 |    +0.2% |   -2.698 |     -368.5 |    160 | mem_0_mem_unit_addr_to_ram[25]
+     180* |       6 |     139 |        4 |      0 |    30 |    +0.2% |   -2.713 |     -367.5 |    160 | mem_0_mem_unit_data_in_to_ram[1]
+     190* |       6 |     147 |        5 |      0 |    31 |    +0.3% |   -2.662 |     -366.4 |    160 | mem_0_mem_unit_addr_to_ram[31]
+     200* |       6 |     154 |        5 |      0 |    34 |    +0.3% |   -2.653 |     -364.9 |    160 | mem_0_mem_unit_addr_to_ram[20]
+     210* |       6 |     162 |        6 |      0 |    35 |    +0.3% |   -2.631 |     -363.7 |    160 | mem_0_mem_unit_addr_to_ram[18]
+     220* |       6 |     172 |        6 |      0 |    35 |    +0.3% |   -2.619 |     -362.3 |    160 | mem_0_mem_unit_data_in_to_ram[6]
+     230* |       7 |     179 |        7 |      0 |    36 |    +0.3% |   -2.616 |     -361.6 |    160 | mem_0_mem_unit_addr_to_ram[29]
+     240* |       7 |     187 |        8 |      0 |    37 |    +0.3% |   -2.594 |     -361.0 |    160 | mem_0_mem_unit_data_in_to_ram[20]
+     250* |       7 |     197 |        8 |      0 |    37 |    +0.3% |   -2.557 |     -360.0 |    160 | mem_0_mem_unit_data_in_to_ram[14]
+     260* |       7 |     205 |        8 |      0 |    39 |    +0.3% |   -2.556 |     -359.0 |    160 | mem_0_mem_unit_data_in_to_ram[13]
+     270* |       7 |     213 |        8 |      0 |    41 |    +0.2% |   -2.517 |     -358.3 |    160 | mem_0_mem_unit_data_in_to_ram[28]
+     280* |       7 |     223 |        8 |      0 |    41 |    +0.2% |   -2.500 |     -357.5 |    160 | mem_0_mem_unit_addr_to_ram[3]
+     290* |       7 |     232 |        8 |      0 |    42 |    +0.2% |   -2.497 |     -356.5 |    160 | mem_0_mem_unit_data_in_to_ram[9]
+     300* |       7 |     242 |        8 |      0 |    42 |    +0.2% |   -2.477 |     -355.7 |    160 | mem_0_mem_unit_data_in_to_ram[19]
+     302* |       7 |     244 |        8 |      0 |    42 |    +0.2% |   -2.471 |     -355.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     304* |       7 |     245 |        8 |      0 |    42 |    +0.2% |   -2.470 |     -355.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     310* |       7 |     248 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -355.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     313* |       7 |     251 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -355.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     316* |       7 |     253 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     317* |       7 |     253 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     319* |       7 |     254 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     320* |       7 |     254 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     323* |       7 |     257 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     328* |       7 |     261 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     329* |       7 |     261 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     330* |       7 |     261 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     330* |       7 |     261 |        8 |      0 |    44 |    +0.2% |   -2.470 |     -354.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     337* |       7 |     265 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -354.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     338* |       7 |     265 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -354.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     340* |       7 |     266 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -354.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     340* |       7 |     266 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -354.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     344* |       7 |     269 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     345* |       7 |     269 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     350* |       7 |     273 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     351* |       7 |     274 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     355* |       7 |     277 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     356* |       7 |     277 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     357* |       7 |     277 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -353.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     360* |       7 |     279 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -352.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     362* |       7 |     281 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -352.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     363* |       7 |     281 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -352.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     364* |       7 |     281 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -352.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     369* |       7 |     285 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -352.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     370* |       7 |     285 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -352.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     376* |       7 |     291 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     379* |       7 |     293 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     380* |       7 |     293 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     385* |       7 |     298 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     388* |       7 |     300 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     390* |       7 |     301 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     390* |       7 |     301 |        8 |      0 |    46 |    +0.2% |   -2.470 |     -351.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     395* |       7 |     304 |        9 |      0 |    46 |    +0.2% |   -2.470 |     -351.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     398* |       7 |     306 |        9 |      0 |    46 |    +0.2% |   -2.470 |     -350.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     400* |       7 |     307 |        9 |      0 |    46 |    +0.2% |   -2.470 |     -350.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     403* |       7 |     310 |        9 |      0 |    46 |    +0.2% |   -2.470 |     -350.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     404* |       7 |     310 |        9 |      0 |    46 |    +0.2% |   -2.470 |     -350.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     410* |       7 |     313 |       10 |      0 |    47 |    +0.2% |   -2.470 |     -350.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     415* |       7 |     317 |       10 |      0 |    48 |    +0.2% |   -2.470 |     -350.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     420* |       7 |     321 |       10 |      0 |    48 |    +0.2% |   -2.470 |     -349.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     423* |       7 |     324 |       10 |      0 |    48 |    +0.2% |   -2.470 |     -349.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     429* |       7 |     328 |       10 |      0 |    49 |    +0.2% |   -2.470 |     -349.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     430* |       7 |     328 |       10 |      0 |    49 |    +0.2% |   -2.470 |     -349.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     436* |       7 |     333 |       10 |      0 |    50 |    +0.2% |   -2.470 |     -349.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     438* |       7 |     334 |       10 |      0 |    50 |    +0.2% |   -2.470 |     -349.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     439* |       7 |     334 |       10 |      0 |    50 |    +0.2% |   -2.470 |     -349.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     440* |       7 |     334 |       10 |      0 |    50 |    +0.2% |   -2.470 |     -349.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     450* |       7 |     342 |       11 |      0 |    51 |    +0.2% |   -2.470 |     -348.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     451* |       7 |     343 |       11 |      0 |    51 |    +0.2% |   -2.470 |     -348.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     454* |       7 |     345 |       11 |      0 |    51 |    +0.2% |   -2.470 |     -348.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     460* |       7 |     349 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -348.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     460* |       7 |     349 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -348.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     467* |       7 |     355 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -347.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     470* |       7 |     357 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -347.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     470* |       7 |     357 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -347.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     471* |       7 |     357 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -347.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     477* |       7 |     362 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -346.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     478* |       7 |     362 |       11 |      0 |    52 |    +0.2% |   -2.470 |     -346.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     480* |       7 |     362 |       11 |      0 |    53 |    +0.2% |   -2.470 |     -346.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     489* |       7 |     371 |       11 |      0 |    53 |    +0.2% |   -2.470 |     -346.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     490* |       7 |     371 |       11 |      0 |    53 |    +0.2% |   -2.470 |     -346.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     492* |       7 |     373 |       11 |      0 |    53 |    +0.2% |   -2.470 |     -345.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     500* |       7 |     376 |       13 |      0 |    55 |    +0.2% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     510* |       7 |     377 |       22 |      0 |    55 |    +0.4% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     520* |       7 |     377 |       32 |      0 |    55 |    +0.5% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     530* |       7 |     377 |       42 |      0 |    55 |    +0.6% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     540* |       7 |     377 |       52 |      0 |    55 |    +0.7% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     550* |       7 |     377 |       62 |      0 |    55 |    +0.8% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     552* |       7 |     377 |       14 |      0 |    55 |    +0.3% |   -2.470 |     -345.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     560* |       7 |     383 |       14 |      0 |    56 |    +0.3% |   -2.470 |     -345.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     560* |       7 |     383 |       14 |      0 |    56 |    +0.3% |   -2.470 |     -345.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     570* |       7 |     391 |       15 |      0 |    56 |    +0.3% |   -2.470 |     -344.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     570* |       7 |     391 |       15 |      0 |    56 |    +0.3% |   -2.470 |     -344.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     574* |       7 |     394 |       15 |      0 |    56 |    +0.3% |   -2.470 |     -344.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     577* |       7 |     396 |       15 |      0 |    56 |    +0.3% |   -2.470 |     -344.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     580* |       7 |     397 |       15 |      0 |    57 |    +0.3% |   -2.470 |     -343.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     585* |       7 |     402 |       15 |      0 |    57 |    +0.3% |   -2.470 |     -343.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     588* |       7 |     404 |       15 |      0 |    57 |    +0.3% |   -2.470 |     -343.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     590* |       7 |     404 |       15 |      0 |    58 |    +0.3% |   -2.470 |     -343.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     597* |       7 |     411 |       15 |      0 |    58 |    +0.3% |   -2.470 |     -342.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     600* |       7 |     413 |       15 |      0 |    58 |    +0.3% |   -2.470 |     -342.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     607* |       7 |     411 |       15 |      0 |    58 |    +0.3% |   -2.470 |     -342.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     610* |       7 |     413 |       15 |      0 |    58 |    +0.2% |   -2.470 |     -342.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     610* |       7 |     413 |       15 |      0 |    58 |    +0.2% |   -2.470 |     -342.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     619* |       7 |     413 |       15 |      0 |    58 |    +0.2% |   -2.470 |     -342.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     620* |       7 |     413 |       15 |      0 |    58 |    +0.2% |   -2.470 |     -342.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     630* |       7 |     420 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -341.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     635* |       7 |     425 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -341.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     640* |       7 |     429 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -341.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     644* |       7 |     433 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -340.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     648* |       7 |     436 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -340.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     650* |       7 |     437 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -340.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     651* |       7 |     438 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -340.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     653* |       7 |     439 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -340.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     660* |       7 |     445 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -339.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     666* |       7 |     451 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -339.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     670* |       7 |     454 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -339.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     678* |       7 |     462 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -338.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     680* |       7 |     463 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -338.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     690* |       7 |     473 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -338.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     690* |       7 |     472 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -338.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     700* |       7 |     481 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -337.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     702* |       7 |     482 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -337.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     710* |       7 |     489 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -336.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     711* |       7 |     490 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -336.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     720* |       7 |     498 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -336.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     721* |       7 |     499 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -336.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     730* |       7 |     507 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -335.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     732* |       7 |     509 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -335.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     740* |       7 |     516 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -334.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     742* |       7 |     518 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -334.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     750* |       7 |     525 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -334.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     752* |       7 |     527 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -334.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     760* |       7 |     534 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -333.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     763* |       7 |     537 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -333.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     770* |       7 |     543 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -333.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     773* |       7 |     546 |       16 |      0 |    60 |    +0.3% |   -2.470 |     -332.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     780* |       7 |     551 |       17 |      0 |    60 |    +0.3% |   -2.470 |     -332.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     784* |       7 |     555 |       17 |      0 |    60 |    +0.3% |   -2.470 |     -332.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     790* |       7 |     560 |       17 |      0 |    60 |    +0.3% |   -2.470 |     -331.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     796* |       7 |     565 |       18 |      0 |    60 |    +0.4% |   -2.470 |     -331.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     800* |       7 |     567 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -331.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     806* |       7 |     573 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -330.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     810* |       7 |     576 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -330.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     817* |       7 |     583 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -330.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     820* |       7 |     585 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -330.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     828* |       7 |     593 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -329.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     830* |       7 |     594 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -329.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     837* |       7 |     601 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -329.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     840* |       7 |     603 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -328.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     847* |       7 |     610 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -328.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     850* |       7 |     612 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -328.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     857* |       7 |     619 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -327.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     860* |       7 |     621 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -327.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     866* |       7 |     627 |       19 |      0 |    60 |    +0.4% |   -2.470 |     -327.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     870* |       7 |     629 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -326.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     876* |       7 |     635 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -326.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     880* |       7 |     638 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -326.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     885* |       7 |     643 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -325.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     890* |       7 |     647 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -325.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     894* |       7 |     651 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -325.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     900* |       7 |     656 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -324.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     903* |       7 |     659 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -324.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     910* |       7 |     665 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -324.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     912* |       7 |     667 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -323.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     920* |       7 |     674 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -323.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     921* |       7 |     675 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -323.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     930* |       7 |     683 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -322.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     930* |       7 |     683 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -322.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     939* |       7 |     691 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -322.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     940* |       7 |     691 |       20 |      0 |    60 |    +0.4% |   -2.470 |     -322.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     949* |       7 |     699 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -321.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     950* |       7 |     699 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -321.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     958* |       7 |     707 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -320.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     960* |       7 |     708 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -320.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     967* |       7 |     715 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -320.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     970* |       7 |     717 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -320.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     976* |       7 |     723 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -319.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     980* |       7 |     726 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -319.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     985* |       7 |     731 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -318.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     990* |       7 |     735 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -318.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+     994* |       7 |     739 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -318.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1000* |       7 |     744 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -317.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1003* |       7 |     747 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -317.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1010* |       7 |     753 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -317.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1012* |       7 |     755 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -317.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1020* |       7 |     762 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -316.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1021* |       7 |     763 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -316.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1030* |       7 |     771 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -315.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1030* |       7 |     771 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -315.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1039* |       7 |     779 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -315.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1040* |       7 |     779 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -315.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1048* |       7 |     787 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -314.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1050* |       7 |     788 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -314.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1057* |       7 |     795 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -313.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1060* |       7 |     797 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -313.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1066* |       7 |     803 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -313.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1070* |       7 |     806 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -313.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1075* |       7 |     811 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -312.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1080* |       7 |     815 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -312.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1084* |       7 |     819 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -312.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1090* |       7 |     824 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -311.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1093* |       7 |     827 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -311.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1100* |       7 |     833 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -310.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1102* |       7 |     835 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -310.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1110* |       7 |     842 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -310.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1111* |       7 |     843 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -310.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1120* |       7 |     851 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -309.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1120* |       7 |     851 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -309.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1129* |       7 |     859 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -308.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1130* |       7 |     859 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -308.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1138* |       7 |     867 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -308.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1140* |       7 |     868 |       21 |      0 |    60 |    +0.4% |   -2.470 |     -308.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1148* |       7 |     875 |       22 |      0 |    60 |    +0.4% |   -2.470 |     -307.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1150* |       7 |     876 |       22 |      0 |    60 |    +0.4% |   -2.470 |     -307.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1158* |       7 |     883 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -307.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1160* |       7 |     884 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -307.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1167* |       7 |     891 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -306.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1170* |       7 |     893 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -306.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1176* |       7 |     899 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -305.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1180* |       7 |     902 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -305.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1185* |       7 |     907 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -305.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1190* |       7 |     911 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -304.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1194* |       7 |     915 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -304.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1200* |       7 |     920 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -304.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1203* |       7 |     923 |       23 |      0 |    60 |    +0.4% |   -2.470 |     -304.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1210* |       7 |     928 |       24 |      0 |    60 |    +0.4% |   -2.470 |     -303.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1213* |       7 |     931 |       24 |      0 |    60 |    +0.4% |   -2.470 |     -303.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1220* |       7 |     937 |       24 |      0 |    60 |    +0.4% |   -2.470 |     -302.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1222* |       7 |     939 |       24 |      0 |    60 |    +0.4% |   -2.470 |     -302.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1230* |       7 |     945 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -302.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1232* |       7 |     947 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -302.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1240* |       7 |     954 |       25 |      0 |    60 |    +0.4% |   -2.470 |     -301.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1241* |       7 |     955 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -301.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1250* |       7 |     963 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -300.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1250* |       7 |     963 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -300.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1259* |       7 |     971 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -300.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1260* |       7 |     971 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -300.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1268* |       7 |     979 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -299.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1270* |       7 |     980 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -299.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1277* |       7 |     987 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -299.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1280* |       7 |     989 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -298.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1286* |       7 |     995 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -298.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1290* |       7 |     998 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -298.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1295* |       7 |    1003 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -297.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1300* |       7 |    1007 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -297.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1304* |       7 |    1011 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -297.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1310* |       7 |    1016 |       25 |      0 |    60 |    +0.4% |   -2.470 |     -296.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1313* |       7 |    1019 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -296.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1320* |       7 |    1025 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -296.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1322* |       7 |    1027 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -295.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1330* |       7 |    1034 |       25 |      0 |    60 |    +0.4% |   -2.470 |     -295.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1331* |       7 |    1035 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -295.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1340* |       7 |    1043 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -294.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1340* |       7 |    1043 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -294.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1349* |       7 |    1051 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -294.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1350* |       7 |    1051 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -294.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1358* |       7 |    1059 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -293.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1360* |       7 |    1060 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -293.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1367* |       7 |    1067 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -292.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1370* |       7 |    1069 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -292.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1376* |       7 |    1075 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -292.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1380* |       7 |    1078 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -292.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1385* |       7 |    1083 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -291.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1390* |       7 |    1087 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -291.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1394* |       7 |    1091 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -291.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1400* |       7 |    1096 |       25 |      0 |    60 |    +0.4% |   -2.470 |     -290.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1403* |       7 |    1099 |       25 |      0 |    60 |    +0.5% |   -2.470 |     -290.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1410* |       7 |    1104 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -289.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1413* |       7 |    1107 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -289.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1420* |       7 |    1113 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -289.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1422* |       7 |    1115 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -289.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1430* |       7 |    1122 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -288.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1431* |       7 |    1123 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -288.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1440* |       7 |    1131 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -287.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1440* |       7 |    1131 |       26 |      0 |    60 |    +0.5% |   -2.470 |     -287.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1450* |       7 |    1139 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -287.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1450* |       7 |    1139 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -287.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1459* |       7 |    1147 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -286.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1460* |       7 |    1147 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -286.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1468* |       7 |    1155 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -286.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1470* |       7 |    1156 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -286.1 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1477* |       7 |    1163 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -285.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1480* |       7 |    1165 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -285.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1486* |       7 |    1171 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -284.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1490* |       7 |    1174 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -284.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1495* |       7 |    1179 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -284.3 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1500* |       7 |    1183 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -283.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1504* |       7 |    1187 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -283.7 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1510* |       7 |    1192 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -283.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1513* |       7 |    1195 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -283.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1520* |       7 |    1201 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -282.5 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1522* |       7 |    1203 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -282.4 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1530* |       7 |    1210 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -281.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1531* |       7 |    1211 |       27 |      0 |    60 |    +0.5% |   -2.470 |     -281.8 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1540* |       7 |    1218 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -281.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1541* |       7 |    1219 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -281.2 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1550* |       7 |    1227 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -280.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1550* |       7 |    1227 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -280.6 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1559* |       7 |    1235 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1559* |       7 |    1235 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1560+ |       7 |    1235 |       28 |      0 |    60 |    +0.5% |   -2.470 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1561+ |       7 |    1236 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1563+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1564+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1565+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1566+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1567+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1568+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1569+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1570+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1570+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1571+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1572+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1573+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1574+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1575+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1576+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1577+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1578+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1579+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1580+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1580+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1581+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1582+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1583+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1584+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1585+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1586+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1587+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1588+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1589+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1590+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1590+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1591+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1592+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1593+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1594+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1595+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1596+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1597+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1598+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1599+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1600+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1601+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1602+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1603+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1604+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1605+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1606+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1607+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1608+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1609+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1610+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1610+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1611+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1612+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1613+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1614+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1615+ |       7 |    1237 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -280.0 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1617+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1618+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1619+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1620+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1620+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1621+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1622+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1623+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1624+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1625+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1626+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1627+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1628+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1629+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1630+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1630+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1631+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1632+ |       7 |    1238 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1634+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1635+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1636+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1637+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1638+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1639+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1640+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1640+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1641+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1642+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1643+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1644+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1645+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1646+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1647+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1648+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1649+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1650+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1650+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1651+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1652+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1653+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1654+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1655+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1656+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1657+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1658+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1659+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1660+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1660+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1661+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1662+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1663+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1664+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1665+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1666+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1667+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1668+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1669+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1670+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1670+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1671+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1672+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1673+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1674+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1675+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1676+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1677+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1678+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1679+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1680+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1680+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1681+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1682+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1683+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1684+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1685+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1686+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1687+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1688+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1689+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1690+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1690+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1691+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1692+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1693+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1694+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1695+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1696+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1697+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1698+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1699+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    1700+ |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+    final |       7 |    1239 |       28 |      0 |    60 |    +0.5% |   -2.468 |     -279.9 |    160 | mem_0_mem_unit_addr_to_ram[2]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 7 buffers.
+[INFO RSZ-0040] Inserted 28 buffers.
+[INFO RSZ-0051] Resized 1239 instances: 1237 up, 2 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 60 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 2.87s
+[INFO RSZ-0046] Found 483 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.644 | -174.732 | mem_0.WriteRq.config_reg[0]$_DFF_PP0_/D
+       10 |       0 |       9 |            0 |    +0.1% |  -0.597 | -169.934 | pe_c0_r0.const_val.ConstVal.config_reg[0][31]$_DFF_PP0_/D
+       20 |       0 |      23 |            0 |    +0.4% |  -0.494 | -163.322 | pe_c0_r0.reg2.out[19]$_DFFE_PP0P_/D
+       30 |       0 |      43 |            0 |    +0.7% |  -0.492 | -158.396 | pe_c0_r0.reg2.out[1]$_DFFE_PP0P_/D
+       40 |       0 |      63 |            0 |    +1.0% |  -0.491 | -153.479 | pe_c0_r0.reg3.out[13]$_DFFE_PP0P_/D
+       50 |       0 |      81 |            0 |    +1.2% |  -0.490 | -148.573 | pe_c0_r0.reg0.out[20]$_DFFE_PP0P_/D
+       60 |       0 |     100 |            0 |    +1.5% |  -0.488 | -143.680 | pe_c0_r0.reg3.out[24]$_DFFE_PP0P_/D
+       70 |       0 |     117 |            0 |    +1.8% |  -0.487 | -138.801 | pe_c0_r0.reg3.out[17]$_DFFE_PP0P_/D
+       80 |       0 |     132 |            0 |    +2.0% |  -0.487 | -133.931 | pe_c0_r0.reg3.out[28]$_DFFE_PP0P_/D
+       90 |       0 |     149 |            0 |    +2.3% |  -0.485 | -129.071 | pe_c0_r0.reg3.out[3]$_DFFE_PP0P_/D
+      100 |       0 |     162 |            0 |    +2.5% |  -0.481 | -124.230 | pe_c0_r0.reg0.out[21]$_DFFE_PP0P_/D
+      110 |       0 |     181 |            0 |    +2.8% |  -0.476 | -119.436 | pe_c0_r0.reg3.out[29]$_DFFE_PP0P_/D
+      120 |       0 |     196 |            0 |    +3.0% |  -0.469 | -114.713 | pe_c0_r0.reg1.out[21]$_DFFE_PP0P_/D
+      130 |       0 |     215 |            0 |    +3.3% |  -0.467 | -110.029 | pe_c0_r0.reg2.out[9]$_DFFE_PP0P_/D
+      140 |       0 |     234 |            0 |    +3.6% |  -0.463 | -105.377 | io_bottom_0.reg_out.out[30]$_DFFE_PP0P_/D
+      150 |       0 |     253 |            0 |    +3.9% |  -0.460 | -100.762 | io_top_0.reg_out.out[22]$_DFFE_PP0P_/D
+      160 |       0 |     270 |            0 |    +4.2% |  -0.458 | -96.168 | pe_c0_r0.reg1.out[16]$_DFFE_PP0P_/D
+      170 |       0 |     288 |            0 |    +4.4% |  -0.455 | -91.599 | io_bottom_0.reg_out.out[15]$_DFFE_PP0P_/D
+      180 |       0 |     304 |            0 |    +4.7% |  -0.448 | -87.082 | io_bottom_0.reg_out.out[23]$_DFFE_PP0P_/D
+      190 |       0 |     322 |            0 |    +5.0% |  -0.443 | -82.623 | io_top_0.reg_out.out[8]$_DFFE_PP0P_/D
+      200 |       0 |     338 |            0 |    +5.2% |  -0.440 | -78.211 | io_bottom_0.reg_out.out[29]$_DFFE_PP0P_/D
+      210 |       0 |     355 |            0 |    +5.5% |  -0.434 | -73.843 | io_bottom_0.reg_out.out[21]$_DFFE_PP0P_/D
+      220 |       0 |     373 |            0 |    +5.7% |  -0.429 | -69.527 | io_right_0.reg_out.out[4]$_DFFE_PP0P_/D
+      230 |       0 |     388 |            0 |    +6.0% |  -0.411 | -65.312 | io_bottom_0.reg_out.out[14]$_DFFE_PP0P_/D
+      240 |       0 |     401 |            0 |    +6.2% |  -0.398 | -61.270 | io_top_0.reg_out.out[30]$_DFFE_PP0P_/D
+      250 |       0 |     416 |            0 |    +6.4% |  -0.388 | -57.332 | io_top_0.reg_out.out[17]$_DFFE_PP0P_/D
+      260 |       0 |     429 |            0 |    +6.6% |  -0.378 | -53.502 | io_bottom_0.reg_in.out[8]$_DFFE_PP0P_/D
+      270 |       0 |     444 |            0 |    +6.8% |  -0.369 | -49.761 | io_right_0.reg_in.out[15]$_DFFE_PP0P_/D
+      280 |       0 |     458 |            0 |    +7.0% |  -0.358 | -46.029 | pe_c0_r0.crossbar.Mux2config.config_reg[0][0]$_DFF_PP0_/D
+      290 |       0 |     472 |            0 |    +7.3% |  -0.344 | -42.501 | io_bottom_0.reg_in.out[0]$_DFFE_PP0P_/D
+      300 |       0 |     483 |            0 |    +7.4% |  -0.332 | -39.126 | io_right_0.reg_in.out[24]$_DFFE_PP0P_/D
+      310 |       0 |     495 |            0 |    +7.6% |  -0.322 | -35.866 | io_right_0.reg_in.out[9]$_DFFE_PP0P_/D
+      320 |       0 |     506 |            0 |    +7.8% |  -0.313 | -32.669 | io_right_0.reg_in.out[22]$_DFFE_PP0P_/D
+      330 |       0 |     520 |            0 |    +8.0% |  -0.299 | -29.588 | pe_c0_r0.crossbar.Mux5config.config_reg[0][0]$_DFF_PP0_/D
+      340 |       0 |     532 |            0 |    +8.2% |  -0.290 | -26.497 | io_top_0.reg_in.out[19]$_DFFE_PP0P_/D
+      350 |       0 |     546 |            0 |    +8.4% |  -0.282 | -23.637 | io_right_0.reg_in.out[31]$_DFFE_PP0P_/D
+      360 |       0 |     558 |            0 |    +8.6% |  -0.272 | -20.861 | io_top_0.reg_in.out[15]$_DFFE_PP0P_/D
+      370 |       0 |     570 |            0 |    +8.8% |  -0.259 | -18.252 | io_top_0.reg_in.out[28]$_DFFE_PP0P_/D
+      380 |       0 |     582 |            0 |    +9.0% |  -0.249 | -15.706 | io_top_0.reg_in.out[2]$_DFFE_PP0P_/D
+      390 |       0 |     595 |            0 |    +9.2% |  -0.229 | -13.318 | pe_c0_r0.const_val.ConstVal.config_reg[0][4]$_DFF_PP0_/D
+      400 |       0 |     609 |            0 |    +9.4% |  -0.215 | -11.178 | io_top_0.reg_in.out[31]$_DFFE_PP0P_/D
+      410 |       0 |     621 |            0 |    +9.6% |  -0.195 |  -9.130 | pe_c0_r0.RES.out[3]$_DFFE_PP0P_/D
+      420 |       0 |     633 |            0 |    +9.7% |  -0.174 |  -7.463 | pe_c0_r0.RES.out[29]$_DFFE_PP0P_/D
+      430 |       0 |     644 |            0 |    +9.9% |  -0.158 |  -5.802 | io_top_0.reg_in.out[5]$_DFFE_PP0P_/D
+      440 |       0 |     654 |            0 |   +10.1% |  -0.149 |  -4.684 | pe_c0_r0.RES.out[20]$_DFFE_PP0P_/D
+      450 |       0 |     664 |            0 |   +10.2% |  -0.130 |  -3.406 | pe_c0_r0.rega.out[15]$_DFFE_PP0P_/D
+      460 |       0 |     673 |            0 |   +10.4% |  -0.119 |  -2.629 | mem_0.WriteRq.config_reg[0]$_DFF_PP0_/D
+      470 |       0 |     683 |            0 |   +10.5% |  -0.119 |  -1.768 | mem_0.WriteRq.config_reg[0]$_DFF_PP0_/D
+      480 |       0 |     693 |            0 |   +10.7% |  -0.119 |  -1.142 | mem_0.WriteRq.config_reg[0]$_DFF_PP0_/D
+      490 |       0 |     703 |            0 |   +10.8% |  -0.067 |  -0.490 | io_top_0.RegOutConfig.config_reg[0]$_DFF_PP0_/D
+      500 |       0 |     713 |            0 |   +11.0% |  -0.005 |  -0.008 | io_top_0.reg_out.out[3]$_DFFE_PP0P_/D
+    final |       0 |     715 |            0 |   +11.0% |   0.000 |   0.000 | pe_c0_r0.rega.out[24]$_DFFE_PP0P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 715 hold buffers.
+[INFO RSZ-0506] Runtime: 1.42s
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:01.06[h:]min:sec. CPU time: user 1.09 sys 0.04 (107%). Peak memory: 70456KB.
+Repair timing output passed lec test
+detailed_placement
+[INFO DPL-0006] Core area: 265090.49 um^2
+[INFO DPL-0007] Movable instances area: 67783.76 um^2
+[INFO DPL-0008] Fixed instances area within core: 4420.49 um^2
+[INFO DPL-0009] Utilization: 27.2%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 10713 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |       3491 |       589 |      2887
+        1 |       1137 |       171 |       945
+        2 |        550 |        80 |       467
+        3 |        394 |        52 |       330
+        4 |        257 |        35 |       222
+        5 |        166 |        20 |       146
+        6 |        157 |        15 |       142
+        7 |        103 |        11 |        92
+        8 |         60 |         8 |        52
+        9 |         44 |         4 |        40
+       10 |         34 |         4 |        30
+       17 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 17.
+[INFO DPL-0500] Runtime: 0.14s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                5444
+total displacement       4836.9 u
+average displacement        0.5 u
+max displacement           25.4 u
+original HPWL          254346.9 u
+legalized HPWL         258603.0 u
+delta HPWL                    2 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 72204 um^2 27% utilization.
+write_db ./results/sky130hd/cgra_U0/base/4_1_cts.odb
+write_sdc -no_timestamp ./results/sky130hd/cgra_U0/base/4_cts.sdc
+Elapsed time: 0:07.84[h:]min:sec. CPU time: user 9.33 sys 0.55 (126%). Peak memory: 187756KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+4_1_cts                .odb          1        1     1.07       68 83c896ed58

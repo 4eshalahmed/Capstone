@@ -1,0 +1,12 @@
+violation type: Metal Spacing
+	srcs: net:net1139
+	bbox = (205.2250, 93.7400) - (205.4600, 93.8450) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net1138
+	bbox = (205.7050, 93.8000) - (205.9950, 93.8950) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net1271
+	bbox = (212.1450, 94.1250) - (212.4350, 94.2200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:VSS net:net1139
+	bbox = (205.7000, 95.0150) - (205.7800, 95.3850) on Layer met2

@@ -1,0 +1,42 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/cgra_U0/base/3_3_place_gp.odb
+read_sdc ./results/sky130hd/cgra_U0/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      7109
+     1000 |     +0.0% |       1 |       1 |             1 |      6109
+     2000 |     +0.0% |       1 |       1 |             1 |      5109
+     3000 |     +0.0% |       1 |       1 |             1 |      4109
+     4000 |     +0.0% |       1 |       1 |             1 |      3109
+     5000 |     +0.0% |       1 |       1 |             1 |      2109
+     6000 |     +0.0% |       1 |       1 |             1 |      1109
+     7000 |     +0.0% |       1 |       1 |             1 |       109
+    final |     +0.0% |       1 |       1 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0039] Resized 1 instances.
+[INFO RSZ-0038] Inserted 1 buffers in 1 nets.
+[INFO RSZ-0504] Runtime: 0.31s
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 62955 um^2 24% utilization.
+Instance count before 9880, after 9881
+Pin count before 23570, after 23572
+write_db ./results/sky130hd/cgra_U0/base/3_4_place_resized.odb
+Elapsed time: 0:01.73[h:]min:sec. CPU time: user 1.89 sys 0.09 (114%). Peak memory: 166740KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          1        2     1.14      162 0dd703beb4
