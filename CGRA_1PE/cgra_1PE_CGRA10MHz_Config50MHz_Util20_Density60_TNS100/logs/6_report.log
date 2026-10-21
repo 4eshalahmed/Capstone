@@ -1,0 +1,84 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/cgra_U0/base/6_1_fill.odb
+read_sdc ./results/sky130hd/cgra_U0/base/6_1_fill.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db ./results/sky130hd/cgra_U0/base/6_final.odb
+write_sdc -no_timestamp ./results/sky130hd/cgra_U0/base/6_final.sdc
+Deleted 0 routing obstructions
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:01.07[h:]min:sec. CPU time: user 1.05 sys 0.04 (101%). Peak memory: 51368KB.
+Global output passed lec test
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation cgra_U0 (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 30259 rc segments
+[INFO RCX-0439] Coupling Cap extraction cgra_U0 ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 55% of 69637 wires extracted
+[INFO RCX-0442] 100% of 69637 wires extracted
+[INFO RCX-0045] Extract 7634 nets, 37854 rsegs, 37854 caps, 79907 ccs
+[INFO RCX-0443] 7634 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 1.18e-02 W
+Supply voltage   : 1.80e+00 V
+Worstcase voltage: 1.80e+00 V
+Average voltage  : 1.80e+00 V
+Average IR drop  : 9.38e-06 V
+Worstcase IR drop: 9.39e-04 V
+Percentage drop  : 0.05 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 1.18e-02 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.19e-03 V
+Average voltage  : 9.38e-06 V
+Average IR drop  : 9.38e-06 V
+Worstcase IR drop: 1.19e-03 V
+Percentage drop  : 0.07 %
+######################################
+Cell type report:                       Count        Area
+  Fill cell                             27549   195085.85
+  Tap cell                               3533     4420.49
+  Antenna cell                             24       60.06
+  Clock buffer                             67     1460.15
+  Timing Repair Buffer                   1313    12396.89
+  Inverter                                115      432.92
+  Clock inverter                           30      445.43
+  Sequential cell                         493    12343.09
+  Multi-Input combinational cell         4897    38445.62
+  Total                                 38021   265090.49
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 70005 um^2 26% utilization.
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/cts_default_cgra_clk.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/cts_default_cgra_clk_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/cts_default_config_clk.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/cts_default_config_clk_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_resizer.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_congestion.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/cgra_U0/base/final_worst_path.webp.png
+Elapsed time: 0:12.24[h:]min:sec. CPU time: user 12.67 sys 0.47 (107%). Peak memory: 325968KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+6_report                             1        1     1.02       50 N/A

@@ -1,0 +1,252 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/cgra_U0/base/3_place.odb
+read_sdc ./results/sky130hd/cgra_U0/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0007] Net "CGRA_Clock" found for clock "cgra_clk".
+[INFO CTS-0010]  Clock net "CGRA_Clock" has 416 sinks.
+[INFO CTS-0007] Net "Config_Clock" found for clock "config_clk".
+[INFO CTS-0010]  Clock net "Config_Clock" has 77 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net CGRA_Clock.
+[INFO CTS-0028]  Total number of sinks: 416.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0206] Best clustering solution was found from max clustering size of 14 and max clustering diameter of 112.
+[INFO CTS-0019]  Total number of sinks after clustering: 40.
+[INFO CTS-0024]  Normalized sink region: [(1.4493, 3.89951), (17.423, 28.9826)].
+[INFO CTS-0025]     Width:  15.9737.
+[INFO CTS-0026]     Height: 25.0831.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 20
+    Sub-region size: 15.9737 X 12.5415
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 10
+    Sub-region size: 7.9869 X 12.5415
+[INFO CTS-0034]     Segment length (rounded): 4.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 40.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net Config_Clock.
+[INFO CTS-0028]  Total number of sinks: 77.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(9925, 61260), (283625, 352180)].
+[INFO CTS-0024]  Normalized sink region: [(0.729779, 4.50441), (20.8548, 25.8956)].
+[INFO CTS-0025]     Width:  20.1250.
+[INFO CTS-0026]     Height: 21.3912.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 39
+    Sub-region size: 20.1250 X 10.6956
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 20
+    Sub-region size: 10.0625 X 10.6956
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 10
+    Sub-region size: 10.0625 X 5.3478
+[INFO CTS-0034]     Segment length (rounded): 2.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 77.
+[INFO CTS-0018]     Created 45 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 45 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 5:1, 6:1, 7:2, 8:3, 9:7, 10:7, 11:10, 12:7, 13:4, 14:2..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0018]     Created 9 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 9 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 6:1, 7:1, 9:1, 10:3, 11:1, 14:1..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0098] Clock net "CGRA_Clock"
+[INFO CTS-0099]  Sinks 452
+[INFO CTS-0100]  Leaf buffers 40
+[INFO CTS-0101]  Average sink wire length 526.16 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Dummy loads inserted 36
+[INFO CTS-0098] Clock net "Config_Clock"
+[INFO CTS-0099]  Sinks 84
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 454.11 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Dummy loads inserted 7
+[INFO CTS-0500] Runtime: 0.32s
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 265090.49 um^2
+[INFO DPL-0007] Movable instances area: 58278.39 um^2
+[INFO DPL-0008] Fixed instances area within core: 4420.49 um^2
+[INFO DPL-0009] Utilization: 23.7%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 9728 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |        272 |        40 |       232
+        1 |         30 |         2 |        28
+        2 |         14 |         2 |        12
+        3 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 3.
+[INFO DPL-0500] Runtime: 0.04s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                1997
+total displacement       6198.7 u
+average displacement        0.6 u
+max displacement           16.2 u
+original HPWL          232381.7 u
+legalized HPWL         236149.0 u
+delta HPWL                    2 %
+
+estimate_parasitics -placement
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 0.15s
+[INFO RSZ-0046] Found 479 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.643 | -178.691 | mem_0.MuxData.config_reg[0]$_DFF_PP0_/D
+       10 |       0 |       9 |            0 |    +0.1% |  -0.592 | -173.884 | io_right_0.RegOutConfig.config_reg[0]$_DFF_PP0_/D
+       20 |       0 |      21 |            0 |    +0.3% |  -0.496 | -167.635 | pe_c0_r0.reg3.out[15]$_DFFE_PP0P_/D
+       30 |       0 |      34 |            0 |    +0.5% |  -0.494 | -162.688 | pe_c0_r0.reg3.out[0]$_DFFE_PP0P_/D
+       40 |       0 |      50 |            0 |    +0.8% |  -0.492 | -157.751 | pe_c0_r0.reg1.out[10]$_DFFE_PP0P_/D
+       50 |       0 |      67 |            0 |    +1.1% |  -0.491 | -152.837 | pe_c0_r0.reg1.out[28]$_DFFE_PP0P_/D
+       60 |       0 |      86 |            0 |    +1.4% |  -0.490 | -147.934 | pe_c0_r0.reg3.out[4]$_DFFE_PP0P_/D
+       70 |       0 |     104 |            0 |    +1.7% |  -0.488 | -143.041 | pe_c0_r0.reg2.out[3]$_DFFE_PP0P_/D
+       80 |       0 |     123 |            0 |    +2.0% |  -0.487 | -138.145 | pe_c0_r0.reg1.out[25]$_DFFE_PP0P_/D
+       90 |       0 |     143 |            0 |    +2.3% |  -0.485 | -133.243 | pe_c0_r0.reg0.out[22]$_DFFE_PP0P_/D
+      100 |       0 |     160 |            0 |    +2.6% |  -0.482 | -128.391 | pe_c0_r0.reg1.out[24]$_DFFE_PP0P_/D
+      110 |       0 |     176 |            0 |    +2.8% |  -0.472 | -123.344 | pe_c0_r0.reg0.out[12]$_DFFE_PP0P_/D
+      120 |       0 |     195 |            0 |    +3.1% |  -0.469 | -118.638 | pe_c0_r0.reg1.out[14]$_DFFE_PP0P_/D
+      130 |       0 |     214 |            0 |    +3.4% |  -0.467 | -113.959 | pe_c0_r0.reg1.out[22]$_DFFE_PP0P_/D
+      140 |       0 |     234 |            0 |    +3.7% |  -0.461 | -109.320 | pe_c0_r0.reg0.out[1]$_DFFE_PP0P_/D
+      150 |       0 |     252 |            0 |    +4.0% |  -0.459 | -104.718 | pe_c0_r0.rega.out[3]$_DFFE_PP0P_/D
+      160 |       0 |     269 |            0 |    +4.3% |  -0.456 | -100.142 | io_bottom_0.reg_out.out[10]$_DFFE_PP0P_/D
+      170 |       0 |     287 |            0 |    +4.6% |  -0.452 | -95.601 | io_top_0.reg_out.out[29]$_DFFE_PP0P_/D
+      180 |       0 |     304 |            0 |    +4.9% |  -0.448 | -91.079 | io_bottom_0.reg_out.out[12]$_DFFE_PP0P_/D
+      190 |       0 |     322 |            0 |    +5.1% |  -0.442 | -86.622 | io_bottom_0.reg_out.out[19]$_DFFE_PP0P_/D
+      200 |       0 |     338 |            0 |    +5.4% |  -0.439 | -82.147 | io_right_0.reg_out.out[31]$_DFFE_PP0P_/D
+      210 |       0 |     356 |            0 |    +5.7% |  -0.432 | -77.793 | pe_c0_r0.const_val.ConstVal.config_reg[0][8]$_DFF_PP0_/D
+      220 |       0 |     372 |            0 |    +5.9% |  -0.427 | -73.385 | io_right_0.reg_out.out[18]$_DFFE_PP0P_/D
+      230 |       0 |     389 |            0 |    +6.2% |  -0.412 | -69.170 | io_bottom_0.reg_out.out[0]$_DFFE_PP0P_/D
+      240 |       0 |     406 |            0 |    +6.5% |  -0.406 | -65.083 | io_bottom_0.reg_out.out[9]$_DFFE_PP0P_/D
+      250 |       0 |     422 |            0 |    +6.7% |  -0.399 | -61.052 | pe_c0_r0.crossbar.Mux0config.config_reg[0][2]$_DFF_PP0_/D
+      260 |       0 |     437 |            0 |    +7.0% |  -0.394 | -57.120 | io_bottom_0.reg_out.out[16]$_DFFE_PP0P_/D
+      270 |       0 |     450 |            0 |    +7.2% |  -0.386 | -53.224 | pe_c0_r0.const_val.ConstVal.config_reg[0][30]$_DFF_PP0_/D
+      280 |       0 |     461 |            0 |    +7.4% |  -0.374 | -49.070 | io_right_0.reg_in.out[0]$_DFFE_PP0P_/D
+      290 |       0 |     473 |            0 |    +7.6% |  -0.368 | -45.356 | pe_c0_r0.ALUconfig.config_reg[0][2]$_DFF_PP0_/D
+      300 |       0 |     484 |            0 |    +7.7% |  -0.364 | -41.777 | pe_c0_r0.regb.out[11]$_DFFE_PP0P_/D
+      310 |       0 |     495 |            0 |    +7.9% |  -0.346 | -38.209 | io_right_0.reg_in.out[18]$_DFFE_PP0P_/D
+      320 |       0 |     505 |            0 |    +8.1% |  -0.337 | -35.228 | io_bottom_0.reg_in.out[19]$_DFFE_PP0P_/D
+      330 |       0 |     515 |            0 |    +8.2% |  -0.325 | -31.465 | io_top_0.reg_in.out[14]$_DFFE_PP0P_/D
+      340 |       0 |     528 |            0 |    +8.4% |  -0.318 | -28.246 | io_top_0.reg_in.out[25]$_DFFE_PP0P_/D
+      350 |       0 |     539 |            0 |    +8.6% |  -0.307 | -25.670 | pe_c0_r0.regb.out[17]$_DFFE_PP0P_/D
+      360 |       0 |     553 |            0 |    +8.8% |  -0.291 | -22.673 | io_bottom_0.reg_in.out[29]$_DFFE_PP0P_/D
+      370 |       0 |     566 |            0 |    +9.0% |  -0.277 | -19.731 | io_top_0.reg_in.out[22]$_DFFE_PP0P_/D
+      380 |       0 |     577 |            0 |    +9.2% |  -0.268 | -17.002 | pe_c0_r0.crossbar.Mux4config.config_reg[0][0]$_DFF_PP0_/D
+      390 |       0 |     587 |            0 |    +9.4% |  -0.249 | -14.505 | io_top_0.reg_in.out[18]$_DFFE_PP0P_/D
+      400 |       0 |     603 |            0 |    +9.6% |  -0.239 | -11.999 | io_bottom_0.reg_in.out[31]$_DFFE_PP0P_/D
+      410 |       0 |     616 |            0 |    +9.8% |  -0.226 |  -9.924 | pe_c0_r0.ALUconfig.config_reg[0][3]$_DFF_PP0_/D
+      420 |       0 |     624 |            0 |   +10.0% |  -0.193 |  -8.288 | io_top_0.reg_in.out[5]$_DFFE_PP0P_/D
+      430 |       0 |     635 |            0 |   +10.1% |  -0.178 |  -6.814 | pe_c0_r0.RES.out[7]$_DFFE_PP0P_/D
+      440 |       0 |     646 |            0 |   +10.3% |  -0.167 |  -5.276 | pe_c0_r0.rega.out[10]$_DFFE_PP0P_/D
+      450 |       0 |     657 |            0 |   +10.5% |  -0.151 |  -3.869 | pe_c0_r0.crossbar.Mux4config.config_reg[0][2]$_DFF_PP0_/D
+      460 |       0 |     668 |            0 |   +10.7% |  -0.138 |  -2.809 | io_top_0.reg_in.out[26]$_DFFE_PP0P_/D
+      470 |       0 |     681 |            0 |   +10.9% |  -0.114 |  -1.615 | mem_0.MuxData.config_reg[0]$_DFF_PP0_/D
+      480 |       0 |     688 |            0 |   +11.0% |  -0.114 |  -1.413 | mem_0.MuxData.config_reg[0]$_DFF_PP0_/D
+      480 |       0 |     688 |            0 |   +11.0% |  -0.114 |  -1.413 | mem_0.MuxData.config_reg[0]$_DFF_PP0_/D
+      490 |       0 |     697 |            0 |   +11.1% |  -0.072 |  -0.465 | pe_c0_r0.Reg1config.config_reg[0]$_DFF_PP0_/D
+      500 |       0 |     705 |            0 |   +11.3% |  -0.010 |  -0.020 | io_bottom_0.reg_in.out[10]$_DFFE_PP0P_/D
+    final |       0 |     710 |            0 |   +11.3% |   0.000 |   0.000 | io_right_0.reg_in.out[9]$_DFFE_PP0P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 710 hold buffers.
+[INFO RSZ-0506] Runtime: 1.46s
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:00.52[h:]min:sec. CPU time: user 0.55 sys 0.03 (111%). Peak memory: 49920KB.
+Repair timing output passed lec test
+detailed_placement
+[INFO DPL-0006] Core area: 265090.49 um^2
+[INFO DPL-0007] Movable instances area: 65385.21 um^2
+[INFO DPL-0008] Fixed instances area within core: 4420.49 um^2
+[INFO DPL-0009] Utilization: 26.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 10438 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |       3606 |       558 |      3018
+        1 |       1389 |       199 |      1184
+        2 |        943 |       121 |       822
+        3 |        625 |        81 |       544
+        4 |        425 |        47 |       378
+        5 |        302 |        38 |       246
+        6 |        219 |        25 |       191
+        7 |        172 |        20 |       152
+        8 |         98 |        14 |        84
+        9 |         74 |        10 |        64
+       10 |         28 |         4 |        24
+       17 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 17.
+[INFO DPL-0500] Runtime: 0.14s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                4789
+total displacement       4849.4 u
+average displacement        0.5 u
+max displacement           20.5 u
+original HPWL          242025.6 u
+legalized HPWL         246435.1 u
+delta HPWL                    2 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 69806 um^2 26% utilization.
+write_db ./results/sky130hd/cgra_U0/base/4_1_cts.odb
+write_sdc -no_timestamp ./results/sky130hd/cgra_U0/base/4_cts.sdc
+Elapsed time: 0:04.58[h:]min:sec. CPU time: user 5.22 sys 0.28 (120%). Peak memory: 187512KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+4_1_cts                .odb          0        1     1.12       48 c57f52d517

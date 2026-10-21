@@ -1,0 +1,6 @@
+violation type: Short
+	srcs: net:net531 net:_02651_
+	bbox = (106.6550, 161.6500) - (106.8700, 161.6800) on Layer met1
+violation type: Short
+	srcs: net:net531 net:_02651_
+	bbox = (106.7300, 161.6500) - (106.8700, 161.6800) on Layer met1
