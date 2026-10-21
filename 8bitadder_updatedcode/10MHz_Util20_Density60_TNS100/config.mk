@@ -1,0 +1,9 @@
+export DESIGN_NAME = adder8
+export PLATFORM = sky130hd
+
+export VERILOG_FILES = $(DESIGN_HOME)/src/ClockedAdder8/adder8.v
+export SDC_FILE = $(DESIGN_HOME)/sky130hd/ClockedAdder8_10MHz_Util20_Density60_TNS100/constraint.sdc
+
+export CORE_UTILIZATION = 20
+export PLACE_DENSITY = 0.60
+export TNS_END_PERCENT = 100
