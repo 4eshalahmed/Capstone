@@ -1,0 +1,99 @@
+[2026-10-21 19:28:12.404] [miter_logger] [info] MiterStrategy::run starting
+[2026-10-21 19:28:12.404] [miter_logger] [info] Collecting POs for design 0: cgra_U0
+
+[2026-10-21 19:28:12.435] [miter_logger] [info] Collected 627 PIs for design 0
+
+[2026-10-21 19:28:12.435] [miter_logger] [info] Collected 1641 POs for design 0
+
+[2026-10-21 19:28:12.435] [miter_logger] [info] design 0 PI summary by model/term (627 total terminals, 12 unique rows):
+| Model                    | Term                             | Count |
+|--------------------------|----------------------------------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q                                |   488 |
+| cgra_U0                  | io_bottom_0_IOPin_bidir_in       |    32 |
+| cgra_U0                  | io_right_0_IOPin_bidir_in        |    32 |
+| cgra_U0                  | io_top_0_IOPin_bidir_in          |    32 |
+| cgra_U0                  | mem_0_mem_unit_data_out_from_ram |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | Q                                |     5 |
+| cgra_U0                  | CGRA_Clock                       |     1 |
+| cgra_U0                  | CGRA_Enable                      |     1 |
+| cgra_U0                  | CGRA_Reset                       |     1 |
+| cgra_U0                  | ConfigIn                         |     1 |
+| cgra_U0                  | Config_Clock                     |     1 |
+| cgra_U0                  | Config_Reset                     |     1 |
+
+[2026-10-21 19:28:12.435] [miter_logger] [info] design 0 PO summary by model/term (1641 total terminals, 13 unique rows):
+| Model                    | Term                          | Count |
+|--------------------------|-------------------------------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK                           |   488 |
+| sky130_fd_sc_hd__dfrtp_1 | D                             |   488 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B                       |   488 |
+| cgra_U0                  | io_bottom_0_IOPin_bidir_out   |    32 |
+| cgra_U0                  | io_right_0_IOPin_bidir_out    |    32 |
+| cgra_U0                  | io_top_0_IOPin_bidir_out      |    32 |
+| cgra_U0                  | mem_0_mem_unit_addr_to_ram    |    32 |
+| cgra_U0                  | mem_0_mem_unit_data_in_to_ram |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | CLK                           |     5 |
+| sky130_fd_sc_hd__dfrtp_2 | D                             |     5 |
+| sky130_fd_sc_hd__dfrtp_2 | RESET_B                       |     5 |
+| cgra_U0                  | ConfigOut                     |     1 |
+| cgra_U0                  | mem_0_mem_unit_w_rq_to_ram    |     1 |
+
+[2026-10-21 19:28:12.435] [miter_logger] [info] Collecting POs for design 1: cgra_U0
+
+[2026-10-21 19:28:12.462] [miter_logger] [info] size of common inputs: 627
+[2026-10-21 19:28:12.462] [miter_logger] [info] size of diff0 inputs: 0
+[2026-10-21 19:28:12.462] [miter_logger] [info] size of diff1 inputs: 0
+[2026-10-21 19:28:12.462] [miter_logger] [info] Collected 627 PIs for design 1
+
+[2026-10-21 19:28:12.462] [miter_logger] [info] Collected 1641 POs for design 1
+
+[2026-10-21 19:28:12.462] [miter_logger] [info] design 1 PI summary by model/term (627 total terminals, 12 unique rows):
+| Model                    | Term                             | Count |
+|--------------------------|----------------------------------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q                                |   488 |
+| cgra_U0                  | io_bottom_0_IOPin_bidir_in       |    32 |
+| cgra_U0                  | io_right_0_IOPin_bidir_in        |    32 |
+| cgra_U0                  | io_top_0_IOPin_bidir_in          |    32 |
+| cgra_U0                  | mem_0_mem_unit_data_out_from_ram |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | Q                                |     5 |
+| cgra_U0                  | CGRA_Clock                       |     1 |
+| cgra_U0                  | CGRA_Enable                      |     1 |
+| cgra_U0                  | CGRA_Reset                       |     1 |
+| cgra_U0                  | ConfigIn                         |     1 |
+| cgra_U0                  | Config_Clock                     |     1 |
+| cgra_U0                  | Config_Reset                     |     1 |
+
+[2026-10-21 19:28:12.462] [miter_logger] [info] design 1 PO summary by model/term (1641 total terminals, 13 unique rows):
+| Model                    | Term                          | Count |
+|--------------------------|-------------------------------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK                           |   488 |
+| sky130_fd_sc_hd__dfrtp_1 | D                             |   488 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B                       |   488 |
+| cgra_U0                  | io_bottom_0_IOPin_bidir_out   |    32 |
+| cgra_U0                  | io_right_0_IOPin_bidir_out    |    32 |
+| cgra_U0                  | io_top_0_IOPin_bidir_out      |    32 |
+| cgra_U0                  | mem_0_mem_unit_addr_to_ram    |    32 |
+| cgra_U0                  | mem_0_mem_unit_data_in_to_ram |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | CLK                           |     5 |
+| sky130_fd_sc_hd__dfrtp_2 | D                             |     5 |
+| sky130_fd_sc_hd__dfrtp_2 | RESET_B                       |     5 |
+| cgra_U0                  | ConfigOut                     |     1 |
+| cgra_U0                  | mem_0_mem_unit_w_rq_to_ram    |     1 |
+
+[2026-10-21 19:28:12.462] [miter_logger] [info] normalizeInputs: starting
+[2026-10-21 19:28:12.463] [miter_logger] [info] size of common inputs: 627
+[2026-10-21 19:28:12.463] [miter_logger] [info] size of diff0 inputs: 0
+[2026-10-21 19:28:12.463] [miter_logger] [info] size of diff1 inputs: 0
+[2026-10-21 19:28:12.463] [miter_logger] [info] normalizeOutputs: starting
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of common outputs: 1641
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of diff0 outputs: 0
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of diff1 outputs: 0
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of PIs in circuit 0: 627
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of PIs in circuit 1: 627
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of POs in circuit 0: 1641
+[2026-10-21 19:28:12.464] [miter_logger] [info] size of POs in circuit 1: 1641
+[2026-10-21 19:28:12.587] [miter_logger] [info] Building miter expression
+[2026-10-21 19:28:12.587] [miter_logger] [info] Finished building miter expression
+[2026-10-21 19:28:12.588] [miter_logger] [info] Starting solver
+[2026-10-21 19:28:12.588] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-10-21 19:28:12.588] [miter_logger] [info] Circuits are IDENTICAL

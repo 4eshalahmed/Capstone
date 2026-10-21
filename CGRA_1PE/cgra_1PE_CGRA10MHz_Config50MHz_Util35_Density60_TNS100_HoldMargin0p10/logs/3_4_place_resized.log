@@ -1,0 +1,38 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/cgra_U0/base/3_3_place_gp.odb
+read_sdc ./results/sky130hd/cgra_U0/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      6889
+     1000 |     +0.0% |       0 |       0 |             0 |      5889
+     2000 |     +0.0% |       0 |       0 |             0 |      4889
+     3000 |     +0.0% |       0 |       0 |             0 |      3889
+     4000 |     +0.0% |       0 |       0 |             0 |      2889
+     5000 |     +0.0% |       0 |       0 |             0 |      1889
+     6000 |     +0.0% |       0 |       0 |             0 |       889
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.49s
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 59090 um^2 39% utilization.
+Instance count before 8143, after 8143
+Pin count before 23130, after 23130
+write_db ./results/sky130hd/cgra_U0/base/3_4_place_resized.odb
+Elapsed time: 0:02.45[h:]min:sec. CPU time: user 2.37 sys 0.07 (99%). Peak memory: 162612KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          2        2     1.00      158 9c430cc117
