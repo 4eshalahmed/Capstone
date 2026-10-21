@@ -1,0 +1,62 @@
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Using ABC speed script.
+1. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/designs/src/cgra_1PE/cgrame_1PE.v
+4. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+5. Executing HIERARCHY pass (managing design hierarchy).
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\cgra_U0'.
+6.1. Analyzing design hierarchy..
+6.2. Executing AST frontend in derive mode using pre-parsed AST for module `\hycube_in15_out15_U3'.
+6.3. Executing AST frontend in derive mode using pre-parsed AST for module `\memoryPort_2connect_32b_U2'.
+6.4. Executing AST frontend in derive mode using pre-parsed AST for module `\io_32b_U1'.
+6.5. Analyzing design hierarchy..
+6.6. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_register_32b'.
+6.7. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_configcell_context_II_1_1_size1'.
+Warning: Replacing memory \config_reg with list of registers. See /OpenROAD-flow-scripts/flow/designs/src/cgra_1PE/cgrame_1PE.v:106
+6.8. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_tristate_32b'.
+6.9. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_mux_2to1_32b'.
+6.10. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_memUnit_32b'.
+6.11. Executing AST frontend in derive mode using pre-parsed AST for module `\crossbar_7in_6out_32data_size_U7'.
+6.12. Executing AST frontend in derive mode using pre-parsed AST for module `\const_32b_U6'.
+6.13. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_configcell_context_II_1_1_size4'.
+Warning: Replacing memory \config_reg with list of registers. See /OpenROAD-flow-scripts/flow/designs/src/cgra_1PE/cgrame_1PE.v:244
+6.14. Executing AST frontend in derive mode using pre-parsed AST for module `\func_32b_add_sub_multiply_and_or_xor_shl_ashr_lshr_cmp_U4'.
+6.15. Analyzing design hierarchy..
+6.16. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_xor_32b'.
+6.17. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_sub_32b'.
+6.18. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_shl_32b'.
+6.19. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_or_32b'.
+6.20. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_multiply_32b'.
+6.21. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_lshr_32b'.
+6.22. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_cmp_32b'.
+6.23. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_ashr_32b'.
+6.24. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_and_32b'.
+6.25. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_op_add_32b'.
+6.26. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_caseStatement_10in_0latency_32b'.
+Warning: Replacing memory \delay_ppln with list of registers. See /OpenROAD-flow-scripts/flow/designs/src/cgra_1PE/cgrame_1PE.v:66
+6.27. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_configcell_context_II_1_1_size32'.
+Warning: Replacing memory \config_reg with list of registers. See /OpenROAD-flow-scripts/flow/designs/src/cgra_1PE/cgrame_1PE.v:152
+6.28. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_mux_7to1_32b'.
+6.29. Executing AST frontend in derive mode using pre-parsed AST for module `\cgrame_configcell_context_II_1_1_size3'.
+Warning: Replacing memory \config_reg with list of registers. See /OpenROAD-flow-scripts/flow/designs/src/cgra_1PE/cgrame_1PE.v:198
+6.30. Analyzing design hierarchy..
+6.31. Analyzing design hierarchy..
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module $paramod$0526a4cf62dc9354145dc4b3996532e5e6db57e4\cgrame_mux_7to1_32b because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$0526a4cf62dc9354145dc4b3996532e5e6db57e4\cgrame_configcell_context_II_1_1_size32 because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$6eaceeb2ba42498e4e196dea9d711f75da863f03\cgrame_caseStatement_10in_0latency_32b because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$f733d02ef52314e2b022d58ebd7d7ebbf1b17356\cgrame_configcell_context_II_1_1_size4 because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$0526a4cf62dc9354145dc4b3996532e5e6db57e4\cgrame_mux_2to1_32b because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$5241ab18908e7406f4b71cddce45b3ef0442e1ec\cgrame_configcell_context_II_1_1_size1 because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$0526a4cf62dc9354145dc4b3996532e5e6db57e4\cgrame_register_32b because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$96cf44bd91df23a218d8c660d5c50944358cb235\cgrame_configcell_context_II_1_1_size3 because it contains processes (run 'proc' command first).
+8. Executing RTLIL backend.
+Warnings: 13 unique messages, 13 total
+End of script. Logfile hash: ef79d1b1ac, time: 0.20s, user: 0.15s, system: 0.03s, MEM: 55.16 MB peak
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 65% 4x read_liberty (0 sec), 15% 4x read_verilog (0 sec), ...
+Elapsed time: 0:00.21[h:]min:sec. CPU time: user 0.16 sys 0.04 (97%). Peak memory: 59360KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+1_1_yosys_canonicalize .rtlil        0        0     0.95       57 32cd7a1ae4
