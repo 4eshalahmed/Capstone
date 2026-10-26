@@ -1,0 +1,39 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/mux8/base/3_3_place_gp.odb
+read_sdc ./results/sky130hd/mux8/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |        78
+       10 |     +0.0% |       0 |       0 |             0 |        68
+       20 |     +0.0% |       0 |       0 |             0 |        58
+       30 |     +0.0% |       0 |       0 |             0 |        48
+       40 |     +0.0% |       0 |       0 |             0 |        38
+       50 |     +0.0% |       0 |       0 |             0 |        28
+       60 |     +0.0% |       0 |       0 |             0 |        18
+       70 |     +0.0% |       0 |       0 |             0 |         8
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.00s
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 1025 um^2 76% utilization.
+Instance count before 74, after 74
+Pin count before 184, after 184
+write_db ./results/sky130hd/mux8/base/3_4_place_resized.odb
+Elapsed time: 0:00.34[h:]min:sec. CPU time: user 0.29 sys 0.05 (99%). Peak memory: 135180KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          0        0     1.00      132 a8aa2d1501
