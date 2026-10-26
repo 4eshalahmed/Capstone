@@ -1,0 +1,100 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/multiplier8/base/2_floorplan.odb
+read_sdc ./results/sky130hd/multiplier8/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  1.380  2.720 ) ( 74.980 73.440 ) um
+[INFO GPL-0016] Core area:                    5204.992 um^2
+[INFO GPL-0036] Movable instances area:       2743.882 um^2
+[INFO GPL-0037] Total instances area:         2831.466 um^2
+[INFO GPL-0035] Pin density area adjust:       161.993 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:               287
+[INFO GPL-0007] Movable instances:                 217
+[INFO GPL-0008] Fixed instances:                    70
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                    307
+[INFO GPL-0011] Number of pins:                    831
+[INFO GPL-0012] Die BBox:       (  0.000  0.000 ) ( 76.080 76.080 ) um
+[INFO GPL-0013] Placement BBox: (  1.380  2.720 ) ( 74.980 73.440 ) um
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  5204.992 um^2
+[INFO GPL-0017] Fixed instances area:           87.584 um^2
+[INFO GPL-0018] Movable instances area:       2905.875 um^2
+[INFO GPL-0019] Utilization:                    56.784 %
+[INFO GPL-0020] Standard cells area:          2905.875 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 217	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:     13.391 um^2
+[INFO GPL-0025] Ideal bin area:                 22.319 um^2
+[INFO GPL-0026] Ideal bin count:                   233
+[INFO GPL-0027] Total bin area:               5204.992 um^2
+[INFO GPL-0028] Bin count (X, Y):           8 ,      8
+[INFO GPL-0029] Bin size (W * H):       9.200 *  8.840 um
+[INFO GPL-0030] Number of bins:                     64
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9343 |  6.744370e+02 |   +0.00% |  1.51e-13 |      
+       10 |   0.9266 |  4.903900e+02 |  -27.29% |  2.46e-13 |      
+       20 |   0.9280 |  4.949900e+02 |   +0.94% |  4.00e-13 |      
+       30 |   0.9278 |  4.943230e+02 |   -0.13% |  6.52e-13 |      
+       40 |   0.9279 |  4.937440e+02 |   -0.12% |  1.06e-12 |      
+       50 |   0.9277 |  4.939720e+02 |   +0.05% |  1.73e-12 |      
+       60 |   0.9275 |  4.940480e+02 |   +0.02% |  2.82e-12 |      
+       70 |   0.9271 |  4.939200e+02 |   -0.03% |  4.59e-12 |      
+       80 |   0.9264 |  4.939930e+02 |   +0.01% |  7.48e-12 |      
+       90 |   0.9251 |  4.925230e+02 |   -0.30% |  1.22e-11 |      
+      100 |   0.9224 |  4.929740e+02 |   +0.09% |  1.98e-11 |      
+      110 |   0.9171 |  4.953670e+02 |   +0.49% |  3.23e-11 |      
+      120 |   0.9059 |  5.062600e+02 |   +2.20% |  5.26e-11 |      
+      130 |   0.8862 |  5.354550e+02 |   +5.77% |  8.57e-11 |      
+      140 |   0.8667 |  6.464630e+02 |  +20.73% |  1.40e-10 |      
+      150 |   0.8417 |  9.473720e+02 |  +46.55% |  2.27e-10 |      
+      160 |   0.7554 |  1.180402e+03 |  +24.60% |  3.70e-10 |      
+      170 |   0.7318 |  1.409060e+03 |  +19.37% |  6.03e-10 |      
+      180 |   0.6950 |  1.550478e+03 |  +10.04% |  9.83e-10 |      
+      190 |   0.6463 |  1.697581e+03 |   +9.49% |  1.60e-09 |      
+      200 |   0.5854 |  1.829106e+03 |   +7.75% |  2.61e-09 |      
+      210 |   0.5267 |  1.998230e+03 |   +9.25% |  4.25e-09 |      
+      220 |   0.4781 |  2.169692e+03 |   +8.58% |  6.92e-09 |      
+      230 |   0.4248 |  2.352092e+03 |   +8.41% |  1.13e-08 |      
+      240 |   0.3709 |  2.494489e+03 |   +6.05% |  1.84e-08 |      
+      250 |   0.3220 |  2.593721e+03 |   +3.98% |  2.84e-08 |      
+      260 |   0.2810 |  2.690626e+03 |   +3.74% |  4.19e-08 |      
+      270 |   0.2441 |  2.775437e+03 |   +3.15% |  6.17e-08 |      
+      280 |   0.2078 |  2.836498e+03 |   +2.20% |  9.09e-08 |      
+      290 |   0.1771 |  2.893273e+03 |   +2.00% |  1.34e-07 |      
+      300 |   0.1525 |  2.955936e+03 |   +2.17% |  1.97e-07 |      
+      310 |   0.1268 |  2.988141e+03 |   +1.09% |  2.91e-07 |      
+      320 |   0.1022 |  3.008550e+03 |   +0.68% |  4.28e-07 |      
+      322 |   0.0985 |  3.010385e+03 |          |  4.81e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 322
+[INFO GPL-1002] Placed Cell Area             2905.8748
+[INFO GPL-1003] Available Free Area          5117.4080
+[INFO GPL-1004] Minimum Feasible Density        0.5700 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.6309
+[INFO GPL-1008]     - For 80% usage of free space: 0.7098
+[INFO GPL-1014] Final placement area: 2905.87 (+0.00%)
+[INFO GPL-1018] Final HPWL (um): 2987.22
+Design area 2831 um^2 54% utilization.
+write_db ./results/sky130hd/multiplier8/base/3_1_place_gp_skip_io.odb
+Elapsed time: 0:00.36[h:]min:sec. CPU time: user 0.33 sys 0.05 (102%). Peak memory: 103840KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_1_place_gp_skip_io   .odb          0        0     1.06      101 8ee256e288
