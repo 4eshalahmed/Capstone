@@ -1,0 +1,3 @@
+violation type: Metal Spacing
+	srcs: net:VDD net:Product[8]
+	bbox = (83.5900, 16.4850) - (83.8000, 16.5100) on Layer met3
