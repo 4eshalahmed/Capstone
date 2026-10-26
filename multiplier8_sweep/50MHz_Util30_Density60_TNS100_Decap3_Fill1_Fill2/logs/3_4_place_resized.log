@@ -1,0 +1,66 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/multiplier8/base/3_3_place_gp.odb
+read_sdc ./results/sky130hd/multiplier8/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       341
+       10 |     +0.0% |       0 |       0 |             0 |       331
+       20 |     +0.0% |       0 |       0 |             0 |       321
+       30 |     +0.0% |       0 |       0 |             0 |       311
+       40 |     +0.0% |       0 |       0 |             0 |       301
+       50 |     +0.0% |       0 |       0 |             0 |       291
+       60 |     +0.0% |       0 |       0 |             0 |       281
+       70 |     +0.0% |       0 |       0 |             0 |       271
+       80 |     +0.0% |       0 |       0 |             0 |       261
+       90 |     +0.0% |       0 |       0 |             0 |       251
+      100 |     +0.0% |       0 |       0 |             0 |       241
+      110 |     +0.0% |       0 |       0 |             0 |       231
+      120 |     +0.0% |       0 |       0 |             0 |       221
+      130 |     +0.0% |       0 |       0 |             0 |       211
+      140 |     +0.0% |       0 |       0 |             0 |       201
+      150 |     +0.0% |       0 |       0 |             0 |       191
+      160 |     +0.0% |       0 |       0 |             0 |       181
+      170 |     +0.0% |       0 |       0 |             0 |       171
+      180 |     +0.0% |       0 |       0 |             0 |       161
+      190 |     +0.0% |       0 |       0 |             0 |       151
+      200 |     +0.0% |       0 |       0 |             0 |       141
+      210 |     +0.0% |       0 |       0 |             0 |       131
+      220 |     +0.0% |       0 |       0 |             0 |       121
+      230 |     +0.0% |       0 |       0 |             0 |       111
+      240 |     +0.0% |       0 |       0 |             0 |       101
+      250 |     +0.0% |       0 |       0 |             0 |        91
+      260 |     +0.0% |       0 |       0 |             0 |        81
+      270 |     +0.0% |       0 |       0 |             0 |        71
+      280 |     +0.0% |       0 |       0 |             0 |        61
+      290 |     +0.0% |       0 |       0 |             0 |        51
+      300 |     +0.0% |       0 |       0 |             0 |        41
+      310 |     +0.0% |       0 |       0 |             0 |        31
+      320 |     +0.0% |       0 |       0 |             0 |        21
+      330 |     +0.0% |       0 |       0 |             0 |        11
+      340 |     +0.0% |       0 |       0 |             0 |         1
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.02s
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 3217 um^2 37% utilization.
+Instance count before 359, after 359
+Pin count before 899, after 899
+write_db ./results/sky130hd/multiplier8/base/3_4_place_resized.odb
+Elapsed time: 0:00.39[h:]min:sec. CPU time: user 0.35 sys 0.05 (102%). Peak memory: 135804KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          0        0     1.03      132 2f53ae74d2
