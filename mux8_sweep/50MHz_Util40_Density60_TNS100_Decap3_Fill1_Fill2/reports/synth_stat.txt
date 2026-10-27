@@ -1,0 +1,27 @@
+
+21. Printing statistics.
+
+=== mux8 ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+       32        -       32        - wires
+       53        -       53        - wire bits
+       31        -       31        - public wires
+       52        -       52        - public wire bits
+        6        -        6        - ports
+       27        -       27        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+       34  756.976       34  756.976 cells
+        1   11.261        1   11.261   sky130_fd_sc_hd__buf_6
+       25    625.6       25    625.6   sky130_fd_sc_hd__dfrtp_1
+        8  120.115        8  120.115   sky130_fd_sc_hd__mux2_4
+
+   Chip area for module '\mux8': 756.976000
+     of which used for sequential elements: 625.600000 (82.64%)
+
