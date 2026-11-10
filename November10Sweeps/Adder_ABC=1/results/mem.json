@@ -5,7 +5,7 @@
       "attributes": {
         "hdlname": "adder32",
         "top": "00000000000000000000000000000001",
-        "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:2.1-29.10"
+        "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:2.1-29.10"
       },
       "ports": {
         "clk": {
@@ -45,7 +45,7 @@
             "Y_WIDTH": "00000000000000000000000000100001"
           },
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14.20-14.45"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14.20-14.45"
           },
           "port_directions": {
             "A": "input",
@@ -76,7 +76,7 @@
             "WIDTH": "00000000000000000000000000100000"
           },
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
           },
           "port_directions": {
             "ARST": "input",
@@ -101,7 +101,7 @@
             "WIDTH": "00000000000000000000000000000001"
           },
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
           },
           "port_directions": {
             "ARST": "input",
@@ -126,7 +126,7 @@
             "WIDTH": "00000000000000000000000000100000"
           },
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
           },
           "port_directions": {
             "ARST": "input",
@@ -151,7 +151,7 @@
             "WIDTH": "00000000000000000000000000100000"
           },
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
           },
           "port_directions": {
             "ARST": "input",
@@ -186,63 +186,63 @@
           "hide_name": 0,
           "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:5.24-5.25"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:5.24-5.25"
           }
         },
         "A_r": {
           "hide_name": 0,
           "bits": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20"
           }
         },
         "B": {
           "hide_name": 0,
           "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:6.24-6.25"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:6.24-6.25"
           }
         },
         "B_r": {
           "hide_name": 0,
           "bits": [ 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25"
           }
         },
         "Carry": {
           "hide_name": 0,
           "bits": [ 100 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:8.24-8.29"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:8.24-8.29"
           }
         },
         "Sum": {
           "hide_name": 0,
           "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:7.24-7.27"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:7.24-7.27"
           }
         },
         "clk": {
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:3.24-3.27"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:3.24-3.27"
           }
         },
         "rst_n": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:4.24-4.29"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:4.24-4.29"
           }
         },
         "sum_w": {
           "hide_name": 0,
           "bits": [ 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263 ],
           "attributes": {
-            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22"
+            "src": "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22"
           }
         }
       }

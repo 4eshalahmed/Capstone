@@ -36199,42 +36199,42 @@ module \sky130_fd_sc_hd__xor3_4
   end
   connect \X $auto$rtlil.cc:3507:OrGate$5590
 end
-attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:2.1-29.10"
+attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:2.1-29.10"
 attribute \top 1
 attribute \hdlname "adder32"
 module \adder32
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:3.24-3.27"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:3.24-3.27"
   wire input 1 \clk
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:4.24-4.29"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:4.24-4.29"
   wire input 2 \rst_n
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:5.24-5.25"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:5.24-5.25"
   wire width 32 input 3 \A
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:6.24-6.25"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:6.24-6.25"
   wire width 32 input 4 \B
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:7.24-7.27"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:7.24-7.27"
   wire width 32 output 5 \Sum
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:8.24-8.29"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:8.24-8.29"
   wire output 6 \Carry
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20"
   wire width 32 \A_r
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25"
   wire width 32 \B_r
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22"
   wire width 33 \sum_w
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14.20-14.45"
-  wire width 33 $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14$5594_Y
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14.20-14.45"
+  wire width 33 $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14$5594_Y
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
   wire width 32 $0\Sum[31:0]
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
   wire $0\Carry[0:0]
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
   wire width 32 $0\A_r[31:0]
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
   wire width 32 $0\B_r[31:0]
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17.13-17.19"
-  wire $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17$5596_Y
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14.20-14.45"
-  cell $add $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14$5594
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17.13-17.19"
+  wire $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17$5596_Y
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14.20-14.45"
+  cell $add $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14$5594
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 33
@@ -36242,31 +36242,31 @@ module \adder32
     parameter \Y_WIDTH 33
     connect \A { 1'0 \A_r }
     connect \B { 1'0 \B_r }
-    connect \Y $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14$5594_Y
+    connect \Y $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14$5594_Y
   end
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17.13-17.19"
-  cell $logic_not $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17$5596
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17.13-17.19"
+  cell $logic_not $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17$5596
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \rst_n
-    connect \Y $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17$5596_Y
+    connect \Y $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17$5596_Y
   end
-  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8"
-  process $proc$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16$5595
+  attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8"
+  process $proc$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16$5595
     assign $0\Sum[31:0] \Sum
     assign $0\Carry[0:0] \Carry
     assign $0\A_r[31:0] \A_r
     assign $0\B_r[31:0] \B_r
-    attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17.9-26.12"
-    switch $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17$5596_Y
-    attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:17.13-17.19"
+    attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17.9-26.12"
+    switch $logic_not$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17$5596_Y
+    attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:17.13-17.19"
       case 1'1
         assign $0\A_r[31:0] 0
         assign $0\B_r[31:0] 0
         assign $0\Sum[31:0] 0
         assign $0\Carry[0:0] 1'0
-    attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:22.13-22.17"
+    attribute \src "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:22.13-22.17"
       case 
         assign $0\A_r[31:0] \A
         assign $0\B_r[31:0] \B
@@ -36283,5 +36283,5 @@ module \adder32
       update \A_r $0\A_r[31:0]
       update \B_r $0\B_r[31:0]
   end
-  connect \sum_w $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:14$5594_Y
+  connect \sum_w $add$/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:14$5594_Y
 end

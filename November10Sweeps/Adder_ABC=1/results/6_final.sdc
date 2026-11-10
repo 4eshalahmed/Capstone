@@ -105,8 +105,6 @@ set_output_delay 2.0000 -clock [get_clocks {clk}] -add_delay [get_ports {Sum[6]}
 set_output_delay 2.0000 -clock [get_clocks {clk}] -add_delay [get_ports {Sum[7]}]
 set_output_delay 2.0000 -clock [get_clocks {clk}] -add_delay [get_ports {Sum[8]}]
 set_output_delay 2.0000 -clock [get_clocks {clk}] -add_delay [get_ports {Sum[9]}]
-set_false_path\
-    -from [get_ports {rst_n}]
 ###############################################################################
 # Environment
 ###############################################################################

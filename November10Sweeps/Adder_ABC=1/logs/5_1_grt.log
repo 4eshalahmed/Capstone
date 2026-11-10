@@ -4,8 +4,8 @@ This program is licensed under the BSD-3 license. See the LICENSE file for detai
 Components of this program may be licensed under more restrictive licenses which must be honored.
 [INFO ORD-0030] Using 1 thread(s).
 read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_db ./results/sky130hd/adder32/adder32_abc1_20261110_174140/4_cts.odb
-read_sdc ./results/sky130hd/adder32/adder32_abc1_20261110_174140/4_cts.sdc
+read_db ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/4_cts.odb
+read_sdc ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/4_cts.sdc
 source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
 pin_access
 [INFO DRT-0149] Reading tech and libs.
@@ -93,9 +93,9 @@ Number of nets:           807
 #macroValidViaAp       = 0
 #macroNoAp             = 0
 [INFO DRT-0166] Complete pin access.
-[INFO DRT-0267] cpu time = 00:00:15, elapsed time = 00:00:15, memory = 112.05 (MB), peak = 111.41 (MB)
-Took 16 seconds: pin_access
-global_route -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_20261110_174140/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO DRT-0267] cpu time = 00:00:13, elapsed time = 00:00:13, memory = 112.40 (MB), peak = 111.88 (MB)
+Took 14 seconds: pin_access
+global_route -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
 [INFO GRT-0020] Min routing layer: met1
 [INFO GRT-0021] Max routing layer: met5
 [INFO GRT-0022] Global adjustment: 0%
@@ -234,7 +234,7 @@ Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
       810 |     +0.0% |       0 |       0 |             0 |         4
     final |     +0.0% |       0 |       0 |             0 |         0
 ---------------------------------------------------------------------
-[INFO RSZ-0504] Runtime: 0.06s
+[INFO RSZ-0504] Runtime: 0.04s
 global_route -start_incremental
 detailed_placement
 [INFO DPL-0006] Core area: 9283.90 um^2
@@ -261,13 +261,13 @@ original HPWL            8901.9 u
 legalized HPWL           8901.9 u
 delta HPWL                    0 %
 
-global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_20261110_174140/congestion_post_repair_design.rpt
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/congestion_post_repair_design.rpt
 Repair setup and hold violations...
 estimate_parasitics -global_routing
 repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
 [INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
 [INFO RSZ-0098] No setup violations found
-[INFO RSZ-0505] Runtime: 0.06s
+[INFO RSZ-0505] Runtime: 0.04s
 [INFO RSZ-0033] No hold violations found.
 [INFO RSZ-0506] Runtime: 0.01s
 global_route -start_incremental
@@ -297,10 +297,10 @@ legalized HPWL           8901.9 u
 delta HPWL                    0 %
 
 check_placement -verbose
-global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_20261110_174140/congestion_post_repair_timing.rpt
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/congestion_post_repair_timing.rpt
 estimate_parasitics -global_routing
 global_route -start_incremental
-global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_20261110_174140/congestion_post_recover_power.rpt
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/congestion_post_recover_power.rpt
 Repair antennas...
 [INFO GRT-0012] Found 0 antenna violations.
 [INFO ANT-0002] Found 0 net violations.
@@ -316,12 +316,12 @@ Design area 6148 um^2 66% utilization.
 [INFO FLW-0007] clock clk period 20.000000
 [INFO FLW-0008] Clock clk period 3.263
 [INFO FLW-0009] Clock clk slack 16.565
-write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_20261110_174140/updated_clks.sdc
+write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/updated_clks.sdc
 [INFO FLW-0011] Path endpoint path count 234
-write_db ./results/sky130hd/adder32/adder32_abc1_20261110_174140/5_1_grt.odb
-write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_20261110_174140/5_1_grt.sdc
-Elapsed time: 0:17.68[h:]min:sec. CPU time: user 17.53 sys 0.13 (99%). Peak memory: 251432KB.
+write_db ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/5_1_grt.odb
+write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/5_1_grt.sdc
+Elapsed time: 0:15.10[h:]min:sec. CPU time: user 14.99 sys 0.11 (99%). Peak memory: 252160KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-5_1_grt                .odb         17       18     1.00      245 5c8fa8b13a
-5_1_grt                .sdc                                       fff6d400b7
+5_1_grt                .odb         15       15     1.00      246 fb140ee591
+5_1_grt                .sdc                                       5273ab27fb

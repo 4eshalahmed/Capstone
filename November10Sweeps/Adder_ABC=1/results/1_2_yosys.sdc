@@ -6,4 +6,3 @@ set_clock_uncertainty 0.2 [get_clocks clk]
 set_input_delay 2.0 -clock clk [get_ports {A[*] B[*]}]
 set_output_delay 2.0 -clock clk [get_ports {Sum[*] Carry}]
 
-set_false_path -from [get_ports rst_n]

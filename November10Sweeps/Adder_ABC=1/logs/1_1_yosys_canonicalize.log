@@ -2,7 +2,7 @@ Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11
 Using ABC area script.
 1. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 2. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-3. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v
+3. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v
 4. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
 5. Executing HIERARCHY pass (managing design hierarchy).
 6. Executing AST frontend in derive mode using pre-parsed AST for module `\adder32'.
@@ -12,10 +12,10 @@ Using ABC area script.
 Warning: Ignoring module adder32 because it contains processes (run 'proc' command first).
 8. Executing RTLIL backend.
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: 230892c2ce, time: 0.29s, user: 0.21s, system: 0.04s, MEM: 55.16 MB peak
+End of script. Logfile hash: 06cf1758df, time: 0.18s, user: 0.13s, system: 0.03s, MEM: 55.31 MB peak
 Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
-Time spent: 76% 4x read_liberty (0 sec), 12% 4x read_verilog (0 sec), ...
-Elapsed time: 0:00.30[h:]min:sec. CPU time: user 0.23 sys 0.05 (92%). Peak memory: 59200KB.
+Time spent: 77% 4x read_liberty (0 sec), 13% 4x read_verilog (0 sec), ...
+Elapsed time: 0:00.18[h:]min:sec. CPU time: user 0.15 sys 0.04 (99%). Peak memory: 59520KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-1_1_yosys_canonicalize .rtlil        0        0     0.93       57 4a7b3c1ef2
+1_1_yosys_canonicalize .rtlil        0        0     1.06       58 7b111729dd

@@ -4,8 +4,8 @@ This program is licensed under the BSD-3 license. See the LICENSE file for detai
 Components of this program may be licensed under more restrictive licenses which must be honored.
 [INFO ORD-0030] Using 1 thread(s).
 read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_db ./results/sky130hd/adder32/adder32_abc1_20261110_174140/2_floorplan.odb
-read_sdc ./results/sky130hd/adder32/adder32_abc1_20261110_174140/2_floorplan.sdc
+read_db ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/2_floorplan.odb
+read_sdc ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/2_floorplan.sdc
 source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
 global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
 [INFO GPL-0001] ---- Initialize GPL Main Data Structures
@@ -94,8 +94,8 @@ Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
 [INFO GPL-1014] Final placement area: 5099.93 (+0.00%)
 [INFO GPL-1018] Final HPWL (um): 5847.51
 Design area 4962 um^2 53% utilization.
-write_db ./results/sky130hd/adder32/adder32_abc1_20261110_174140/3_1_place_gp_skip_io.odb
-Elapsed time: 0:00.55[h:]min:sec. CPU time: user 0.48 sys 0.05 (96%). Peak memory: 104960KB.
+write_db ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/3_1_place_gp_skip_io.odb
+Elapsed time: 0:00.38[h:]min:sec. CPU time: user 0.32 sys 0.05 (96%). Peak memory: 105120KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-3_1_place_gp_skip_io   .odb          0        1     0.96      102 d1b8825102
+3_1_place_gp_skip_io   .odb          0        0     0.97      102 1e364a274b

@@ -2,24 +2,24 @@
 
 (* hdlname = "adder32" *)
 (* top =  1  *)
-(* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:2.1-29.10" *)
+(* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:2.1-29.10" *)
 module adder32(clk, rst_n, A, B, Sum, Carry);
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:3.24-3.27" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:3.24-3.27" *)
   input clk;
   wire clk;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:4.24-4.29" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:4.24-4.29" *)
   input rst_n;
   wire rst_n;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:5.24-5.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:5.24-5.25" *)
   input [31:0] A;
   wire [31:0] A;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:6.24-6.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:6.24-6.25" *)
   input [31:0] B;
   wire [31:0] B;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:7.24-7.27" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:7.24-7.27" *)
   output [31:0] Sum;
   wire [31:0] Sum;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:8.24-8.29" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:8.24-8.29" *)
   output Carry;
   wire Carry;
   (* src = "/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_adders_hd.v:6.31-6.32" *)
@@ -588,199 +588,199 @@ module adder32(clk, rst_n, A, B, Sum, Carry);
   wire _0499_;
   wire _0500_;
   wire _0501_;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[0] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[10] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[11] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[12] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[13] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[14] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[15] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[16] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[17] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[18] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[19] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[1] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[20] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[21] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[22] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[23] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[24] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[25] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[26] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[27] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[28] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[29] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[2] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[30] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[31] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[3] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[4] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[5] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[6] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[7] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[8] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.17-11.20" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.17-11.20" *)
   wire \A_r[9] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[0] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[10] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[11] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[12] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[13] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[14] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[15] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[16] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[17] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[18] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[19] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[1] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[20] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[21] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[22] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[23] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[24] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[25] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[26] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[27] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[28] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[29] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[2] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[30] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[31] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[3] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[4] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[5] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[6] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[7] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[8] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:11.22-11.25" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:11.22-11.25" *)
   wire \B_r[9] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[0] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[10] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[11] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[12] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[13] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[14] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[15] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[16] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[17] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[18] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[19] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[1] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[20] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[21] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[22] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[23] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[24] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[25] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[26] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[27] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[28] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[29] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[2] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[30] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[31] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[32] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[3] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[4] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[5] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[6] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[7] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[8] ;
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:12.17-12.22" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:12.17-12.22" *)
   wire \sum_w[9] ;
   sky130_fd_sc_hd__nand2_1 _0502_ (
     .A(_0019_),
@@ -3341,679 +3341,679 @@ module adder32(clk, rst_n, A, B, Sum, Carry);
     .COUT(_0062_),
     .SUM(_0063_)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[0]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[0]),
     .Q(\A_r[0] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[10]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[10]),
     .Q(\A_r[10] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[11]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[11]),
     .Q(\A_r[11] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[12]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[12]),
     .Q(\A_r[12] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[13]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[13]),
     .Q(\A_r[13] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[14]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[14]),
     .Q(\A_r[14] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[15]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[15]),
     .Q(\A_r[15] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[16]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[16]),
     .Q(\A_r[16] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[17]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[17]),
     .Q(\A_r[17] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[18]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[18]),
     .Q(\A_r[18] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[19]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[19]),
     .Q(\A_r[19] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[1]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[1]),
     .Q(\A_r[1] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[20]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[20]),
     .Q(\A_r[20] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[21]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[21]),
     .Q(\A_r[21] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[22]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[22]),
     .Q(\A_r[22] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[23]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[23]),
     .Q(\A_r[23] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[24]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[24]),
     .Q(\A_r[24] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[25]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[25]),
     .Q(\A_r[25] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[26]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[26]),
     .Q(\A_r[26] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[27]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[27]),
     .Q(\A_r[27] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[28]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[28]),
     .Q(\A_r[28] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[29]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[29]),
     .Q(\A_r[29] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[2]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[2]),
     .Q(\A_r[2] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[30]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[30]),
     .Q(\A_r[30] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[31]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[31]),
     .Q(\A_r[31] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[3]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[3]),
     .Q(\A_r[3] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[4]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[4]),
     .Q(\A_r[4] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[5]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[5]),
     .Q(\A_r[5] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[6]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[6]),
     .Q(\A_r[6] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[7]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[7]),
     .Q(\A_r[7] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[8]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[8]),
     .Q(\A_r[8] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \A_r[9]$_DFF_PN0_  (
     .CLK(clk),
     .D(A[9]),
     .Q(\A_r[9] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[0]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[0]),
     .Q(\B_r[0] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[10]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[10]),
     .Q(\B_r[10] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[11]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[11]),
     .Q(\B_r[11] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[12]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[12]),
     .Q(\B_r[12] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[13]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[13]),
     .Q(\B_r[13] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[14]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[14]),
     .Q(\B_r[14] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[15]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[15]),
     .Q(\B_r[15] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[16]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[16]),
     .Q(\B_r[16] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[17]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[17]),
     .Q(\B_r[17] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[18]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[18]),
     .Q(\B_r[18] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[19]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[19]),
     .Q(\B_r[19] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[1]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[1]),
     .Q(\B_r[1] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[20]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[20]),
     .Q(\B_r[20] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[21]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[21]),
     .Q(\B_r[21] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[22]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[22]),
     .Q(\B_r[22] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[23]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[23]),
     .Q(\B_r[23] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[24]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[24]),
     .Q(\B_r[24] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[25]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[25]),
     .Q(\B_r[25] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[26]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[26]),
     .Q(\B_r[26] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[27]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[27]),
     .Q(\B_r[27] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[28]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[28]),
     .Q(\B_r[28] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[29]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[29]),
     .Q(\B_r[29] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[2]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[2]),
     .Q(\B_r[2] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[30]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[30]),
     .Q(\B_r[30] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[31]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[31]),
     .Q(\B_r[31] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[3]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[3]),
     .Q(\B_r[3] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[4]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[4]),
     .Q(\B_r[4] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[5]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[5]),
     .Q(\B_r[5] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[6]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[6]),
     .Q(\B_r[6] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[7]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[7]),
     .Q(\B_r[7] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[8]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[8]),
     .Q(\B_r[8] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \B_r[9]$_DFF_PN0_  (
     .CLK(clk),
     .D(B[9]),
     .Q(\B_r[9] ),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Carry$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[32] ),
     .Q(Carry),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[0]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[0] ),
     .Q(Sum[0]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[10]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[10] ),
     .Q(Sum[10]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[11]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[11] ),
     .Q(Sum[11]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[12]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[12] ),
     .Q(Sum[12]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[13]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[13] ),
     .Q(Sum[13]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[14]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[14] ),
     .Q(Sum[14]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[15]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[15] ),
     .Q(Sum[15]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[16]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[16] ),
     .Q(Sum[16]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[17]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[17] ),
     .Q(Sum[17]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[18]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[18] ),
     .Q(Sum[18]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[19]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[19] ),
     .Q(Sum[19]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[1]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[1] ),
     .Q(Sum[1]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[20]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[20] ),
     .Q(Sum[20]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[21]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[21] ),
     .Q(Sum[21]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[22]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[22] ),
     .Q(Sum[22]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[23]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[23] ),
     .Q(Sum[23]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[24]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[24] ),
     .Q(Sum[24]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[25]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[25] ),
     .Q(Sum[25]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[26]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[26] ),
     .Q(Sum[26]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[27]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[27] ),
     .Q(Sum[27]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[28]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[28] ),
     .Q(Sum[28]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[29]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[29] ),
     .Q(Sum[29]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[2]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[2] ),
     .Q(Sum[2]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[30]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[30] ),
     .Q(Sum[30]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[31]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[31] ),
     .Q(Sum[31]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[3]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[3] ),
     .Q(Sum[3]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[4]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[4] ),
     .Q(Sum[4]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[5]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[5] ),
     .Q(Sum[5]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[6]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[6] ),
     .Q(Sum[6]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[7]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[7] ),
     .Q(Sum[7]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[8]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[8] ),
     .Q(Sum[8]),
     .RESET_B(rst_n)
   );
-  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1/adder32.v:16.5-27.8" *)
+  (* src = "/OpenROAD-flow-scripts/flow/designs/sky130hd/adder32_abc1_resetcheck/adder32.v:16.5-27.8" *)
   sky130_fd_sc_hd__dfrtp_1 \Sum[9]$_DFF_PN0_  (
     .CLK(clk),
     .D(\sum_w[9] ),

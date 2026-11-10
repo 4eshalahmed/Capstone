@@ -4,8 +4,8 @@ This program is licensed under the BSD-3 license. See the LICENSE file for detai
 Components of this program may be licensed under more restrictive licenses which must be honored.
 [INFO ORD-0030] Using 1 thread(s).
 read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_db ./results/sky130hd/adder32/adder32_abc1_20261110_174140/3_2_place_iop.odb
-read_sdc ./results/sky130hd/adder32/adder32_abc1_20261110_174140/2_floorplan.sdc
+read_db ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/3_2_place_iop.odb
+read_sdc ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/2_floorplan.sdc
 source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
 [INFO RSZ-0026] Removed 0 buffers.
 Perform port buffering...
@@ -489,8 +489,8 @@ Report metrics stage 3, global place...
 global place report_design_area
 --------------------------------------------------------------------------
 Design area 5958 um^2 64% utilization.
-write_db ./results/sky130hd/adder32/adder32_abc1_20261110_174140/3_3_place_gp.odb
-Elapsed time: 0:01.38[h:]min:sec. CPU time: user 1.24 sys 0.13 (99%). Peak memory: 245264KB.
+write_db ./results/sky130hd/adder32/adder32_abc1_resetcheck_20261110_175715/3_3_place_gp.odb
+Elapsed time: 0:00.90[h:]min:sec. CPU time: user 0.79 sys 0.10 (99%). Peak memory: 236488KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-3_3_place_gp           .odb          1        1     0.99      239 10131e46ef
+3_3_place_gp           .odb          0        1     0.99      230 73818b932b
