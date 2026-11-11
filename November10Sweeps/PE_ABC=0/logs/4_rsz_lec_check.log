@@ -1,0 +1,93 @@
+[2026-11-10 23:08:15.980] [miter_logger] [info] MiterStrategy::run starting
+[2026-11-10 23:08:15.980] [miter_logger] [info] Collecting POs for design 0: hycube_in15_out15_U3
+
+[2026-11-10 23:08:16.003] [miter_logger] [info] Collected 422 PIs for design 0
+
+[2026-11-10 23:08:16.003] [miter_logger] [info] Collected 996 POs for design 0
+
+[2026-11-10 23:08:16.003] [miter_logger] [info] design 0 PI summary by model/term (422 total terminals, 11 unique rows):
+| Model                    | Term         | Count |
+|--------------------------|--------------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q            |   286 |
+| hycube_in15_out15_U3     | in0          |    32 |
+| hycube_in15_out15_U3     | in1          |    32 |
+| hycube_in15_out15_U3     | in2          |    32 |
+| hycube_in15_out15_U3     | in3          |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | Q            |     3 |
+| hycube_in15_out15_U3     | CGRA_Clock   |     1 |
+| hycube_in15_out15_U3     | CGRA_Enable  |     1 |
+| hycube_in15_out15_U3     | CGRA_Reset   |     1 |
+| hycube_in15_out15_U3     | ConfigIn     |     1 |
+| hycube_in15_out15_U3     | Config_Reset |     1 |
+
+[2026-11-10 23:08:16.003] [miter_logger] [info] design 0 PO summary by model/term (996 total terminals, 11 unique rows):
+| Model                    | Term      | Count |
+|--------------------------|-----------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK       |   286 |
+| sky130_fd_sc_hd__dfrtp_1 | D         |   286 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B   |   286 |
+| hycube_in15_out15_U3     | out0      |    32 |
+| hycube_in15_out15_U3     | out1      |    32 |
+| hycube_in15_out15_U3     | out2      |    32 |
+| hycube_in15_out15_U3     | out3      |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | CLK       |     3 |
+| sky130_fd_sc_hd__dfrtp_2 | D         |     3 |
+| sky130_fd_sc_hd__dfrtp_2 | RESET_B   |     3 |
+| hycube_in15_out15_U3     | ConfigOut |     1 |
+
+[2026-11-10 23:08:16.003] [miter_logger] [info] Collecting POs for design 1: hycube_in15_out15_U3
+
+[2026-11-10 23:08:16.025] [miter_logger] [info] size of common inputs: 422
+[2026-11-10 23:08:16.025] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-10 23:08:16.025] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-10 23:08:16.025] [miter_logger] [info] Collected 422 PIs for design 1
+
+[2026-11-10 23:08:16.025] [miter_logger] [info] Collected 996 POs for design 1
+
+[2026-11-10 23:08:16.025] [miter_logger] [info] design 1 PI summary by model/term (422 total terminals, 11 unique rows):
+| Model                    | Term         | Count |
+|--------------------------|--------------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q            |   286 |
+| hycube_in15_out15_U3     | in0          |    32 |
+| hycube_in15_out15_U3     | in1          |    32 |
+| hycube_in15_out15_U3     | in2          |    32 |
+| hycube_in15_out15_U3     | in3          |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | Q            |     3 |
+| hycube_in15_out15_U3     | CGRA_Clock   |     1 |
+| hycube_in15_out15_U3     | CGRA_Enable  |     1 |
+| hycube_in15_out15_U3     | CGRA_Reset   |     1 |
+| hycube_in15_out15_U3     | ConfigIn     |     1 |
+| hycube_in15_out15_U3     | Config_Reset |     1 |
+
+[2026-11-10 23:08:16.025] [miter_logger] [info] design 1 PO summary by model/term (996 total terminals, 11 unique rows):
+| Model                    | Term      | Count |
+|--------------------------|-----------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK       |   286 |
+| sky130_fd_sc_hd__dfrtp_1 | D         |   286 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B   |   286 |
+| hycube_in15_out15_U3     | out0      |    32 |
+| hycube_in15_out15_U3     | out1      |    32 |
+| hycube_in15_out15_U3     | out2      |    32 |
+| hycube_in15_out15_U3     | out3      |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | CLK       |     3 |
+| sky130_fd_sc_hd__dfrtp_2 | D         |     3 |
+| sky130_fd_sc_hd__dfrtp_2 | RESET_B   |     3 |
+| hycube_in15_out15_U3     | ConfigOut |     1 |
+
+[2026-11-10 23:08:16.025] [miter_logger] [info] normalizeInputs: starting
+[2026-11-10 23:08:16.026] [miter_logger] [info] size of common inputs: 422
+[2026-11-10 23:08:16.026] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-10 23:08:16.026] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-10 23:08:16.026] [miter_logger] [info] normalizeOutputs: starting
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of common outputs: 996
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of diff0 outputs: 0
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of diff1 outputs: 0
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of PIs in circuit 0: 422
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of PIs in circuit 1: 422
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of POs in circuit 0: 996
+[2026-11-10 23:08:16.027] [miter_logger] [info] size of POs in circuit 1: 996
+[2026-11-10 23:08:16.138] [miter_logger] [info] Building miter expression
+[2026-11-10 23:08:16.138] [miter_logger] [info] Finished building miter expression
+[2026-11-10 23:08:16.138] [miter_logger] [info] Starting solver
+[2026-11-10 23:08:16.138] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-11-10 23:08:16.138] [miter_logger] [info] Circuits are IDENTICAL
