@@ -1,0 +1,327 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 20 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/4_cts.odb
+read_sdc ./results/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/4_cts.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   adder32
+Die area:                 ( 0 0 ) ( 99990 99990 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     844
+Number of terminals:      101
+Number of snets:          2
+Number of nets:           807
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 39.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 17319.
+[INFO DRT-0033] mcon shape region query size = 10726.
+[INFO DRT-0033] met1 shape region query size = 3227.
+[INFO DRT-0033] via shape region query size = 630.
+[INFO DRT-0033] met2 shape region query size = 421.
+[INFO DRT-0033] via2 shape region query size = 504.
+[INFO DRT-0033] met3 shape region query size = 434.
+[INFO DRT-0033] via3 shape region query size = 504.
+[INFO DRT-0033] met4 shape region query size = 158.
+[INFO DRT-0033] via4 shape region query size = 25.
+[INFO DRT-0033] met5 shape region query size = 39.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 273 pins.
+[INFO DRT-0081]   Complete 39 unique inst patterns.
+[INFO DRT-0084]   Complete 382 groups.
+#scanned instances     = 844
+#unique  instances     = 39
+#stdCellGenAp          = 1420
+#stdCellValidPlanarAp  = 21
+#stdCellValidViaAp     = 771
+#stdCellPinNoAp        = 3
+#stdCellPinCnt         = 2102
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:21, elapsed time = 00:00:05, memory = 116.19 (MB), peak = 114.53 (MB)
+Took 5 seconds: pin_access
+global_route -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 1363
+[INFO GRT-0019] Found 10 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 51
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal       2827          2195          22.36%
+met2       Vertical         2444          1885          22.87%
+met3       Horizontal       1827          1436          21.40%
+met4       Vertical         1196           897          25.00%
+met5       Horizontal        299           195          34.78%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 2876
+[INFO GRT-0198] Via related Steiner nodes: 26
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 3477
+[INFO GRT-0112] Final usage 3D: 11845
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1              2195           687           31.30%             0 /  0 /  0
+met2              1885           598           31.72%             0 /  0 /  0
+met3              1436            75            5.22%             0 /  0 /  0
+met4               897            54            6.02%             0 /  0 /  0
+met5               195             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             6608          1414           21.40%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 16304 um
+[INFO GRT-0014] Routed nets: 807
+[INFO GRT-0303] Global routing runtime = 00:00:00
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       814
+       10 |     +0.0% |       0 |       0 |             0 |       804
+       20 |     +0.0% |       0 |       0 |             0 |       794
+       30 |     +0.0% |       0 |       0 |             0 |       784
+       40 |     +0.0% |       0 |       0 |             0 |       774
+       50 |     +0.0% |       0 |       0 |             0 |       764
+       60 |     +0.0% |       0 |       0 |             0 |       754
+       70 |     +0.0% |       0 |       0 |             0 |       744
+       80 |     +0.0% |       0 |       0 |             0 |       734
+       90 |     +0.0% |       0 |       0 |             0 |       724
+      100 |     +0.0% |       0 |       0 |             0 |       714
+      110 |     +0.0% |       0 |       0 |             0 |       704
+      120 |     +0.0% |       0 |       0 |             0 |       694
+      130 |     +0.0% |       0 |       0 |             0 |       684
+      140 |     +0.0% |       0 |       0 |             0 |       674
+      150 |     +0.0% |       0 |       0 |             0 |       664
+      160 |     +0.0% |       0 |       0 |             0 |       654
+      170 |     +0.0% |       0 |       0 |             0 |       644
+      180 |     +0.0% |       0 |       0 |             0 |       634
+      190 |     +0.0% |       0 |       0 |             0 |       624
+      200 |     +0.0% |       0 |       0 |             0 |       614
+      210 |     +0.0% |       0 |       0 |             0 |       604
+      220 |     +0.0% |       0 |       0 |             0 |       594
+      230 |     +0.0% |       0 |       0 |             0 |       584
+      240 |     +0.0% |       0 |       0 |             0 |       574
+      250 |     +0.0% |       0 |       0 |             0 |       564
+      260 |     +0.0% |       0 |       0 |             0 |       554
+      270 |     +0.0% |       0 |       0 |             0 |       544
+      280 |     +0.0% |       0 |       0 |             0 |       534
+      290 |     +0.0% |       0 |       0 |             0 |       524
+      300 |     +0.0% |       0 |       0 |             0 |       514
+      310 |     +0.0% |       0 |       0 |             0 |       504
+      320 |     +0.0% |       0 |       0 |             0 |       494
+      330 |     +0.0% |       0 |       0 |             0 |       484
+      340 |     +0.0% |       0 |       0 |             0 |       474
+      350 |     +0.0% |       0 |       0 |             0 |       464
+      360 |     +0.0% |       0 |       0 |             0 |       454
+      370 |     +0.0% |       0 |       0 |             0 |       444
+      380 |     +0.0% |       0 |       0 |             0 |       434
+      390 |     +0.0% |       0 |       0 |             0 |       424
+      400 |     +0.0% |       0 |       0 |             0 |       414
+      410 |     +0.0% |       0 |       0 |             0 |       404
+      420 |     +0.0% |       0 |       0 |             0 |       394
+      430 |     +0.0% |       0 |       0 |             0 |       384
+      440 |     +0.0% |       0 |       0 |             0 |       374
+      450 |     +0.0% |       0 |       0 |             0 |       364
+      460 |     +0.0% |       0 |       0 |             0 |       354
+      470 |     +0.0% |       0 |       0 |             0 |       344
+      480 |     +0.0% |       0 |       0 |             0 |       334
+      490 |     +0.0% |       0 |       0 |             0 |       324
+      500 |     +0.0% |       0 |       0 |             0 |       314
+      510 |     +0.0% |       0 |       0 |             0 |       304
+      520 |     +0.0% |       0 |       0 |             0 |       294
+      530 |     +0.0% |       0 |       0 |             0 |       284
+      540 |     +0.0% |       0 |       0 |             0 |       274
+      550 |     +0.0% |       0 |       0 |             0 |       264
+      560 |     +0.0% |       0 |       0 |             0 |       254
+      570 |     +0.0% |       0 |       0 |             0 |       244
+      580 |     +0.0% |       0 |       0 |             0 |       234
+      590 |     +0.0% |       0 |       0 |             0 |       224
+      600 |     +0.0% |       0 |       0 |             0 |       214
+      610 |     +0.0% |       0 |       0 |             0 |       204
+      620 |     +0.0% |       0 |       0 |             0 |       194
+      630 |     +0.0% |       0 |       0 |             0 |       184
+      640 |     +0.0% |       0 |       0 |             0 |       174
+      650 |     +0.0% |       0 |       0 |             0 |       164
+      660 |     +0.0% |       0 |       0 |             0 |       154
+      670 |     +0.0% |       0 |       0 |             0 |       144
+      680 |     +0.0% |       0 |       0 |             0 |       134
+      690 |     +0.0% |       0 |       0 |             0 |       124
+      700 |     +0.0% |       0 |       0 |             0 |       114
+      710 |     +0.0% |       0 |       0 |             0 |       104
+      720 |     +0.0% |       0 |       0 |             0 |        94
+      730 |     +0.0% |       0 |       0 |             0 |        84
+      740 |     +0.0% |       0 |       0 |             0 |        74
+      750 |     +0.0% |       0 |       0 |             0 |        64
+      760 |     +0.0% |       0 |       0 |             0 |        54
+      770 |     +0.0% |       0 |       0 |             0 |        44
+      780 |     +0.0% |       0 |       0 |             0 |        34
+      790 |     +0.0% |       0 |       0 |             0 |        24
+      800 |     +0.0% |       0 |       0 |             0 |        14
+      810 |     +0.0% |       0 |       0 |             0 |         4
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.03s
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 9283.90 um^2
+[INFO DPL-0007] Movable instances area: 5997.00 um^2
+[INFO DPL-0008] Fixed instances area within core: 161.40 um^2
+[INFO DPL-0009] Utilization: 66.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 844 cells
+[INFO DPL-0500] Runtime: 0.00s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL            9005.0 u
+legalized HPWL           9005.0 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 0.03s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.01s
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 9283.90 um^2
+[INFO DPL-0007] Movable instances area: 5997.00 um^2
+[INFO DPL-0008] Fixed instances area within core: 161.40 um^2
+[INFO DPL-0009] Utilization: 66.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 844 cells
+[INFO DPL-0500] Runtime: 0.00s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL            9005.0 u
+legalized HPWL           9005.0 u
+delta HPWL                    0 %
+
+check_placement -verbose
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/congestion_post_repair_timing.rpt
+estimate_parasitics -global_routing
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 6158 um^2 66% utilization.
+[INFO FLW-0007] clock clk period 100.000000
+[INFO FLW-0008] Clock clk period 2.016
+[INFO FLW-0009] Clock clk slack 97.878
+write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/updated_clks.sdc
+[INFO FLW-0011] Path endpoint path count 234
+write_db ./results/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/5_1_grt.odb
+write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_10MHz_defaultdensity_20261111_165704/5_1_grt.sdc
+Elapsed time: 0:06.15[h:]min:sec. CPU time: user 22.69 sys 0.24 (373%). Peak memory: 259712KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+5_1_grt                .odb          6       23     3.73      253 662da6563e
+5_1_grt                .sdc                                       149f7d4c01
