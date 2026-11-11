@@ -1,0 +1,24 @@
+violation type: Short
+	srcs: net:_05616_ net:net578
+	bbox = (36.5000, 93.2600) - (36.6400, 93.4000) on Layer met1
+violation type: Short
+	srcs: net:net458 net:net578
+	bbox = (36.9600, 93.2600) - (37.1000, 93.4000) on Layer met1
+violation type: Short
+	srcs: net:net452 net:net578
+	bbox = (34.2000, 94.7900) - (34.3400, 94.8500) on Layer met2
+violation type: Short
+	srcs: net:net452 net:net578
+	bbox = (34.2000, 94.7900) - (34.4000, 94.8500) on Layer met2
+violation type: Short
+	srcs: net:_02239_ net:net578
+	bbox = (34.6600, 94.7900) - (34.8000, 94.9300) on Layer met2
+violation type: Short
+	srcs: net:net483 net:net578
+	bbox = (35.0500, 94.7900) - (35.2600, 94.9300) on Layer met2
+violation type: Short
+	srcs: net:net483 net:net578
+	bbox = (35.1200, 94.6750) - (35.2600, 94.9300) on Layer met2
+violation type: Short
+	srcs: net:net483 net:net578
+	bbox = (35.1200, 94.7900) - (35.2600, 94.9300) on Layer met2
