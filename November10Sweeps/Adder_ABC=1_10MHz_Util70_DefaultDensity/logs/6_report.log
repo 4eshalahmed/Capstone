@@ -1,0 +1,81 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 20 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/6_1_fill.odb
+read_sdc ./results/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/6_1_fill.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db ./results/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/6_final.odb
+write_sdc -no_timestamp ./results/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/6_final.sdc
+Deleted 0 routing obstructions
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:00.27[h:]min:sec. CPU time: user 0.26 sys 0.01 (99%). Peak memory: 19840KB.
+Global output passed lec test
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation adder32 (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 2004 rc segments
+[INFO RCX-0439] Coupling Cap extraction adder32 ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 51% of 5098 wires extracted
+[INFO RCX-0442] 100% of 5098 wires extracted
+[INFO RCX-0045] Extract 807 nets, 2806 rsegs, 2806 caps, 5760 ccs
+[INFO RCX-0443] 807 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 9.50e-05 W
+Supply voltage   : 1.80e+00 V
+Worstcase voltage: 1.80e+00 V
+Average voltage  : 1.80e+00 V
+Average IR drop  : 4.40e-06 V
+Worstcase IR drop: 1.63e-05 V
+Percentage drop  : 0.00 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 9.50e-05 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 8.03e-06 V
+Average voltage  : 2.78e-06 V
+Average IR drop  : 2.78e-06 V
+Worstcase IR drop: 8.03e-06 V
+Percentage drop  : 0.00 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                               201     389.12
+  Tap cell                                 77      96.34
+  Clock buffer                             11     151.40
+  Timing Repair Buffer                    100     995.96
+  Inverter                                117     439.17
+  Clock inverter                            5      61.31
+  Sequential cell                          97    2427.33
+  Multi-Input combinational cell          385    1934.36
+  Total                                   993    6494.98
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 6106 um^2 94% utilization.
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/cts_default_clk.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/cts_default_clk_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_resizer.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_congestion.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/sky130hd/adder32/adder32_abc1_10MHz_util70_defaultdensity_20261111_171743/final_worst_path.webp.png
+Elapsed time: 0:02.54[h:]min:sec. CPU time: user 2.48 sys 0.22 (106%). Peak memory: 155360KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+6_report                             0        0     1.00       19 N/A

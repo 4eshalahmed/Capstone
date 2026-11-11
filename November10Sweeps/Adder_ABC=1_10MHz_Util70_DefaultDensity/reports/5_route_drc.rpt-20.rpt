@@ -1,0 +1,21 @@
+violation type: Metal Spacing
+	srcs: net:VDD net:Sum[10]
+	bbox = (83.5900, 32.8050) - (83.8000, 32.8300) on Layer met3
+violation type: Metal Spacing
+	srcs: net:VDD net:A[2]
+	bbox = (83.5900, 38.2450) - (83.8000, 38.2700) on Layer met3
+violation type: Metal Spacing
+	srcs: net:VDD net:Carry
+	bbox = (83.5900, 43.6850) - (83.8000, 43.7100) on Layer met3
+violation type: Metal Spacing
+	srcs: net:VDD net:B[31]
+	bbox = (83.5900, 49.1250) - (83.8000, 49.1500) on Layer met3
+violation type: Metal Spacing
+	srcs: net:VDD net:Sum[30]
+	bbox = (83.5900, 54.5650) - (83.8000, 54.5900) on Layer met3
+violation type: Metal Spacing
+	srcs: net:VDD net:B[30]
+	bbox = (83.5900, 65.4450) - (83.8000, 65.4700) on Layer met3
+violation type: Metal Spacing
+	srcs: net:VDD net:Sum[29]
+	bbox = (83.5900, 76.3250) - (83.8000, 76.3500) on Layer met3
