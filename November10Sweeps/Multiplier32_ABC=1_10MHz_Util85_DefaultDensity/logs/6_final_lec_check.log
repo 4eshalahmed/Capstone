@@ -1,0 +1,71 @@
+[2026-11-12 15:03:00.535] [miter_logger] [info] MiterStrategy::run starting
+[2026-11-12 15:03:00.535] [miter_logger] [info] Collecting POs for design 0: multiplier32
+
+[2026-11-12 15:03:00.546] [miter_logger] [info] Collected 194 PIs for design 0
+
+[2026-11-12 15:03:00.546] [miter_logger] [info] Collected 448 POs for design 0
+
+[2026-11-12 15:03:00.546] [miter_logger] [info] design 0 PI summary by model/term (194 total terminals, 5 unique rows):
+| Model                    | Term  | Count |
+|--------------------------|-------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q     |   128 |
+| multiplier32             | A     |    32 |
+| multiplier32             | B     |    32 |
+| multiplier32             | clk   |     1 |
+| multiplier32             | rst_n |     1 |
+
+[2026-11-12 15:03:00.546] [miter_logger] [info] design 0 PO summary by model/term (448 total terminals, 4 unique rows):
+| Model                    | Term    | Count |
+|--------------------------|---------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK     |   128 |
+| sky130_fd_sc_hd__dfrtp_1 | D       |   128 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B |   128 |
+| multiplier32             | Product |    64 |
+
+[2026-11-12 15:03:00.546] [miter_logger] [info] Collecting POs for design 1: multiplier32
+
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of common inputs: 194
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-12 15:03:00.557] [miter_logger] [info] Collected 194 PIs for design 1
+
+[2026-11-12 15:03:00.557] [miter_logger] [info] Collected 448 POs for design 1
+
+[2026-11-12 15:03:00.557] [miter_logger] [info] design 1 PI summary by model/term (194 total terminals, 6 unique rows):
+| Model                    | Term  | Count |
+|--------------------------|-------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q     |   126 |
+| multiplier32             | A     |    32 |
+| multiplier32             | B     |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | Q     |     2 |
+| multiplier32             | clk   |     1 |
+| multiplier32             | rst_n |     1 |
+
+[2026-11-12 15:03:00.557] [miter_logger] [info] design 1 PO summary by model/term (448 total terminals, 7 unique rows):
+| Model                    | Term    | Count |
+|--------------------------|---------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK     |   126 |
+| sky130_fd_sc_hd__dfrtp_1 | D       |   126 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B |   126 |
+| multiplier32             | Product |    64 |
+| sky130_fd_sc_hd__dfrtp_2 | CLK     |     2 |
+| sky130_fd_sc_hd__dfrtp_2 | D       |     2 |
+| sky130_fd_sc_hd__dfrtp_2 | RESET_B |     2 |
+
+[2026-11-12 15:03:00.557] [miter_logger] [info] normalizeInputs: starting
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of common inputs: 194
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-12 15:03:00.557] [miter_logger] [info] normalizeOutputs: starting
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of common outputs: 448
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of diff0 outputs: 0
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of diff1 outputs: 0
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of PIs in circuit 0: 194
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of PIs in circuit 1: 194
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of POs in circuit 0: 448
+[2026-11-12 15:03:00.557] [miter_logger] [info] size of POs in circuit 1: 448
+[2026-11-12 15:03:00.618] [miter_logger] [info] Building miter expression
+[2026-11-12 15:03:00.618] [miter_logger] [info] Finished building miter expression
+[2026-11-12 15:03:00.618] [miter_logger] [info] Starting solver
+[2026-11-12 15:03:00.618] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-11-12 15:03:00.618] [miter_logger] [info] Circuits are IDENTICAL

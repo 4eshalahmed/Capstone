@@ -1,0 +1,179 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 20 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/3_4_place_resized.odb
+read_sdc ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+detailed_placement
+[INFO DPL-0006] Core area: 43361.59 um^2
+[INFO DPL-0007] Movable instances area: 38758.42 um^2
+[INFO DPL-0008] Fixed instances area within core: 731.95 um^2
+[INFO DPL-0009] Utilization: 91.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 5252 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |       7356 |      1550 |      5668
+        1 |       5252 |       840 |      4370
+        2 |       4643 |       623 |      3969
+        3 |       4188 |       536 |      3460
+        4 |       3402 |       470 |      2849
+        5 |       3352 |       426 |      2782
+        6 |       2776 |       372 |      2368
+        7 |       2299 |       311 |      1976
+        8 |       2452 |       328 |      2091
+        9 |       2136 |       268 |      1781
+       10 |       2031 |       293 |      1723
+       20 |       1223 |       235 |       967
+       30 |       1005 |       187 |       818
+       40 |        809 |       185 |       624
+       50 |        629 |       147 |       482
+       60 |        511 |       113 |       398
+       70 |        449 |       107 |       339
+       80 |        399 |        83 |       316
+       90 |        303 |        83 |       220
+      100 |        283 |        69 |       214
+      110 |        258 |        68 |       190
+      120 |        253 |        69 |       184
+      130 |        212 |        52 |       160
+      140 |        171 |        41 |       130
+      150 |        128 |        42 |        86
+      160 |        191 |        51 |       140
+      170 |        181 |        47 |       134
+      180 |        132 |        32 |       100
+      190 |        124 |        36 |        88
+      200 |         89 |        29 |        60
+      210 |         96 |        26 |        70
+      220 |         80 |        20 |        60
+      230 |        105 |        21 |        84
+      240 |         74 |        22 |        52
+      250 |         61 |        19 |        42
+      260 |         60 |        20 |        40
+      270 |         55 |        19 |        36
+      280 |         66 |        12 |        54
+      290 |         55 |        11 |        44
+      300 |         47 |        15 |        32
+      310 |         56 |        16 |        40
+      320 |         43 |        15 |        28
+      330 |        102 |        24 |        78
+      340 |         61 |        19 |        42
+      350 |         32 |        10 |        22
+      360 |         36 |        10 |        26
+      370 |         46 |        10 |        36
+      380 |         32 |        10 |        22
+      390 |         28 |        10 |        18
+      399 |         36 |        12 |        24
+Negotiation phase 2: isolation point active, 1000 iterations.
+      400 |         48 |        12 |        36
+      410 |         24 |        10 |        14
+      420 |         34 |         6 |        28
+      430 |         25 |         7 |        18
+      440 |         14 |         6 |         8
+      445 |          0 |         0 |         0
+Negotiation phase 2 converged at iteration 45.
+[INFO DPL-0500] Runtime: 3.96s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves               36953
+total displacement      26284.8 u
+average displacement        5.0 u
+max displacement           39.3 u
+original HPWL           68315.1 u
+legalized HPWL          97804.4 u
+delta HPWL                   43 %
+
+improve_placement -max_displacement "5 1"
+Detailed placement improvement.
+[INFO DPL-0401] Setting random seed to 1.
+[INFO DPL-0402] Setting maximum displacement 5 1 to 13600 2720 units.
+[INFO DPL-0320] Collected 715 fixed cells.
+[INFO DPL-0318] Collected 4667 single height cells.
+[INFO DPL-0321] Collected 0 wide cells.
+[INFO DPL-0322] Image (1380, 2720) - (211140, 209440)
+[INFO DPL-0310] Assigned 4667 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPL-0303] Running algorithm for independent set matching.
+[INFO DPL-0300] Set matching objective is wirelength.
+[INFO DPL-0301] Pass   1 of matching; objective is 9.782679e+07.
+[INFO DPL-0301] Pass   2 of matching; objective is 9.476865e+07.
+[INFO DPL-0302] End of matching; objective is 9.472751e+07, improvement is 3.17 percent.
+[INFO DPL-0303] Running algorithm for global swaps.
+[INFO DPL-0306] Pass   1 of global swaps; hpwl is 9.226393e+07.
+[INFO DPL-0306] Pass   2 of global swaps; hpwl is 9.189150e+07.
+[INFO DPL-0307] End of global swaps; objective is 9.189150e+07, improvement is 2.99 percent.
+[INFO DPL-0303] Running algorithm for vertical swaps.
+[INFO DPL-0308] Pass   1 of vertical swaps; hpwl is 9.145098e+07.
+[INFO DPL-0309] End of vertical swaps; objective is 9.145098e+07, improvement is 0.48 percent.
+[INFO DPL-0303] Running algorithm for reordering.
+[INFO DPL-0304] Pass   1 of reordering; objective is 8.981345e+07.
+[INFO DPL-0304] Pass   2 of reordering; objective is 8.951132e+07.
+[INFO DPL-0305] End of reordering; objective is 8.951132e+07, improvement is 2.12 percent.
+[INFO DPL-0303] Running algorithm for random improvement.
+[INFO DPL-0324] Random improver is using random generator.
+[INFO DPL-0325] Random improver is using hpwl objective.
+[INFO DPL-0326] Random improver cost string is (a).
+[INFO DPL-0332] End of pass, Generator random called 93340 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 93340, swaps 23578, moves  3956 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 8.910815e+07, Scratch cost 8.729516e+07, Incremental cost 8.729516e+07, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 8.729516e+07.
+[INFO DPL-0327] Pass   1 of random improver; improvement in cost is 2.03 percent.
+[INFO DPL-0332] End of pass, Generator random called 93340 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 186680, swaps 46553, moves  8175 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 8.729516e+07, Scratch cost 8.685153e+07, Incremental cost 8.685153e+07, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 8.685153e+07.
+[INFO DPL-0327] Pass   2 of random improver; improvement in cost is 0.51 percent.
+[INFO DPL-0328] End of random improver; improvement is 2.532455 percent.
+[INFO DPL-0380] Cell flipping.
+[INFO DPL-0382] Changed 0 cell orientations for row compatibility.
+[INFO DPL-0383] Performed 1513 cell flips.
+[INFO DPL-0384] End of flipping; objective is 8.561798e+07, improvement is 1.88 percent.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+Place Optimization Analysis
+---------------------------------
+total attempts           280020
+relocated cells            3293
+total displacement      15244.0 u
+average displacement        4.6 u
+max displacement           16.1 u
+original HPWL           97804.4 u
+improved HPWL           85607.7 u
+delta HPWL                  -12 %
+
+optimize_mirroring
+[INFO DPL-0020] Mirrored 466 instances
+[INFO DPL-0021] HPWL before           85607.7 u
+[INFO DPL-0022] HPWL after            85537.2 u
+[INFO DPL-0023] HPWL delta               -0.1 %
+[INFO FLW-0012] Placement violations .
+estimate_parasitics -placement
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 39490 um^2 91% utilization.
+write_db ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/3_5_place_dp.odb
+write_sdc -no_timestamp ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/3_place.sdc
+Elapsed time: 0:05.45[h:]min:sec. CPU time: user 5.88 sys 0.36 (114%). Peak memory: 136480KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_5_place_dp           .odb          5        6     1.14      133 28ae42b3e0

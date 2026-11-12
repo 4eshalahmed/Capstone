@@ -1,0 +1,202 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 20 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/3_place.odb
+read_sdc ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 128 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 128.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(1645, 4020), (199445, 208140)].
+[INFO CTS-0024]  Normalized sink region: [(0.120956, 0.295588), (14.6651, 15.3044)].
+[INFO CTS-0025]     Width:  14.5441.
+[INFO CTS-0026]     Height: 15.0088.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 64
+    Sub-region size: 14.5441 X 7.5044
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 32
+    Sub-region size: 7.2721 X 7.5044
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 16
+    Sub-region size: 7.2721 X 3.7522
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 8
+    Sub-region size: 3.6360 X 3.7522
+[INFO CTS-0034]     Segment length (rounded): 2.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 128.
+[INFO CTS-0018]     Created 17 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 17 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 4:1, 5:2, 6:2, 7:2, 8:2, 9:2, 10:1, 11:4..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 140
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 334.02 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Dummy loads inserted 12
+[INFO CTS-0500] Runtime: 0.24s
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 43361.59 um^2
+[INFO DPL-0007] Movable instances area: 39326.47 um^2
+[INFO DPL-0008] Fixed instances area within core: 731.95 um^2
+[INFO DPL-0009] Utilization: 92.4%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 5281 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |        853 |       107 |       746
+        1 |        714 |        83 |       631
+        2 |        638 |        66 |       572
+        3 |        630 |        71 |       559
+        4 |        612 |        68 |       538
+        5 |        646 |        74 |       572
+        6 |        613 |        64 |       549
+        7 |        662 |        76 |       577
+        8 |        621 |        84 |       537
+        9 |        628 |        78 |       541
+       10 |        575 |        65 |       510
+       20 |        382 |        72 |       294
+       30 |        469 |        67 |       400
+       40 |        444 |        70 |       356
+       50 |        433 |        76 |       353
+       60 |        431 |        75 |       324
+       70 |        378 |        68 |       308
+       80 |        280 |        57 |       223
+       90 |        317 |        44 |       264
+      100 |        307 |        69 |       238
+      110 |        293 |        59 |       234
+      120 |        279 |        57 |       210
+      130 |        316 |        60 |       256
+      140 |        282 |        57 |       225
+      150 |        418 |        58 |       321
+      160 |        331 |        54 |       277
+      170 |        235 |        50 |       185
+      180 |        260 |        53 |       207
+      190 |        307 |        70 |       228
+      200 |        258 |        45 |       213
+      210 |        199 |        43 |       156
+      220 |        193 |        45 |       148
+      230 |        199 |        51 |       148
+      240 |        188 |        42 |       146
+      250 |        190 |        44 |       146
+      260 |        119 |        35 |        84
+      270 |        100 |        30 |        70
+      280 |        172 |        32 |       140
+      290 |        158 |        25 |       133
+      300 |        195 |        40 |       155
+      310 |        154 |        28 |       126
+      320 |        102 |        36 |        66
+      330 |        125 |        29 |        96
+      340 |        133 |        40 |        93
+      350 |         99 |        23 |        76
+      360 |         40 |        12 |        28
+      370 |         66 |        16 |        50
+      380 |         71 |        17 |        54
+      390 |         78 |         8 |        70
+      399 |         52 |        12 |        40
+Negotiation phase 2: isolation point active, 1000 iterations.
+      400 |         56 |        16 |        40
+      410 |         67 |        13 |        54
+      420 |         45 |        13 |        32
+      430 |         10 |         4 |         6
+      440 |         16 |         4 |        12
+      450 |         26 |         4 |        22
+      460 |         46 |        10 |        36
+      462 |          0 |         0 |         0
+Negotiation phase 2 converged at iteration 62.
+[INFO DPL-0500] Runtime: 2.81s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves               21934
+total displacement      17201.5 u
+average displacement        3.3 u
+max displacement           48.1 u
+original HPWL           86760.0 u
+legalized HPWL         102220.9 u
+delta HPWL                   18 %
+
+estimate_parasitics -placement
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 0.09s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.01s
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:00.41[h:]min:sec. CPU time: user 0.43 sys 0.03 (110%). Peak memory: 36172KB.
+Repair timing output passed lec test
+detailed_placement
+[INFO DPL-0006] Core area: 43361.59 um^2
+[INFO DPL-0007] Movable instances area: 39326.47 um^2
+[INFO DPL-0008] Fixed instances area within core: 731.95 um^2
+[INFO DPL-0009] Utilization: 92.4%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 5281 cells
+[INFO DPL-0500] Runtime: 0.02s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          102220.9 u
+legalized HPWL         102220.9 u
+delta HPWL                    0 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 40058 um^2 92% utilization.
+write_db ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/4_1_cts.odb
+write_sdc -no_timestamp ./results/sky130hd/multiplier32/multiplier32_abc1_10MHz_util85_defaultdensity_20261112_095618/4_cts.sdc
+Elapsed time: 0:04.66[h:]min:sec. CPU time: user 5.62 sys 1.01 (142%). Peak memory: 177864KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+4_1_cts                .odb          0        0     1.12       35 ed05288cf9
