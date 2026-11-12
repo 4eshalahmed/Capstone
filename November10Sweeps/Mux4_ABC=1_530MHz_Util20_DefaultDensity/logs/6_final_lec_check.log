@@ -1,0 +1,77 @@
+[2026-11-12 13:58:17.868] [miter_logger] [info] MiterStrategy::run starting
+[2026-11-12 13:58:17.868] [miter_logger] [info] Collecting POs for design 0: mux4_32
+
+[2026-11-12 13:58:17.871] [miter_logger] [info] Collected 294 PIs for design 0
+
+[2026-11-12 13:58:17.872] [miter_logger] [info] Collected 518 POs for design 0
+
+[2026-11-12 13:58:17.872] [miter_logger] [info] design 0 PI summary by model/term (294 total terminals, 8 unique rows):
+| Model                    | Term  | Count |
+|--------------------------|-------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q     |   162 |
+| mux4_32                  | A     |    32 |
+| mux4_32                  | B     |    32 |
+| mux4_32                  | C     |    32 |
+| mux4_32                  | D     |    32 |
+| mux4_32                  | sel   |     2 |
+| mux4_32                  | clk   |     1 |
+| mux4_32                  | rst_n |     1 |
+
+[2026-11-12 13:58:17.872] [miter_logger] [info] design 0 PO summary by model/term (518 total terminals, 4 unique rows):
+| Model                    | Term    | Count |
+|--------------------------|---------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK     |   162 |
+| sky130_fd_sc_hd__dfrtp_1 | D       |   162 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B |   162 |
+| mux4_32                  | Y       |    32 |
+
+[2026-11-12 13:58:17.872] [miter_logger] [info] Collecting POs for design 1: mux4_32
+
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of common inputs: 294
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-12 13:58:17.874] [miter_logger] [info] Collected 294 PIs for design 1
+
+[2026-11-12 13:58:17.874] [miter_logger] [info] Collected 518 POs for design 1
+
+[2026-11-12 13:58:17.874] [miter_logger] [info] design 1 PI summary by model/term (294 total terminals, 9 unique rows):
+| Model                    | Term  | Count |
+|--------------------------|-------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | Q     |   161 |
+| mux4_32                  | A     |    32 |
+| mux4_32                  | B     |    32 |
+| mux4_32                  | C     |    32 |
+| mux4_32                  | D     |    32 |
+| mux4_32                  | sel   |     2 |
+| mux4_32                  | clk   |     1 |
+| mux4_32                  | rst_n |     1 |
+| sky130_fd_sc_hd__dfrtp_2 | Q     |     1 |
+
+[2026-11-12 13:58:17.874] [miter_logger] [info] design 1 PO summary by model/term (518 total terminals, 7 unique rows):
+| Model                    | Term    | Count |
+|--------------------------|---------|-------|
+| sky130_fd_sc_hd__dfrtp_1 | CLK     |   161 |
+| sky130_fd_sc_hd__dfrtp_1 | D       |   161 |
+| sky130_fd_sc_hd__dfrtp_1 | RESET_B |   161 |
+| mux4_32                  | Y       |    32 |
+| sky130_fd_sc_hd__dfrtp_2 | CLK     |     1 |
+| sky130_fd_sc_hd__dfrtp_2 | D       |     1 |
+| sky130_fd_sc_hd__dfrtp_2 | RESET_B |     1 |
+
+[2026-11-12 13:58:17.874] [miter_logger] [info] normalizeInputs: starting
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of common inputs: 294
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-12 13:58:17.874] [miter_logger] [info] normalizeOutputs: starting
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of common outputs: 518
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of diff0 outputs: 0
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of diff1 outputs: 0
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of PIs in circuit 0: 294
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of PIs in circuit 1: 294
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of POs in circuit 0: 518
+[2026-11-12 13:58:17.874] [miter_logger] [info] size of POs in circuit 1: 518
+[2026-11-12 13:58:17.882] [miter_logger] [info] Building miter expression
+[2026-11-12 13:58:17.882] [miter_logger] [info] Finished building miter expression
+[2026-11-12 13:58:17.882] [miter_logger] [info] Starting solver
+[2026-11-12 13:58:17.882] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-11-12 13:58:17.882] [miter_logger] [info] Circuits are IDENTICAL
