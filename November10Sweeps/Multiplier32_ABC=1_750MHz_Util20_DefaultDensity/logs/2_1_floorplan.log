@@ -1,0 +1,297 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 20 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/multiplier32/multiplier32_abc1_750MHz_util20_defaultdensity_20261112_103040/1_synth.odb
+read_sdc ./results/sky130hd/multiplier32/multiplier32_abc1_750MHz_util20_defaultdensity_20261112_103040/1_synth.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 65 input ports missing set_input_delay.
+Warning: There are 64 output ports missing set_output_delay.
+Warning: There are 128 unconstrained endpoints.
+number instances in verilog is 4664
+initialize_floorplan -utilization 20 -aspect_ratio 1.0 -core_space 1.0 -site unithd
+[INFO IFP-0107] Defining die area using utilization: 20.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (1.000, 1.000) snapped to (1.380, 2.720).
+[INFO IFP-0001] Added 158 rows of 942 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 436.105 436.105 ) um
+[INFO IFP-0101] Core BBox: (  1.380  2.720 ) ( 434.700 432.480 ) um
+[INFO IFP-0102] Core area:                       186223.603 um^2
+[INFO IFP-0103] Total instances area:             37689.898 um^2
+[INFO IFP-0104] Effective utilization:                0.202
+[INFO IFP-0105] Number of instances:                   4664
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+set_dont_use "sky130_fd_sc_hd__probe_p_8 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__lpflow_bleeder_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_16 sky130_fd_sc_hd__lpflow_clkbufkapwr_2 sky130_fd_sc_hd__lpflow_clkbufkapwr_4 sky130_fd_sc_hd__lpflow_clkbufkapwr_8 sky130_fd_sc_hd__lpflow_clkinvkapwr_1 sky130_fd_sc_hd__lpflow_clkinvkapwr_16 sky130_fd_sc_hd__lpflow_clkinvkapwr_2 sky130_fd_sc_hd__lpflow_clkinvkapwr_4 sky130_fd_sc_hd__lpflow_clkinvkapwr_8 sky130_fd_sc_hd__lpflow_decapkapwr_12 sky130_fd_sc_hd__lpflow_decapkapwr_3 sky130_fd_sc_hd__lpflow_decapkapwr_4 sky130_fd_sc_hd__lpflow_decapkapwr_6 sky130_fd_sc_hd__lpflow_decapkapwr_8 sky130_fd_sc_hd__lpflow_inputiso0n_1 sky130_fd_sc_hd__lpflow_inputiso0p_1 sky130_fd_sc_hd__lpflow_inputiso1n_1 sky130_fd_sc_hd__lpflow_inputiso1p_1 sky130_fd_sc_hd__lpflow_inputisolatch_1 sky130_fd_sc_hd__lpflow_isobufsrc_1 sky130_fd_sc_hd__lpflow_isobufsrc_16 sky130_fd_sc_hd__lpflow_isobufsrc_2 sky130_fd_sc_hd__lpflow_isobufsrc_4 sky130_fd_sc_hd__lpflow_isobufsrc_8 sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4"
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/LO
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/HI
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0094] Found 62 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 62 out of 62 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -4.709 |     -262.3 |     62 | Product\[61\]$_DFF_PN0_/D
+      10* |       0 |       9 |        0 |      0 |     0 |    +0.0% |   -4.690 |     -261.7 |     62 | Product\[61\]$_DFF_PN0_/D
+      20* |       0 |      19 |        0 |      0 |     0 |    +0.1% |   -4.684 |     -261.6 |     62 | Product\[61\]$_DFF_PN0_/D
+      30* |       0 |      29 |        0 |      0 |     0 |    +0.1% |   -4.676 |     -261.1 |     62 | Product\[63\]$_DFF_PN0_/D
+      40* |       0 |      39 |        0 |      0 |     0 |    +0.1% |   -4.668 |     -260.8 |     62 | Product\[61\]$_DFF_PN0_/D
+      50* |       0 |      49 |        0 |      0 |     0 |    +0.2% |   -4.660 |     -260.7 |     62 | Product\[61\]$_DFF_PN0_/D
+      60* |       0 |      59 |        0 |      0 |     0 |    +0.2% |   -4.652 |     -260.4 |     62 | Product\[60\]$_DFF_PN0_/D
+      70* |       0 |      69 |        0 |      0 |     0 |    +0.3% |   -4.647 |     -260.3 |     62 | Product\[61\]$_DFF_PN0_/D
+      80* |       0 |      79 |        0 |      0 |     0 |    +0.4% |   -4.637 |     -259.8 |     62 | Product\[61\]$_DFF_PN0_/D
+      90* |       0 |      89 |        0 |      0 |     0 |    +0.5% |   -4.628 |     -259.5 |     62 | Product\[42\]$_DFF_PN0_/D
+     100* |       0 |      98 |        0 |      0 |     1 |    +0.6% |   -4.620 |     -259.3 |     62 | Product\[38\]$_DFF_PN0_/D
+     110* |       0 |     105 |        0 |      0 |     4 |    +0.8% |   -4.606 |     -258.4 |     62 | Product\[62\]$_DFF_PN0_/D
+     120* |       0 |     111 |        0 |      0 |     8 |    +0.9% |   -4.599 |     -258.0 |     62 | Product\[49\]$_DFF_PN0_/D
+     130* |       0 |     115 |        0 |      0 |    14 |    +1.0% |   -4.588 |     -257.6 |     62 | Product\[40\]$_DFF_PN0_/D
+     140* |       0 |     116 |        0 |      0 |    23 |    +1.0% |   -4.574 |     -256.8 |     62 | Product\[51\]$_DFF_PN0_/D
+     150* |       0 |     121 |        0 |      0 |    28 |    +1.1% |   -4.559 |     -256.3 |     62 | Product\[62\]$_DFF_PN0_/D
+     160* |       0 |     128 |        0 |      0 |    31 |    +1.1% |   -4.557 |     -256.2 |     62 | Product\[62\]$_DFF_PN0_/D
+     170* |       0 |     135 |        0 |      0 |    34 |    +1.1% |   -4.549 |     -256.0 |     62 | Product\[62\]$_DFF_PN0_/D
+     180* |       0 |     138 |        0 |      0 |    41 |    +1.1% |   -4.546 |     -255.8 |     62 | Product\[49\]$_DFF_PN0_/D
+     190* |       0 |     143 |        0 |      0 |    46 |    +1.2% |   -4.544 |     -255.7 |     62 | Product\[49\]$_DFF_PN0_/D
+     200* |       0 |     149 |        0 |      0 |    50 |    +1.2% |   -4.543 |     -255.6 |     62 | Product\[50\]$_DFF_PN0_/D
+     210* |       0 |     154 |        0 |      0 |    55 |    +1.2% |   -4.537 |     -255.2 |     62 | Product\[62\]$_DFF_PN0_/D
+     220* |       0 |     156 |        0 |      0 |    63 |    +1.2% |   -4.527 |     -254.7 |     62 | Product\[62\]$_DFF_PN0_/D
+     230* |       0 |     160 |        0 |      0 |    69 |    +1.3% |   -4.516 |     -254.5 |     62 | Product\[49\]$_DFF_PN0_/D
+     240* |       0 |     163 |        0 |      0 |    76 |    +1.3% |   -4.510 |     -254.2 |     62 | Product\[62\]$_DFF_PN0_/D
+     250* |       0 |     165 |        0 |      0 |    84 |    +1.3% |   -4.505 |     -254.0 |     62 | Product\[61\]$_DFF_PN0_/D
+     260* |       0 |     168 |        0 |      0 |    91 |    +1.3% |   -4.498 |     -253.7 |     62 | Product\[61\]$_DFF_PN0_/D
+     270* |       0 |     169 |        0 |      0 |   100 |    +1.3% |   -4.504 |     -253.6 |     62 | Product\[50\]$_DFF_PN0_/D
+     280* |       0 |     169 |        0 |      0 |   110 |    +1.3% |   -4.492 |     -253.5 |     62 | Product\[50\]$_DFF_PN0_/D
+     290* |       0 |     171 |        0 |      0 |   118 |    +1.3% |   -4.492 |     -253.4 |     62 | Product\[56\]$_DFF_PN0_/D
+     300* |       0 |     172 |        0 |      0 |   127 |    +1.3% |   -4.483 |     -253.0 |     62 | Product\[40\]$_DFF_PN0_/D
+     310* |       0 |     174 |        0 |      0 |   135 |    +1.3% |   -4.478 |     -252.6 |     62 | Product\[63\]$_DFF_PN0_/D
+     320* |       0 |     176 |        0 |      0 |   143 |    +1.3% |   -4.472 |     -252.6 |     62 | Product\[63\]$_DFF_PN0_/D
+     330* |       0 |     179 |        0 |      0 |   150 |    +1.4% |   -4.470 |     -252.3 |     62 | Product\[39\]$_DFF_PN0_/D
+     340* |       0 |     183 |        0 |      0 |   156 |    +1.4% |   -4.466 |     -252.1 |     62 | Product\[63\]$_DFF_PN0_/D
+     350* |       0 |     185 |        0 |      0 |   164 |    +1.4% |   -4.469 |     -252.3 |     62 | Product\[51\]$_DFF_PN0_/D
+     360* |       0 |     191 |        0 |      0 |   168 |    +1.5% |   -4.458 |     -252.0 |     62 | Product\[51\]$_DFF_PN0_/D
+     370* |       0 |     193 |        0 |      0 |   176 |    +1.5% |   -4.474 |     -252.0 |     62 | Product\[51\]$_DFF_PN0_/D
+     380* |       0 |     198 |        0 |      0 |   181 |    +1.6% |   -4.455 |     -251.9 |     62 | Product\[50\]$_DFF_PN0_/D
+     390* |       0 |     201 |        0 |      0 |   188 |    +1.6% |   -4.451 |     -251.7 |     62 | Product\[61\]$_DFF_PN0_/D
+     400* |       0 |     205 |        0 |      0 |   194 |    +1.6% |   -4.445 |     -251.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     410* |       0 |     212 |        0 |      0 |   197 |    +1.7% |   -4.440 |     -251.3 |     62 | Product\[50\]$_DFF_PN0_/D
+     420* |       0 |     220 |        0 |      0 |   199 |    +1.7% |   -4.443 |     -251.1 |     62 | Product\[51\]$_DFF_PN0_/D
+     430* |       0 |     227 |        0 |      0 |   202 |    +1.8% |   -4.433 |     -250.7 |     62 | Product\[50\]$_DFF_PN0_/D
+     440* |       0 |     235 |        0 |      0 |   204 |    +1.9% |   -4.428 |     -250.5 |     62 | Product\[56\]$_DFF_PN0_/D
+     450* |       0 |     241 |        0 |      0 |   208 |    +1.9% |   -4.424 |     -250.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     460* |       0 |     246 |        0 |      0 |   213 |    +2.0% |   -4.420 |     -250.3 |     62 | Product\[40\]$_DFF_PN0_/D
+     470* |       0 |     251 |        0 |      0 |   218 |    +2.0% |   -4.418 |     -250.2 |     62 | Product\[51\]$_DFF_PN0_/D
+     480* |       0 |     257 |        0 |      0 |   222 |    +2.0% |   -4.412 |     -249.8 |     62 | Product\[62\]$_DFF_PN0_/D
+     490* |       0 |     265 |        0 |      0 |   224 |    +2.1% |   -4.408 |     -249.7 |     62 | Product\[62\]$_DFF_PN0_/D
+     500* |       0 |     271 |        0 |      0 |   228 |    +2.1% |   -4.425 |     -249.9 |     62 | Product\[61\]$_DFF_PN0_/D
+     510* |       0 |     278 |        0 |      0 |   231 |    +2.2% |   -4.404 |     -249.6 |     62 | Product\[62\]$_DFF_PN0_/D
+     520* |       0 |     282 |        0 |      0 |   237 |    +2.3% |   -4.410 |     -249.5 |     62 | Product\[39\]$_DFF_PN0_/D
+     530* |       0 |     290 |        0 |      0 |   239 |    +2.4% |   -4.399 |     -249.5 |     62 | Product\[62\]$_DFF_PN0_/D
+     540* |       0 |     297 |        0 |      0 |   242 |    +2.5% |   -4.409 |     -249.3 |     62 | Product\[50\]$_DFF_PN0_/D
+     550* |       0 |     305 |        0 |      0 |   244 |    +2.6% |   -4.395 |     -249.3 |     62 | Product\[61\]$_DFF_PN0_/D
+     560* |       0 |     310 |        0 |      0 |   249 |    +2.7% |   -4.403 |     -249.3 |     62 | Product\[63\]$_DFF_PN0_/D
+     570* |       0 |     318 |        0 |      0 |   251 |    +2.8% |   -4.392 |     -249.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     580* |       0 |     321 |        0 |      0 |   258 |    +2.8% |   -4.388 |     -249.0 |     62 | Product\[61\]$_DFF_PN0_/D
+     590* |       0 |     326 |        0 |      0 |   263 |    +2.8% |   -4.421 |     -248.9 |     62 | Product\[61\]$_DFF_PN0_/D
+     600* |       0 |     331 |        0 |      0 |   268 |    +2.9% |   -4.388 |     -248.8 |     62 | Product\[51\]$_DFF_PN0_/D
+     607* |       0 |     332 |        0 |      0 |   270 |    +2.9% |   -4.384 |     -248.8 |     62 | Product\[61\]$_DFF_PN0_/D
+     610* |       0 |     333 |        0 |      0 |   271 |    +2.9% |   -4.392 |     -248.8 |     62 | Product\[61\]$_DFF_PN0_/D
+     620* |       0 |     338 |        0 |      0 |   276 |    +2.9% |   -4.400 |     -248.6 |     62 | Product\[60\]$_DFF_PN0_/D
+     630* |       0 |     345 |        0 |      0 |   279 |    +3.0% |   -4.400 |     -248.6 |     62 | Product\[60\]$_DFF_PN0_/D
+     640* |       0 |     346 |        0 |      0 |   288 |    +3.0% |   -4.400 |     -248.6 |     62 | Product\[60\]$_DFF_PN0_/D
+     650* |       0 |     348 |        0 |      0 |   296 |    +3.0% |   -4.400 |     -248.5 |     62 | Product\[60\]$_DFF_PN0_/D
+     658* |       0 |     332 |        0 |      0 |   270 |    +2.9% |   -4.384 |     -248.8 |     62 | Product\[61\]$_DFF_PN0_/D
+     660* |       0 |     332 |        0 |      0 |   271 |    +2.9% |   -4.384 |     -248.8 |     62 | Product\[61\]$_DFF_PN0_/D
+     670* |       0 |     334 |        0 |      0 |   279 |    +2.9% |   -4.401 |     -249.0 |     62 | Product\[40\]$_DFF_PN0_/D
+     680* |       0 |     339 |        0 |      0 |   284 |    +2.9% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     684* |       0 |     338 |        0 |      0 |   279 |    +2.9% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     690* |       0 |     341 |        0 |      0 |   281 |    +3.0% |   -4.408 |     -248.6 |     62 | Product\[60\]$_DFF_PN0_/D
+     694* |       0 |     339 |        0 |      0 |   279 |    +2.9% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     700* |       0 |     343 |        0 |      0 |   280 |    +3.0% |   -4.396 |     -248.8 |     62 | Product\[61\]$_DFF_PN0_/D
+     710* |       0 |     345 |        0 |      0 |   288 |    +3.0% |   -4.396 |     -248.8 |     62 | Product\[61\]$_DFF_PN0_/D
+     711* |       0 |     339 |        0 |      0 |   279 |    +2.9% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     720* |       0 |     344 |        0 |      0 |   282 |    +3.0% |   -4.394 |     -248.5 |     62 | Product\[50\]$_DFF_PN0_/D
+     729* |       0 |     339 |        0 |      0 |   279 |    +2.9% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     730* |       0 |     339 |        0 |      0 |   279 |    +2.9% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     740* |       0 |     342 |        0 |      0 |   286 |    +3.0% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     750* |       0 |     346 |        0 |      0 |   292 |    +3.0% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     760* |       0 |     351 |        0 |      0 |   297 |    +3.0% |   -4.396 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     770* |       0 |     356 |        0 |      0 |   302 |    +3.1% |   -4.389 |     -248.5 |     62 | Product\[50\]$_DFF_PN0_/D
+     775* |       0 |     347 |        0 |      0 |   292 |    +3.0% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     778* |       0 |     347 |        0 |      0 |   292 |    +3.0% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     780* |       0 |     348 |        0 |      0 |   292 |    +3.0% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     790* |       0 |     351 |        0 |      0 |   299 |    +3.1% |   -4.401 |     -248.4 |     62 | Product\[50\]$_DFF_PN0_/D
+     800* |       0 |     355 |        0 |      0 |   305 |    +3.1% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     810* |       0 |     359 |        0 |      0 |   311 |    +3.1% |   -4.388 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     815* |       0 |     358 |        0 |      0 |   309 |    +3.1% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     820* |       0 |     358 |        0 |      0 |   313 |    +3.1% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     828* |       0 |     363 |        0 |      0 |   316 |    +3.2% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     830* |       0 |     363 |        0 |      0 |   317 |    +3.2% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     831* |       0 |     363 |        0 |      0 |   318 |    +3.2% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     840* |       0 |     365 |        0 |      0 |   324 |    +3.2% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     840* |       0 |     364 |        0 |      0 |   322 |    +3.2% |   -4.384 |     -248.5 |     62 | Product\[61\]$_DFF_PN0_/D
+     848* |       0 |     366 |        0 |      0 |   323 |    +3.2% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     850* |       0 |     366 |        0 |      0 |   324 |    +3.2% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     854* |       0 |     366 |        0 |      0 |   325 |    +3.2% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     859* |       0 |     366 |        0 |      0 |   327 |    +3.2% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     860* |       0 |     366 |        0 |      0 |   327 |    +3.2% |   -4.384 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     870* |       0 |     371 |        0 |      0 |   332 |    +3.3% |   -4.396 |     -248.4 |     62 | Product\[62\]$_DFF_PN0_/D
+     871* |       0 |     366 |        0 |      0 |   328 |    +3.2% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+     880* |       0 |     369 |        0 |      0 |   333 |    +3.2% |   -4.395 |     -248.4 |     62 | Product\[61\]$_DFF_PN0_/D
+     886* |       0 |     367 |        0 |      0 |   331 |    +3.2% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+     890* |       0 |     368 |        0 |      0 |   333 |    +3.2% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     894* |       0 |     368 |        0 |      0 |   331 |    +3.2% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     900* |       0 |     370 |        0 |      0 |   334 |    +3.3% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     905* |       0 |     370 |        0 |      0 |   333 |    +3.3% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     909* |       0 |     370 |        0 |      0 |   333 |    +3.3% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     910* |       0 |     370 |        0 |      0 |   333 |    +3.3% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     920* |       0 |     376 |        0 |      0 |   337 |    +3.3% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     922* |       0 |     375 |        0 |      0 |   334 |    +3.3% |   -4.384 |     -248.1 |     62 | Product\[61\]$_DFF_PN0_/D
+     930* |       0 |     380 |        0 |      0 |   336 |    +3.4% |   -4.388 |     -248.0 |     62 | Product\[62\]$_DFF_PN0_/D
+     940* |       0 |     383 |        0 |      0 |   343 |    +3.4% |   -4.388 |     -248.0 |     62 | Product\[62\]$_DFF_PN0_/D
+     944* |       0 |     377 |        0 |      0 |   334 |    +3.3% |   -4.384 |     -248.1 |     62 | Product\[61\]$_DFF_PN0_/D
+     950* |       0 |     379 |        0 |      0 |   337 |    +3.4% |   -4.388 |     -248.1 |     62 | Product\[62\]$_DFF_PN0_/D
+     957* |       0 |     377 |        0 |      0 |   335 |    +3.3% |   -4.384 |     -248.1 |     62 | Product\[61\]$_DFF_PN0_/D
+     960* |       0 |     379 |        0 |      0 |   335 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     965* |       0 |     380 |        0 |      0 |   335 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     970* |       0 |     384 |        0 |      0 |   335 |    +3.4% |   -4.384 |     -248.4 |     62 | Product\[63\]$_DFF_PN0_/D
+     973* |       0 |     381 |        0 |      0 |   335 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     979* |       0 |     381 |        0 |      0 |   335 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     980* |       0 |     381 |        0 |      0 |   335 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+     982* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+     988* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+     990* |       0 |     381 |        0 |      0 |   338 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+     996* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1000* |       0 |     383 |        0 |      0 |   338 |    +3.4% |   -4.388 |     -248.3 |     62 | Product\[62\]$_DFF_PN0_/D
+    1003* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1005* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1008* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1010* |       0 |     382 |        0 |      0 |   337 |    +3.4% |   -4.385 |     -248.3 |     62 | Product\[63\]$_DFF_PN0_/D
+    1014* |       0 |     381 |        0 |      0 |   337 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1016* |       0 |     381 |        0 |      0 |   338 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1020* |       0 |     382 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1020* |       0 |     382 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1023* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1030* |       0 |     387 |        0 |      0 |   342 |    +3.4% |   -4.393 |     -248.2 |     62 | Product\[62\]$_DFF_PN0_/D
+    1031* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1034* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1037* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1040* |       0 |     385 |        0 |      0 |   340 |    +3.4% |   -4.385 |     -248.3 |     62 | Product\[63\]$_DFF_PN0_/D
+    1041* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1044* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1048* |       0 |     383 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1050* |       0 |     384 |        0 |      0 |   340 |    +3.4% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1060* |       0 |     390 |        0 |      0 |   344 |    +3.5% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1065* |       0 |     391 |        0 |      0 |   348 |    +3.5% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1069* |       0 |     392 |        0 |      0 |   348 |    +3.5% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1070* |       0 |     392 |        0 |      0 |   348 |    +3.5% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1074* |       0 |     393 |        0 |      0 |   349 |    +3.5% |   -4.384 |     -248.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1080* |       0 |     395 |        0 |      0 |   352 |    +3.5% |   -4.384 |     -248.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1090* |       0 |     402 |        0 |      0 |   355 |    +3.5% |   -4.384 |     -248.1 |     62 | Product\[61\]$_DFF_PN0_/D
+    1100* |       0 |     412 |        0 |      0 |   355 |    +3.6% |   -4.384 |     -247.7 |     62 | Product\[61\]$_DFF_PN0_/D
+    1110* |       0 |     416 |        0 |      0 |   361 |    +3.7% |   -4.384 |     -247.5 |     62 | Product\[61\]$_DFF_PN0_/D
+    1120* |       0 |     420 |        0 |      0 |   367 |    +3.8% |   -4.384 |     -247.4 |     62 | Product\[61\]$_DFF_PN0_/D
+    1130* |       0 |     423 |        0 |      0 |   374 |    +3.8% |   -4.384 |     -247.2 |     62 | Product\[61\]$_DFF_PN0_/D
+    1140* |       0 |     427 |        0 |      0 |   380 |    +3.9% |   -4.388 |     -247.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1145* |       0 |     407 |        0 |      0 |   355 |    +3.6% |   -4.384 |     -247.7 |     62 | Product\[61\]$_DFF_PN0_/D
+    1150* |       0 |     408 |        0 |      0 |   358 |    +3.6% |   -4.384 |     -247.6 |     62 | Product\[61\]$_DFF_PN0_/D
+    1160* |       0 |     413 |        0 |      0 |   363 |    +3.6% |   -4.384 |     -247.4 |     62 | Product\[61\]$_DFF_PN0_/D
+    1170* |       0 |     420 |        0 |      0 |   366 |    +3.7% |   -4.391 |     -247.4 |     62 | Product\[63\]$_DFF_PN0_/D
+    1180* |       0 |     424 |        0 |      0 |   372 |    +3.7% |   -4.391 |     -247.4 |     62 | Product\[63\]$_DFF_PN0_/D
+    1190* |       0 |     429 |        0 |      0 |   377 |    +3.8% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1190* |       0 |     414 |        0 |      0 |   363 |    +3.6% |   -4.384 |     -247.4 |     62 | Product\[61\]$_DFF_PN0_/D
+    1200* |       0 |     421 |        0 |      0 |   365 |    +3.7% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1210* |       0 |     424 |        0 |      0 |   372 |    +3.8% |   -4.391 |     -247.1 |     62 | Product\[63\]$_DFF_PN0_/D
+    1213* |       0 |     414 |        0 |      0 |   363 |    +3.6% |   -4.384 |     -247.4 |     62 | Product\[61\]$_DFF_PN0_/D
+    1220* |       0 |     417 |        0 |      0 |   366 |    +3.7% |   -4.384 |     -247.3 |     62 | Product\[61\]$_DFF_PN0_/D
+    1230* |       0 |     423 |        0 |      0 |   370 |    +3.8% |   -4.391 |     -247.3 |     62 | Product\[63\]$_DFF_PN0_/D
+    1239* |       0 |     422 |        0 |      0 |   368 |    +3.8% |   -4.384 |     -247.1 |     62 | Product\[61\]$_DFF_PN0_/D
+    1240* |       0 |     422 |        0 |      0 |   368 |    +3.8% |   -4.384 |     -247.1 |     62 | Product\[61\]$_DFF_PN0_/D
+    1250* |       0 |     428 |        0 |      0 |   372 |    +3.9% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1260* |       0 |     433 |        0 |      0 |   377 |    +3.9% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1270* |       0 |     436 |        0 |      0 |   384 |    +3.9% |   -4.391 |     -246.9 |     62 | Product\[63\]$_DFF_PN0_/D
+    1274* |       0 |     423 |        0 |      0 |   368 |    +3.8% |   -4.384 |     -247.1 |     62 | Product\[61\]$_DFF_PN0_/D
+    1280* |       0 |     426 |        0 |      0 |   370 |    +3.8% |   -4.391 |     -247.3 |     62 | Product\[63\]$_DFF_PN0_/D
+    1280* |       0 |     423 |        0 |      0 |   368 |    +3.8% |   -4.384 |     -247.1 |     62 | Product\[61\]$_DFF_PN0_/D
+    1290* |       0 |     430 |        0 |      0 |   370 |    +3.9% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1300* |       0 |     436 |        0 |      0 |   374 |    +4.0% |   -4.391 |     -247.0 |     62 | Product\[63\]$_DFF_PN0_/D
+    1307* |       0 |     425 |        0 |      0 |   368 |    +3.9% |   -4.384 |     -247.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1310* |       0 |     427 |        0 |      0 |   368 |    +3.9% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1314* |       0 |     425 |        0 |      0 |   368 |    +3.9% |   -4.384 |     -247.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1320* |       0 |     428 |        0 |      0 |   370 |    +3.9% |   -4.391 |     -247.2 |     62 | Product\[63\]$_DFF_PN0_/D
+    1324* |       0 |     425 |        0 |      0 |   368 |    +3.9% |   -4.384 |     -247.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1327* |       0 |     425 |        0 |      0 |   368 |    +3.9% |   -4.384 |     -247.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1330* |       0 |     426 |        0 |      0 |   369 |    +3.9% |   -4.384 |     -247.0 |     62 | Product\[61\]$_DFF_PN0_/D
+    1340* |       0 |     432 |        0 |      0 |   373 |    +3.9% |   -4.391 |     -246.8 |     62 | Product\[63\]$_DFF_PN0_/D
+    1350* |       0 |     436 |        0 |      0 |   379 |    +4.0% |   -4.391 |     -246.8 |     62 | Product\[63\]$_DFF_PN0_/D
+    1355* |       0 |     427 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.8 |     62 | Product\[61\]$_DFF_PN0_/D
+    1360* |       0 |     431 |        0 |      0 |   371 |    +3.9% |   -4.391 |     -246.8 |     62 | Product\[63\]$_DFF_PN0_/D
+    1370* |       0 |     438 |        0 |      0 |   374 |    +4.1% |   -4.391 |     -246.6 |     62 | Product\[63\]$_DFF_PN0_/D
+    1380* |       0 |     441 |        0 |      0 |   381 |    +4.2% |   -4.391 |     -246.5 |     62 | Product\[63\]$_DFF_PN0_/D
+    1382* |       0 |     429 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.7 |     62 | Product\[61\]$_DFF_PN0_/D
+    1390* |       0 |     436 |        0 |      0 |   371 |    +4.1% |   -4.391 |     -246.6 |     62 | Product\[63\]$_DFF_PN0_/D
+    1400* |       0 |     441 |        0 |      0 |   376 |    +4.1% |   -4.391 |     -246.5 |     62 | Product\[63\]$_DFF_PN0_/D
+    1404* |       0 |     429 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.7 |     62 | Product\[61\]$_DFF_PN0_/D
+    1410* |       0 |     434 |        0 |      0 |   371 |    +4.0% |   -4.391 |     -246.6 |     62 | Product\[63\]$_DFF_PN0_/D
+    1420* |       0 |     440 |        0 |      0 |   375 |    +4.1% |   -4.391 |     -246.4 |     62 | Product\[63\]$_DFF_PN0_/D
+    1427* |       0 |     429 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.7 |     62 | Product\[61\]$_DFF_PN0_/D
+    1430* |       0 |     431 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.6 |     62 | Product\[61\]$_DFF_PN0_/D
+    1438* |       0 |     430 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.7 |     62 | Product\[61\]$_DFF_PN0_/D
+    1440* |       0 |     431 |        0 |      0 |   371 |    +3.9% |   -4.384 |     -246.6 |     62 | Product\[61\]$_DFF_PN0_/D
+    1450* |       0 |     436 |        0 |      0 |   376 |    +4.0% |   -4.384 |     -246.5 |     62 | Product\[61\]$_DFF_PN0_/D
+    1450* |       0 |     436 |        0 |      0 |   376 |    +4.0% |   -4.384 |     -246.5 |     62 | Product\[61\]$_DFF_PN0_/D
+    1454* |       0 |     436 |        0 |      0 |   379 |    +4.0% |   -4.384 |     -246.4 |     62 | Product\[61\]$_DFF_PN0_/D
+    1454* |       0 |     436 |        0 |      0 |   379 |    +4.0% |   -4.384 |     -246.4 |     62 | Product\[61\]$_DFF_PN0_/D
+    final |       0 |     436 |        0 |      0 |   379 |    +4.0% |   -4.384 |     -246.4 |     62 | Product\[61\]$_DFF_PN0_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0051] Resized 436 instances: 436 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 379 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 4.12s
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        1.21e-03 |         1.72e-04
+      met2 |        1.22e-03 |         1.36e-04
+      met3 |        1.66e-04 |         2.15e-04
+      met4 |        1.68e-04 |         1.48e-04
+      met5 |        1.84e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 39201 um^2 21% utilization.
+write_db ./results/sky130hd/multiplier32/multiplier32_abc1_750MHz_util20_defaultdensity_20261112_103040/2_1_floorplan.odb
+write_sdc -no_timestamp ./results/sky130hd/multiplier32/multiplier32_abc1_750MHz_util20_defaultdensity_20261112_103040/2_1_floorplan.sdc
+Elapsed time: 0:04.56[h:]min:sec. CPU time: user 9.82 sys 2.41 (267%). Peak memory: 152304KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+2_1_floorplan          .odb          4       12     2.68      148 d2862138eb
+2_1_floorplan          .sdc                                       cef18da86d
