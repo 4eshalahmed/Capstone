@@ -1,0 +1,26 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design cgra_U0
+read_sdc ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/1_2_yosys.sdc
+[WARNING STA-0366] port 'mem_*_data_out' not found.
+[WARNING STA-0366] port 'mem_*_addr' not found.
+[WARNING STA-0366] port 'mem_*_data_in' not found.
+[WARNING STA-0366] port 'mem_*_w_rq' not found.
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+eliminate_dead_logic
+Removed 0 unused instances and 0 unused nets.
+Design area 38148 um^2 100% utilization.
+write_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/1_synth.odb
+write_sdc -no_timestamp ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/1_synth.sdc
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:00.40[h:]min:sec. CPU time: user 0.35 sys 0.05 (97%). Peak memory: 117600KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+1_synth                .odb          0        0     1.00      114 4e272eb906
+1_synth                .sdc                                       09eb1c3088

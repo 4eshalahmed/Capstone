@@ -1,0 +1,147 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/1_synth.odb
+read_sdc ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/1_synth.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 18 input ports missing set_input_delay.
+Warning: There are 34 output ports missing set_output_delay.
+Warning: There are 34 unconstrained endpoints.
+Warning: There are 48 combinational loops in the design.
+number instances in verilog is 5394
+initialize_floorplan -utilization 50 -aspect_ratio 1.0 -core_space 1.0 -site unithd
+[INFO IFP-0107] Defining die area using utilization: 50.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (1.000, 1.000) snapped to (1.380, 2.720).
+[INFO IFP-0001] Added 100 rows of 599 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 278.215 278.215 ) um
+[INFO IFP-0101] Core BBox: (  1.380  2.720 ) ( 276.920 274.720 ) um
+[INFO IFP-0102] Core area:                        74946.880 um^2
+[INFO IFP-0103] Total instances area:             38147.837 um^2
+[INFO IFP-0104] Effective utilization:                0.509
+[INFO IFP-0105] Number of instances:                   5394
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+set_dont_use "sky130_fd_sc_hd__probe_p_8 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__lpflow_bleeder_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_16 sky130_fd_sc_hd__lpflow_clkbufkapwr_2 sky130_fd_sc_hd__lpflow_clkbufkapwr_4 sky130_fd_sc_hd__lpflow_clkbufkapwr_8 sky130_fd_sc_hd__lpflow_clkinvkapwr_1 sky130_fd_sc_hd__lpflow_clkinvkapwr_16 sky130_fd_sc_hd__lpflow_clkinvkapwr_2 sky130_fd_sc_hd__lpflow_clkinvkapwr_4 sky130_fd_sc_hd__lpflow_clkinvkapwr_8 sky130_fd_sc_hd__lpflow_decapkapwr_12 sky130_fd_sc_hd__lpflow_decapkapwr_3 sky130_fd_sc_hd__lpflow_decapkapwr_4 sky130_fd_sc_hd__lpflow_decapkapwr_6 sky130_fd_sc_hd__lpflow_decapkapwr_8 sky130_fd_sc_hd__lpflow_inputiso0n_1 sky130_fd_sc_hd__lpflow_inputiso0p_1 sky130_fd_sc_hd__lpflow_inputiso1n_1 sky130_fd_sc_hd__lpflow_inputiso1p_1 sky130_fd_sc_hd__lpflow_inputisolatch_1 sky130_fd_sc_hd__lpflow_isobufsrc_1 sky130_fd_sc_hd__lpflow_isobufsrc_16 sky130_fd_sc_hd__lpflow_isobufsrc_2 sky130_fd_sc_hd__lpflow_isobufsrc_4 sky130_fd_sc_hd__lpflow_isobufsrc_8 sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4"
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/LO
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/HI
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0094] Found 48 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 48 out of 48 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+       2* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+       4* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+       6* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+       8* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      10* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_bottom_0_IOPin_bidir_out[4]
+      10* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      12* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      14* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      16* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      18* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      20* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_bottom_1_IOPin_bidir_out[2]
+      20* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      22* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      24* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      26* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      28* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      30* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_bottom_1_IOPin_bidir_out[7]
+      30* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      32* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      34* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      36* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      38* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      40* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_right_0_IOPin_bidir_out[4]
+      40* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      42* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      44* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      46* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      48* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      50* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_right_1_IOPin_bidir_out[1]
+      50* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      52* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      54* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      56* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      58* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      60* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_right_1_IOPin_bidir_out[6]
+      60* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      62* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      64* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      66* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      68* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      70* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_top_0_IOPin_bidir_out[3]
+      70* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      72* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      74* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      76* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      78* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      80* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_top_1_IOPin_bidir_out[0]
+      80* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      82* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      84* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      86* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      88* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      90* |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -1.245 |      -59.3 |     48 | io_top_1_IOPin_bidir_out[5]
+      90* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      92* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      94* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      97* |       0 |       2 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+      97* |       0 |       2 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+    final |       0 |       2 |        0 |      0 |     0 |    +0.0% |   -1.237 |      -59.2 |     48 | io_bottom_0_IOPin_bidir_out[0]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0051] Resized 2 instances: 2 up, 0 up match, 0 down, 0 VT
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 0.21s
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        1.21e-03 |         1.72e-04
+      met2 |        1.22e-03 |         1.36e-04
+      met3 |        1.66e-04 |         2.15e-04
+      met4 |        1.68e-04 |         1.48e-04
+      met5 |        1.84e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 38155 um^2 51% utilization.
+write_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/2_1_floorplan.odb
+write_sdc -no_timestamp ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/2_1_floorplan.sdc
+Elapsed time: 0:00.82[h:]min:sec. CPU time: user 0.75 sys 0.06 (98%). Peak memory: 158404KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+2_1_floorplan          .odb          0        1     0.99      154 44536cd273
+2_1_floorplan          .sdc                                       09eb1c3088

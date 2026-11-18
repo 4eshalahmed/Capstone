@@ -1,0 +1,446 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/4_cts.odb
+read_sdc ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/4_cts.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   cgra_U0
+Die area:                 ( 0 0 ) ( 278215 278215 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     7402
+Number of terminals:      155
+Number of snets:          2
+Number of nets:           6668
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 144.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 144356.
+[INFO DRT-0033] mcon shape region query size = 86678.
+[INFO DRT-0033] met1 shape region query size = 24094.
+[INFO DRT-0033] via shape region query size = 5050.
+[INFO DRT-0033] met2 shape region query size = 3104.
+[INFO DRT-0033] via2 shape region query size = 4040.
+[INFO DRT-0033] met3 shape region query size = 3109.
+[INFO DRT-0033] via3 shape region query size = 4040.
+[INFO DRT-0033] met4 shape region query size = 1230.
+[INFO DRT-0033] via4 shape region query size = 200.
+[INFO DRT-0033] met5 shape region query size = 240.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0078]   Complete 1122 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 144 unique inst patterns.
+[INFO DRT-0084]   Complete 3303 groups.
+#scanned instances     = 7402
+#unique  instances     = 144
+#stdCellGenAp          = 4867
+#stdCellValidPlanarAp  = 34
+#stdCellValidViaAp     = 3266
+#stdCellPinNoAp        = 6
+#stdCellPinCnt         = 20651
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:01:07, elapsed time = 00:01:07, memory = 148.60 (MB), peak = 147.66 (MB)
+Took 68 seconds: pin_access
+global_route -congestion_report_file ./reports/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 7397
+[INFO GRT-0019] Found 59 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 51
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal      23833         18469          22.51%
+met2       Vertical        20319         15600          23.22%
+met3       Horizontal      15191         11912          21.59%
+met4       Vertical         9984          7059          29.30%
+met5       Horizontal       2106          1599          24.07%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove congestion.
+[INFO GRT-0102] Start extra iteration 1/30
+[INFO GRT-0102] Start extra iteration 2/30
+[INFO GRT-0102] Start extra iteration 3/30
+[INFO GRT-0197] Via related to pin nodes: 33194
+[INFO GRT-0198] Via related Steiner nodes: 694
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 41727
+[INFO GRT-0112] Final usage 3D: 148681
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1             18469         10798           58.47%             0 /  0 /  0
+met2             15600          9759           62.56%             0 /  0 /  0
+met3             11912          1361           11.43%             0 /  0 /  0
+met4              7059          1582           22.41%             0 /  0 /  0
+met5              1599             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            54639         23500           43.01%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 253823 um
+[INFO GRT-0014] Routed nets: 6619
+[INFO GRT-0303] Global routing runtime = 00:00:00
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      6715
+     1000 |     +0.0% |       0 |       0 |             0 |      5715
+     2000 |     +0.0% |       0 |       0 |             0 |      4715
+     3000 |     +0.0% |       0 |       0 |             0 |      3715
+[WARNING RSZ-0104] Net _4870_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4893_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4891_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4887_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4878_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4876_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4871_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4847_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4841_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4837_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4832_ only has one pin. Check if it is intended to be dangling.
+     4000 |     +0.0% |       0 |       0 |             0 |      2715
+[WARNING RSZ-0104] Net _4886_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4868_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4860_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4856_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4854_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4852_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4850_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4839_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4835_ only has one pin. Check if it is intended to be dangling.
+     5000 |     +0.0% |       0 |       0 |             0 |      1715
+[WARNING RSZ-0104] Net _4901_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4898_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4897_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4896_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4894_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4892_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4888_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4885_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4884_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4883_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4882_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4881_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4879_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4877_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4869_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4867_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4863_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4862_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4861_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4857_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4855_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4853_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4851_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4848_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4842_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4840_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4838_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4836_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _4833_ only has one pin. Check if it is intended to be dangling.
+     6000 |     +0.0% |       0 |       0 |             0 |       715
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.30s
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 74946.88 um^2
+[INFO DPL-0007] Movable instances area: 49836.55 um^2
+[INFO DPL-0008] Fixed instances area within core: 1212.41 um^2
+[INFO DPL-0009] Utilization: 68.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 7402 cells
+[INFO DPL-0500] Runtime: 0.02s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          134085.4 u
+legalized HPWL         134085.4 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 48 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 48 out of 48 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.488 |      -70.8 |     48 | io_bottom_0_IOPin_bidir_out[2]
+       7* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+       8* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+       9* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      10* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      10* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      11* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      12* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      13* |       0 |       5 |        1 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      16* |       0 |       6 |        2 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      17* |       0 |       6 |        2 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      18* |       0 |       6 |        2 |      0 |     0 |    +0.1% |   -1.485 |      -70.8 |     48 | io_right_1_IOPin_bidir_out[0]
+      20* |       0 |       7 |        2 |      0 |     0 |    +0.1% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      20* |       0 |       7 |        2 |      0 |     0 |    +0.1% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      23* |       0 |       8 |        3 |      0 |     0 |    +0.1% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      25* |       0 |       9 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      26* |       0 |       9 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      27* |       0 |       9 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      29* |       0 |      10 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      30* |       0 |      10 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      30* |       0 |      10 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      31* |       0 |      10 |        3 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      33* |       0 |      10 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      34* |       0 |      10 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      35* |       0 |      10 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      37* |       0 |      11 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      39* |       0 |      12 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      40* |       0 |      12 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      40* |       0 |      12 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      42* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      43* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      44* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      45* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      46* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      47* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      48* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      49* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      50* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      50* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      51* |       0 |      13 |        4 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      53* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      54* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      55* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      56* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      57* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      58* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      59* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      60* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      60* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      61* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      62* |       0 |      13 |        5 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      64* |       0 |      13 |        6 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      65* |       0 |      13 |        6 |      0 |     0 |    +0.2% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      67* |       0 |      13 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      69* |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      69* |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      70+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      70+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      71+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      72+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      73+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      74+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      75+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      76+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      77+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      78+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      79+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      80+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      80+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      81+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      82+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      83+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      84+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      85+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      86+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      87+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      88+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      89+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      90+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      90+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      91+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      92+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      93+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      94+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      95+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      96+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      97+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      98+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+      99+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     100+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     100+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     101+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     102+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     103+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     104+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     105+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     106+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     107+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     108+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     109+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     110+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     110+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     111+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     112+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     113+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     114+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     115+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     116+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+     117+ |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+    final |       0 |      14 |        7 |      0 |     0 |    +0.3% |   -1.485 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[0]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 7 buffers.
+[INFO RSZ-0051] Resized 14 instances: 14 up, 0 up match, 0 down, 0 VT
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 0.71s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.02s
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 74946.88 um^2
+[INFO DPL-0007] Movable instances area: 49974.18 um^2
+[INFO DPL-0008] Fixed instances area within core: 1212.41 um^2
+[INFO DPL-0009] Utilization: 68.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 7409 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |        214 |        42 |       172
+        1 |        200 |        36 |       158
+        2 |        236 |        36 |       200
+        3 |        162 |        20 |       142
+        4 |        140 |        20 |       120
+        5 |        128 |        18 |       110
+        6 |        128 |        16 |       112
+        7 |        110 |        16 |        94
+        8 |        123 |        16 |       101
+        9 |        107 |        19 |        88
+       10 |        108 |        16 |        92
+       20 |         95 |        10 |        85
+       30 |         41 |         7 |        34
+       40 |         21 |         2 |        19
+       50 |          5 |         2 |         3
+       60 |         22 |         3 |        19
+       62 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 62.
+[INFO DPL-0500] Runtime: 0.18s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                1097
+total displacement       1051.4 u
+average displacement        0.1 u
+max displacement           34.2 u
+original HPWL          134102.7 u
+legalized HPWL         134942.5 u
+delta HPWL                    1 %
+
+check_placement -verbose
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/congestion_post_repair_timing.rpt
+estimate_parasitics -global_routing
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 4 antenna violations.
+[INFO GRT-0302] Inserted 4 jumpers for 4 nets.
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 51187 um^2 68% utilization.
+[INFO FLW-0007] clock cgra_clk period 20.000000
+[WARNING FLW-0010] more than one clock found. Skipping sdc update.
+[INFO FLW-0011] Path endpoint path count 1243
+write_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/5_1_grt.odb
+write_sdc -no_timestamp ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/5_1_grt.sdc
+Elapsed time: 1:22.26[h:]min:sec. CPU time: user 82.12 sys 0.13 (99%). Peak memory: 334216KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+5_1_grt                .odb         82       82     1.00      326 d5ce6c5e22
+5_1_grt                .sdc                                       24fd5bca6b

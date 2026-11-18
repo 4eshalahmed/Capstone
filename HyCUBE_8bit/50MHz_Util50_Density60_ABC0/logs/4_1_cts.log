@@ -1,0 +1,421 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/3_place.odb
+read_sdc ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0007] Net "CGRA_Clock" found for clock "cgra_clk".
+[INFO CTS-0010]  Clock net "CGRA_Clock" has 320 sinks.
+[INFO CTS-0007] Net "Config_Clock" found for clock "config_clk".
+[INFO CTS-0010]  Clock net "Config_Clock" has 188 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net CGRA_Clock.
+[INFO CTS-0028]  Total number of sinks: 320.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0206] Best clustering solution was found from max clustering size of 12 and max clustering diameter of 128.
+[INFO CTS-0019]  Total number of sinks after clustering: 35.
+[INFO CTS-0024]  Normalized sink region: [(0.425368, 1.20949), (19.0775, 19.7237)].
+[INFO CTS-0025]     Width:  18.6521.
+[INFO CTS-0026]     Height: 18.5142.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 18
+    Sub-region size: 9.3261 X 18.5142
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 9
+    Sub-region size: 9.3261 X 9.2571
+[INFO CTS-0034]     Segment length (rounded): 4.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 35.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net Config_Clock.
+[INFO CTS-0028]  Total number of sinks: 188.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(1645, 6860), (276655, 265140)].
+[INFO CTS-0024]  Normalized sink region: [(0.120956, 0.504412), (20.3423, 19.4956)].
+[INFO CTS-0025]     Width:  20.2213.
+[INFO CTS-0026]     Height: 18.9912.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 94
+    Sub-region size: 10.1107 X 18.9912
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 47
+    Sub-region size: 10.1107 X 9.4956
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 24
+    Sub-region size: 5.0553 X 9.4956
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 12
+    Sub-region size: 5.0553 X 4.7478
+[INFO CTS-0034]     Segment length (rounded): 2.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (1911.535 um) and max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 188.
+[INFO CTS-0018]     Created 40 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 40 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 5:1, 6:3, 7:4, 8:5, 9:9, 10:6, 11:9, 12:2..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0018]     Created 17 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 17 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 7:1, 8:2, 9:1, 10:3, 11:1, 12:1, 13:3, 14:1, 15:2, 20:1..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "CGRA_Clock"
+[INFO CTS-0099]  Sinks 352
+[INFO CTS-0100]  Leaf buffers 35
+[INFO CTS-0101]  Average sink wire length 460.37 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Dummy loads inserted 32
+[INFO CTS-0098] Clock net "Config_Clock"
+[INFO CTS-0099]  Sinks 203
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 416.70 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Dummy loads inserted 15
+[INFO CTS-0500] Runtime: 0.29s
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 74946.88 um^2
+[INFO DPL-0007] Movable instances area: 41964.00 um^2
+[INFO DPL-0008] Fixed instances area within core: 1212.41 um^2
+[INFO DPL-0009] Utilization: 57.6%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 6614 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |        768 |       118 |       629
+        1 |        284 |        44 |       240
+        2 |        138 |        10 |       128
+        3 |         46 |         4 |        42
+        4 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 4.
+[INFO DPL-0500] Runtime: 0.04s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                3333
+total displacement       5886.8 u
+average displacement        0.9 u
+max displacement           20.1 u
+original HPWL          116831.7 u
+legalized HPWL         120208.8 u
+delta HPWL                    3 %
+
+estimate_parasitics -placement
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 48 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 48 out of 48 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |    TNS     |  Viol  |  Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpoint
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -2.199 |      -99.7 |     48 | io_bottom_0_IOPin_bidir_out[7]
+      10* |       0 |       9 |        0 |      0 |     0 |    +0.0% |   -2.100 |      -98.9 |     48 | io_right_1_IOPin_bidir_out[4]
+      20* |       0 |      19 |        0 |      0 |     0 |    +0.0% |   -2.087 |      -97.9 |     48 | io_top_0_IOPin_bidir_out[7]
+      30* |       0 |      29 |        0 |      0 |     0 |    +0.1% |   -2.083 |      -97.0 |     48 | io_bottom_1_IOPin_bidir_out[0]
+      40* |       0 |      39 |        0 |      0 |     0 |    +0.1% |   -2.079 |      -96.0 |     48 | io_right_1_IOPin_bidir_out[6]
+      50* |       0 |      49 |        0 |      0 |     0 |    +0.1% |   -2.080 |      -95.2 |     48 | io_right_0_IOPin_bidir_out[1]
+      60* |       0 |      58 |        1 |      0 |     0 |    +0.2% |   -2.070 |      -94.4 |     48 | io_right_0_IOPin_bidir_out[3]
+      70* |       0 |      68 |        1 |      0 |     0 |    +0.2% |   -2.068 |      -93.6 |     48 | io_right_0_IOPin_bidir_out[4]
+      80* |       0 |      78 |        1 |      0 |     0 |    +0.2% |   -2.065 |      -92.8 |     48 | io_right_1_IOPin_bidir_out[2]
+      90* |       0 |      88 |        1 |      0 |     0 |    +0.2% |   -2.061 |      -92.0 |     48 | io_right_0_IOPin_bidir_out[5]
+     100* |       0 |      96 |        3 |      0 |     0 |    +0.3% |   -1.919 |      -90.9 |     48 | io_bottom_0_IOPin_bidir_out[6]
+     110* |       0 |     105 |        4 |      0 |     0 |    +0.3% |   -1.912 |      -89.9 |     48 | io_top_1_IOPin_bidir_out[6]
+     120* |       0 |     115 |        4 |      0 |     0 |    +0.3% |   -1.910 |      -88.8 |     48 | io_top_1_IOPin_bidir_out[7]
+     130* |       0 |     125 |        4 |      0 |     0 |    +0.3% |   -1.907 |      -87.7 |     48 | io_top_0_IOPin_bidir_out[5]
+     140* |       0 |     135 |        4 |      0 |     0 |    +0.3% |   -1.914 |      -86.7 |     48 | io_top_0_IOPin_bidir_out[0]
+     150* |       0 |     145 |        4 |      0 |     0 |    +0.3% |   -1.860 |      -85.6 |     48 | io_bottom_0_IOPin_bidir_out[7]
+     160* |       0 |     155 |        4 |      0 |     0 |    +0.2% |   -1.848 |      -85.0 |     48 | io_bottom_1_IOPin_bidir_out[2]
+     170* |       0 |     165 |        4 |      0 |     0 |    +0.1% |   -1.838 |      -84.1 |     48 | io_top_0_IOPin_bidir_out[6]
+     180* |       0 |     175 |        4 |      0 |     0 |    +0.1% |   -1.784 |      -82.6 |     48 | io_top_0_IOPin_bidir_out[0]
+     190* |       0 |     185 |        4 |      0 |     0 |    +0.1% |   -1.773 |      -80.9 |     48 | io_bottom_0_IOPin_bidir_out[3]
+     200* |       0 |     194 |        5 |      0 |     0 |    +0.1% |   -1.737 |      -80.2 |     48 | io_bottom_0_IOPin_bidir_out[5]
+     210* |       0 |     203 |        6 |      0 |     0 |    +0.1% |   -1.731 |      -79.6 |     48 | io_right_0_IOPin_bidir_out[1]
+     220* |       0 |     213 |        6 |      0 |     0 |    +0.2% |   -1.698 |      -79.0 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     230* |       0 |     223 |        6 |      0 |     0 |    +0.0% |   -1.673 |      -78.3 |     48 | io_bottom_0_IOPin_bidir_out[5]
+     240* |       0 |     233 |        6 |      0 |     0 |    -0.1% |   -1.667 |      -77.7 |     48 | io_right_0_IOPin_bidir_out[1]
+     250* |       0 |     243 |        6 |      0 |     0 |    -0.2% |   -1.618 |      -77.1 |     48 | io_right_1_IOPin_bidir_out[4]
+     260* |       0 |     253 |        6 |      0 |     0 |    -0.1% |   -1.611 |      -76.5 |     48 | io_top_1_IOPin_bidir_out[0]
+     270* |       0 |     263 |        6 |      0 |     0 |    -0.1% |   -1.609 |      -75.8 |     48 | io_top_0_IOPin_bidir_out[2]
+     280* |       0 |     273 |        6 |      0 |     0 |    -0.1% |   -1.607 |      -75.2 |     48 | io_right_0_IOPin_bidir_out[1]
+     290* |       0 |     283 |        6 |      0 |     0 |    -0.0% |   -1.603 |      -74.5 |     48 | io_top_0_IOPin_bidir_out[4]
+     300* |       0 |     293 |        6 |      0 |     0 |    -0.1% |   -1.555 |      -73.9 |     48 | io_top_1_IOPin_bidir_out[3]
+     310* |       0 |     303 |        6 |      0 |     0 |    -0.2% |   -1.545 |      -73.2 |     48 | io_right_1_IOPin_bidir_out[6]
+     320* |       0 |     313 |        6 |      0 |     0 |    -0.3% |   -1.544 |      -72.5 |     48 | io_top_1_IOPin_bidir_out[1]
+     330* |       0 |     323 |        6 |      0 |     0 |    -0.4% |   -1.542 |      -71.8 |     48 | io_right_0_IOPin_bidir_out[3]
+     340* |       0 |     333 |        6 |      0 |     0 |    -0.5% |   -1.537 |      -71.1 |     48 | io_top_0_IOPin_bidir_out[4]
+     350* |       0 |     343 |        6 |      0 |     0 |    -0.5% |   -1.479 |      -70.7 |     48 | io_right_1_IOPin_bidir_out[4]
+     360* |       0 |     353 |        6 |      0 |     0 |    -0.4% |   -1.476 |      -70.6 |     48 | io_bottom_0_IOPin_bidir_out[0]
+     365* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     366* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     367* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     368* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     369* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     370* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     370* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     371* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     372* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     373* |       0 |     358 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     375* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     376* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     377* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     378* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     379* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     380* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     380* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     381* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     382* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     383* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     384* |       0 |     359 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     386* |       0 |     360 |        6 |      0 |     0 |    -0.3% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     388* |       0 |     361 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     389* |       0 |     361 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     390* |       0 |     361 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     391* |       0 |     362 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     392* |       0 |     362 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     394* |       0 |     363 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.5 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     396* |       0 |     364 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     398* |       0 |     365 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     400* |       0 |     366 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     400* |       0 |     366 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     402* |       0 |     367 |        6 |      0 |     0 |    -0.2% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     404* |       0 |     368 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     405* |       0 |     368 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     407* |       0 |     369 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     409* |       0 |     370 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     410* |       0 |     370 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     411* |       0 |     371 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     413* |       0 |     372 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     415* |       0 |     373 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     417* |       0 |     374 |        6 |      0 |     0 |    -0.1% |   -1.474 |      -70.4 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     419* |       0 |     375 |        6 |      0 |     0 |    -0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     420* |       0 |     375 |        6 |      0 |     0 |    -0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     421* |       0 |     376 |        6 |      0 |     0 |    -0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     423* |       0 |     377 |        6 |      0 |     0 |    -0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     425* |       0 |     378 |        6 |      0 |     0 |    +0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     427* |       0 |     379 |        6 |      0 |     0 |    +0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     429* |       0 |     380 |        6 |      0 |     0 |    +0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     430* |       0 |     380 |        6 |      0 |     0 |    +0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     431* |       0 |     381 |        6 |      0 |     0 |    +0.0% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     433* |       0 |     382 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     435* |       0 |     383 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     437* |       0 |     384 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     439* |       0 |     385 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     439* |       0 |     385 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     440+ |       0 |     385 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     440+ |       0 |     385 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.3 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     443+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     444+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     445+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     446+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     447+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     448+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     449+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     450+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     450+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     451+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     452+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     453+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     454+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     455+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     456+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     457+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     458+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     459+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     460+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     460+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     461+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     462+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     463+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     464+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     465+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     466+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     467+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     468+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     469+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     470+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     470+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     471+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     472+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     473+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     474+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     475+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     476+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     477+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     478+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     479+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     480+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     480+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     481+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     482+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     483+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     484+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     485+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     486+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     487+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     488+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+     489+ |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+    final |       0 |     387 |        6 |      0 |     0 |    +0.1% |   -1.474 |      -70.1 |     48 | io_bottom_0_IOPin_bidir_out[2]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 6 buffers.
+[INFO RSZ-0051] Resized 387 instances: 387 up, 0 up match, 0 down, 0 VT
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 0.41s
+[INFO RSZ-0046] Found 507 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.625 | -228.308 | pe_c0_r1.RegBConfig.config_reg[0]$_DFF_PP0_/D
+       10 |       0 |       9 |            0 |    +0.2% |  -0.619 | -222.943 | io_bottom_0.RegOutConfig.config_reg[0]$_DFF_PP0_/D
+       20 |       0 |      19 |            0 |    +0.4% |  -0.612 | -217.172 | pe_c1_r1.Reg1config.config_reg[0]$_DFF_PP0_/D
+       30 |       0 |      29 |            0 |    +0.7% |  -0.600 | -211.767 | pe_c0_r1.const_val.ConstVal.config_reg[0][5]$_DFF_PP0_/D
+       40 |       0 |      39 |            0 |    +0.9% |  -0.591 | -206.353 | pe_c0_r0.const_val.ConstVal.config_reg[0][7]$_DFF_PP0_/D
+       50 |       0 |      49 |            0 |    +1.1% |  -0.573 | -200.588 | pe_c1_r0.crossbar.Mux3config.config_reg[0][1]$_DFF_PP0_/D
+       60 |       0 |      59 |            0 |    +1.4% |  -0.563 | -195.139 | pe_c1_r0.crossbar.Mux1config.config_reg[0][0]$_DFF_PP0_/D
+       70 |       0 |      69 |            0 |    +1.6% |  -0.558 | -189.442 | pe_c1_r1.RegBConfig.config_reg[0]$_DFF_PP0_/D
+       80 |       0 |      79 |            0 |    +1.8% |  -0.554 | -183.824 | pe_c1_r1.crossbar.Mux5config.config_reg[0][1]$_DFF_PP0_/D
+       90 |       0 |      89 |            0 |    +2.1% |  -0.541 | -178.382 | pe_c1_r1.crossbar.Mux3config.config_reg[0][1]$_DFF_PP0_/D
+      100 |       0 |      99 |            0 |    +2.3% |  -0.531 | -173.017 | pe_c1_r1.crossbar.Mux0config.config_reg[0][1]$_DFF_PP0_/D
+      110 |       0 |     110 |            0 |    +2.5% |  -0.518 | -167.652 | pe_c1_r1.reg3.out[4]$_DFFE_PP0P_/D
+      120 |       0 |     127 |            0 |    +2.9% |  -0.516 | -162.485 | pe_c1_r1.reg3.out[5]$_DFFE_PP0P_/D
+      130 |       0 |     151 |            0 |    +3.5% |  -0.513 | -157.338 | pe_c1_r1.crossbar.Mux5config.config_reg[0][2]$_DFF_PP0_/D
+      140 |       0 |     168 |            0 |    +3.9% |  -0.512 | -152.212 | pe_c0_r1.reg3.out[2]$_DFFE_PP0P_/D
+      150 |       0 |     191 |            0 |    +4.4% |  -0.511 | -147.096 | pe_c0_r1.reg3.out[4]$_DFFE_PP0P_/D
+      160 |       0 |     210 |            0 |    +4.9% |  -0.510 | -141.974 | pe_c1_r0.reg2.out[6]$_DFFE_PP0P_/D
+      170 |       0 |     227 |            0 |    +5.3% |  -0.509 | -136.875 | pe_c0_r0.crossbar.Mux4config.config_reg[0][2]$_DFF_PP0_/D
+      180 |       0 |     248 |            0 |    +5.7% |  -0.508 | -131.787 | pe_c1_r1.reg2.out[5]$_DFFE_PP0P_/D
+      190 |       0 |     265 |            0 |    +6.1% |  -0.507 | -126.657 | pe_c0_r1.reg2.out[6]$_DFFE_PP0P_/D
+      200 |       0 |     288 |            0 |    +6.7% |  -0.506 | -121.592 | pe_c0_r0.reg1.out[2]$_DFFE_PP0P_/D
+      210 |       0 |     308 |            0 |    +7.1% |  -0.504 | -116.520 | pe_c0_r0.reg3.out[6]$_DFFE_PP0P_/D
+      220 |       0 |     325 |            0 |    +7.5% |  -0.503 | -111.332 | pe_c1_r0.reg3.out[1]$_DFFE_PP0P_/D
+      230 |       0 |     346 |            0 |    +8.0% |  -0.502 | -106.239 | pe_c1_r0.crossbar.Mux2config.config_reg[0][0]$_DFF_PP0_/D
+      240 |       0 |     363 |            0 |    +8.4% |  -0.500 | -101.216 | pe_c0_r0.reg0.out[2]$_DFFE_PP0P_/D
+      250 |       0 |     377 |            0 |    +8.7% |  -0.497 | -96.208 | io_top_0.reg_in.out[1]$_DFFE_PP0P_/D
+      260 |       0 |     392 |            0 |    +9.1% |  -0.493 | -91.261 | pe_c0_r1.Reg1config.config_reg[0]$_DFF_PP0_/D
+      270 |       0 |     406 |            0 |    +9.4% |  -0.489 | -86.324 | pe_c0_r0.reg1.out[3]$_DFFE_PP0P_/D
+      280 |       0 |     420 |            0 |    +9.7% |  -0.484 | -81.462 | pe_c0_r1.reg0.out[2]$_DFFE_PP0P_/D
+      290 |       0 |     432 |            0 |   +10.0% |  -0.479 | -76.651 | io_right_1.reg_in.out[7]$_DFFE_PP0P_/D
+      300 |       0 |     444 |            0 |   +10.3% |  -0.472 | -71.895 | pe_c1_r1.RES.out[3]$_DFFE_PP0P_/D
+      310 |       0 |     456 |            0 |   +10.6% |  -0.466 | -67.197 | io_right_1.reg_in.out[1]$_DFFE_PP0P_/D
+      320 |       0 |     466 |            0 |   +10.8% |  -0.460 | -62.496 | pe_c0_r1.crossbar.Mux5config.config_reg[0][2]$_DFF_PP0_/D
+      330 |       0 |     479 |            0 |   +11.1% |  -0.449 | -57.839 | io_top_0.reg_out.out[4]$_DFFE_PP0P_/D
+      340 |       0 |     493 |            0 |   +11.4% |  -0.445 | -53.363 | pe_c1_r1.reg1.out[1]$_DFFE_PP0P_/D
+      350 |       0 |     507 |            0 |   +11.7% |  -0.440 | -48.867 | io_right_1.reg_out.out[6]$_DFFE_PP0P_/D
+      360 |       0 |     524 |            0 |   +12.1% |  -0.435 | -44.490 | io_bottom_0.reg_out.out[7]$_DFFE_PP0P_/D
+      370 |       0 |     539 |            0 |   +12.5% |  -0.432 | -40.155 | io_top_1.reg_in.out[3]$_DFFE_PP0P_/D
+      380 |       0 |     552 |            0 |   +12.8% |  -0.427 | -35.857 | io_right_0.reg_in.out[2]$_DFFE_PP0P_/D
+      390 |       0 |     567 |            0 |   +13.1% |  -0.418 | -31.621 | io_right_0.reg_out.out[1]$_DFFE_PP0P_/D
+      400 |       0 |     580 |            0 |   +13.4% |  -0.394 | -27.501 | pe_c1_r0.RES.out[1]$_DFFE_PP0P_/D
+      410 |       0 |     592 |            0 |   +13.7% |  -0.362 | -23.744 | pe_c1_r1.rega.out[6]$_DFFE_PP0P_/D
+      420 |       0 |     607 |            0 |   +14.1% |  -0.324 | -20.496 | pe_c1_r1.Mux2config.config_reg[0]$_DFF_PP0_/D
+      430 |       0 |     622 |            0 |   +14.4% |  -0.309 | -17.686 | pe_c1_r0.Mux1config.config_reg[0]$_DFF_PP0_/D
+      440 |       0 |     634 |            0 |   +14.7% |  -0.288 | -14.875 | pe_c1_r1.RES.out[6]$_DFFE_PP0P_/D
+      450 |       0 |     645 |            0 |   +14.9% |  -0.271 | -12.075 | pe_c1_r1.RES.out[5]$_DFFE_PP0P_/D
+      460 |       0 |     656 |            0 |   +15.2% |  -0.244 |  -9.580 | pe_c0_r1.regb.out[6]$_DFFE_PP0P_/D
+      470 |       0 |     669 |            0 |   +15.5% |  -0.204 |  -7.255 | pe_c1_r0.rega.out[5]$_DFFE_PP0P_/D
+      480 |       0 |     681 |            0 |   +15.8% |  -0.173 |  -5.579 | pe_c1_r0.RES.out[3]$_DFFE_PP0P_/D
+      490 |       0 |     691 |            0 |   +16.0% |  -0.132 |  -4.513 | pe_c0_r0.rega.out[4]$_DFFE_PP0P_/D
+      500 |       0 |     700 |            0 |   +16.2% |  -0.092 |  -3.792 | pe_c0_r1.RegBConfig.config_reg[0]$_DFF_PP0_/D
+      510 |       0 |     706 |            0 |   +16.4% |  -0.088 |  -3.528 | pe_c1_r1.const_val.ConstVal.config_reg[0][1]$_DFF_PP0_/D
+      520 |       0 |     716 |            0 |   +16.6% |  -0.083 |  -2.677 | mem_1.MuxAddr.config_reg[0]$_DFF_PP0_/D
+      530 |       0 |     726 |            0 |   +16.8% |  -0.073 |  -1.884 | pe_c0_r0.const_val.ConstVal.config_reg[0][5]$_DFF_PP0_/D
+      540 |       0 |     736 |            0 |   +17.0% |  -0.059 |  -1.217 | pe_c1_r1.ALUconfig.config_reg[0][1]$_DFF_PP0_/D
+      550 |       0 |     746 |            0 |   +17.3% |  -0.048 |  -0.680 | pe_c0_r1.const_val.ConstVal.config_reg[0][6]$_DFF_PP0_/D
+      560 |       0 |     756 |            0 |   +17.5% |  -0.025 |  -0.339 | pe_c1_r0.const_val.ConstVal.config_reg[0][7]$_DFF_PP0_/D
+      570 |       0 |     766 |            0 |   +17.7% |  -0.016 |  -0.128 | pe_c0_r1.crossbar.Mux1config.config_reg[0][1]$_DFF_PP0_/D
+      580 |       0 |     776 |            0 |   +18.0% |  -0.006 |  -0.015 | pe_c1_r1.crossbar.Mux5config.config_reg[0][0]$_DFF_PP0_/D
+    final |       0 |     782 |            0 |   +18.1% |   0.000 |   0.000 | pe_c0_r1.reg1.out[1]$_DFFE_PP0P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 782 hold buffers.
+[INFO RSZ-0506] Runtime: 1.80s
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:00.49[h:]min:sec. CPU time: user 0.52 sys 0.03 (111%). Peak memory: 39460KB.
+Repair timing output passed lec test
+detailed_placement
+[INFO DPL-0006] Core area: 74946.88 um^2
+[INFO DPL-0007] Movable instances area: 49836.55 um^2
+[INFO DPL-0008] Fixed instances area within core: 1212.41 um^2
+[INFO DPL-0009] Utilization: 68.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 7402 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |       5892 |       990 |      4881
+        1 |       2929 |       473 |      2444
+        2 |       1988 |       292 |      1648
+        3 |       1340 |       184 |      1153
+        4 |        910 |       130 |       777
+        5 |        611 |        73 |       511
+        6 |        470 |        68 |       393
+        7 |        462 |        58 |       386
+        8 |        265 |        31 |       234
+        9 |        345 |        45 |       288
+       10 |        300 |        36 |       264
+       20 |         24 |         2 |        22
+       21 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 21.
+[INFO DPL-0500] Runtime: 0.19s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                7997
+total displacement       8772.3 u
+average displacement        1.2 u
+max displacement           24.9 u
+original HPWL          125814.1 u
+legalized HPWL         134085.4 u
+delta HPWL                    7 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 51049 um^2 68% utilization.
+write_db ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/4_1_cts.odb
+write_sdc -no_timestamp ./results/sky130hd/HyCUBE_8bit/50MHz_Util50_Density60_ABC0/4_cts.sdc
+Elapsed time: 0:04.83[h:]min:sec. CPU time: user 4.77 sys 0.11 (101%). Peak memory: 185420KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+4_1_cts                .odb          0        1     1.12       38 cf61227dd0
